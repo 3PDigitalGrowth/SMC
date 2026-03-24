@@ -1,0 +1,142 @@
+.section {
+  background: var(--white);
+  padding: 96px var(--gutter);
+}
+
+.container {
+  max-width: var(--max-width);
+  margin: 0 auto;
+}
+
+.heading {
+  font-family: var(--font-display), Georgia, serif;
+  font-size: 38px;
+  font-weight: 700;
+  color: var(--navy);
+  line-height: 1.2;
+  margin-bottom: 48px;
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 24px;
+  margin-bottom: 32px;
+}
+
+.card {
+  background: var(--navy);
+  border-radius: var(--radius-md);
+  padding: 36px 40px;
+  position: relative;
+  overflow: hidden;
+}
+
+.quoteMark {
+  position: absolute;
+  top: -20px;
+  left: 16px;
+  font-family: var(--font-display), Georgia, serif;
+  font-size: 180px;
+  color: rgba(255, 255, 255, 0.05);
+  line-height: 1;
+  pointer-events: none;
+  user-select: none;
+}
+
+.stars {
+  display: flex;
+  gap: 2px;
+  margin-bottom: 20px;
+  position: relative;
+}
+
+.quote {
+  font-family: var(--font-display), Georgia, serif;
+  font-size: 16px;
+  font-style: italic;
+  color: rgba(255, 255, 255, 0.9);
+  line-height: 1.75;
+  position: relative;
+}
+
+.divider {
+  border: none;
+  border-top: 1px solid rgba(255, 255, 255, 0.1);
+  margin: 20px 0;
+}
+
+.author {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.initials {
+  width: 40px;
+  height: 40px;
+  background: rgba(184, 134, 11, 0.25);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: var(--font-body), 'Helvetica Neue', sans-serif;
+  font-size: 14px;
+  font-weight: 700;
+  color: var(--gold-muted);
+}
+
+.authorName {
+  font-family: var(--font-body), 'Helvetica Neue', sans-serif;
+  font-size: 14px;
+  font-weight: 700;
+  color: var(--white);
+}
+
+.authorRole {
+  font-family: var(--font-body), 'Helvetica Neue', sans-serif;
+  font-size: 12px;
+  font-weight: 300;
+  color: rgba(255, 255, 255, 0.45);
+}
+
+.disclaimer {
+  font-family: var(--font-body), 'Helvetica Neue', sans-serif;
+  font-size: 12px;
+  font-weight: 300;
+  font-style: italic;
+  color: var(--grey-400);
+  text-align: center;
+  margin-bottom: 16px;
+}
+
+.reviewLink {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  font-family: var(--font-body), 'Helvetica Neue', sans-serif;
+  font-size: 14px;
+  font-weight: 700;
+  color: var(--gold);
+  text-decoration: none;
+  transition: gap 0.2s ease;
+}
+
+.reviewLink:hover {
+  gap: 12px;
+}
+
+@media (max-width: 768px) {
+  .section {
+    padding: 64px var(--gutter-mob);
+  }
+
+  .grid {
+    grid-template-columns: 1fr;
+  }
+
+  .heading {
+    font-size: 30px;
+  }
+}

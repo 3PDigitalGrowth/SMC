@@ -1,0 +1,237 @@
+.section {
+  background-color: var(--navy);
+  background-image:
+    radial-gradient(ellipse 60% 50% at 75% 50%, rgba(184, 134, 11, 0.07) 0%, transparent 70%),
+    linear-gradient(rgba(255, 255, 255, 0.025) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(255, 255, 255, 0.025) 1px, transparent 1px);
+  background-size: auto, 80px 80px, 80px 80px;
+  padding: 96px var(--gutter);
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: 45fr 55fr;
+  gap: 64px;
+  max-width: var(--max-width);
+  margin: 0 auto;
+}
+
+.heading {
+  font-family: var(--font-display), Georgia, serif;
+  font-size: 48px;
+  font-weight: 700;
+  color: var(--white);
+  line-height: 1.1;
+  margin-bottom: 20px;
+}
+
+.body {
+  font-family: var(--font-body), 'Helvetica Neue', sans-serif;
+  font-size: 17px;
+  font-weight: 300;
+  color: rgba(255, 255, 255, 0.72);
+  line-height: 1.8;
+  margin-bottom: 28px;
+}
+
+.ticks {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  margin-bottom: 36px;
+}
+
+.tick {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-family: var(--font-body), 'Helvetica Neue', sans-serif;
+  font-size: 15px;
+  font-weight: 300;
+  color: rgba(255, 255, 255, 0.8);
+}
+
+.contactBlock {
+  padding-top: 32px;
+  border-top: 1px solid rgba(255, 255, 255, 0.1);
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.contactItem {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  font-family: var(--font-body), 'Helvetica Neue', sans-serif;
+  font-size: 14px;
+  font-weight: 300;
+  color: rgba(255, 255, 255, 0.7);
+  text-decoration: none;
+  transition: color 0.2s ease;
+}
+
+.contactItem:hover {
+  color: var(--white);
+}
+
+.note {
+  font-family: var(--font-body), 'Helvetica Neue', sans-serif;
+  font-size: 13px;
+  font-weight: 300;
+  font-style: italic;
+  color: rgba(255, 255, 255, 0.45);
+  margin-top: 8px;
+}
+
+.rightCol {
+  display: flex;
+  flex-direction: column;
+  gap: 32px;
+}
+
+.calendlyCard {
+  background: var(--white);
+  border-radius: var(--radius-lg);
+  overflow: hidden;
+}
+
+.fallback {
+  background: var(--white);
+  border-radius: var(--radius-lg);
+  padding: 40px;
+}
+
+.fallbackHeading {
+  font-family: var(--font-display), Georgia, serif;
+  font-size: 22px;
+  font-weight: 700;
+  color: var(--navy);
+  margin-bottom: 24px;
+}
+
+.field {
+  margin-bottom: 20px;
+}
+
+.fieldLabel {
+  display: block;
+  font-family: var(--font-body), 'Helvetica Neue', sans-serif;
+  font-size: 13px;
+  font-weight: 700;
+  color: var(--grey-800);
+  margin-bottom: 6px;
+}
+
+.input,
+.select,
+.textarea {
+  width: 100%;
+  padding: 12px 16px;
+  border: 1px solid var(--grey-200);
+  border-radius: var(--radius-sm);
+  font-family: var(--font-body), 'Helvetica Neue', sans-serif;
+  font-size: 15px;
+  color: var(--grey-800);
+  transition: border-color 0.2s ease;
+  background: var(--white);
+}
+
+.input:focus,
+.select:focus,
+.textarea:focus {
+  outline: none;
+  border-color: var(--navy);
+}
+
+.textarea {
+  min-height: 100px;
+  resize: vertical;
+}
+
+.inputError {
+  border-color: #d32f2f;
+}
+
+.errorText {
+  font-family: var(--font-body), 'Helvetica Neue', sans-serif;
+  font-size: 12px;
+  color: #d32f2f;
+  margin-top: 4px;
+}
+
+.submitBtn {
+  width: 100%;
+  background: var(--gold);
+  color: var(--white);
+  font-family: var(--font-body), 'Helvetica Neue', sans-serif;
+  font-size: 15px;
+  font-weight: 700;
+  padding: 14px;
+  border: none;
+  border-radius: var(--radius-sm);
+  cursor: pointer;
+  transition: background 0.2s ease;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+}
+
+.submitBtn:hover {
+  background: var(--gold-light);
+}
+
+.submitBtn:disabled {
+  opacity: 0.7;
+  cursor: not-allowed;
+}
+
+.spinner {
+  width: 20px;
+  height: 20px;
+  animation: spin 0.8s linear infinite;
+}
+
+@keyframes spin {
+  from { transform: rotate(0deg); }
+  to { transform: rotate(360deg); }
+}
+
+.success {
+  text-align: center;
+  padding: 32px 0;
+}
+
+.successHeading {
+  font-family: var(--font-display), Georgia, serif;
+  font-size: 22px;
+  font-weight: 700;
+  color: var(--navy);
+  margin-bottom: 8px;
+}
+
+.successBody {
+  font-family: var(--font-body), 'Helvetica Neue', sans-serif;
+  font-size: 14px;
+  color: var(--grey-600);
+}
+
+@media (max-width: 768px) {
+  .section {
+    padding: 64px var(--gutter-mob);
+  }
+
+  .grid {
+    grid-template-columns: 1fr;
+    gap: 40px;
+  }
+
+  .grid > :last-child {
+    order: -1;
+  }
+
+  .heading {
+    font-size: 36px;
+  }
+}

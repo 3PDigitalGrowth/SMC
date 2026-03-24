@@ -1,0 +1,11 @@
+.wrapper {
+  opacity: 0;
+  transform: translateY(24px);
+  transition: opacity 0.55s ease, transform 0.55s ease;
+  height: 100%;
+}
+
+.visible {
+  opacity: 1;
+  transform: translateY(0);
+}

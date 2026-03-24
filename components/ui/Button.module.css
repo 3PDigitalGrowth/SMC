@@ -1,0 +1,86 @@
+.btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  font-family: var(--font-body), 'Helvetica Neue', sans-serif;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+  border: none;
+  border-radius: var(--radius-sm);
+  cursor: pointer;
+  transition: background 0.2s ease, transform 0.15s ease, box-shadow 0.2s ease;
+  text-decoration: none;
+  line-height: 1;
+}
+
+.btn:hover {
+  transform: translateY(-1px);
+}
+
+.btn:active {
+  transform: translateY(0);
+}
+
+/* Variants */
+.gold {
+  background: var(--gold);
+  color: var(--white);
+}
+
+.gold:hover {
+  background: var(--gold-light);
+  box-shadow: 0 4px 16px rgba(184, 134, 11, 0.35);
+}
+
+.navy {
+  background: var(--navy);
+  color: var(--white);
+}
+
+.navy:hover {
+  background: var(--navy-light);
+  box-shadow: 0 4px 16px rgba(27, 43, 75, 0.25);
+}
+
+.ghost {
+  background: transparent;
+  color: var(--grey-600);
+  border: 1px solid var(--grey-200);
+}
+
+.ghost:hover {
+  background: var(--grey-100);
+  color: var(--grey-800);
+}
+
+.outline {
+  background: transparent;
+  color: var(--white);
+  border: 1px solid rgba(255, 255, 255, 0.35);
+}
+
+.outline:hover {
+  background: rgba(255, 255, 255, 0.08);
+}
+
+/* Sizes */
+.sm {
+  font-size: 12px;
+  padding: 10px 20px;
+}
+
+.md {
+  font-size: 13px;
+  padding: 14px 28px;
+}
+
+.lg {
+  font-size: 14px;
+  padding: 16px 36px;
+}
+
+.fullWidth {
+  width: 100%;
+}

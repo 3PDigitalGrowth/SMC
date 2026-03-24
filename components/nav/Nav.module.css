@@ -1,0 +1,158 @@
+.nav {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 200;
+  height: 68px;
+  transition: background 0.3s ease, border-color 0.3s ease;
+}
+
+.scrolled {
+  background: var(--navy);
+  border-bottom: 2px solid var(--gold);
+}
+
+.inner {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  max-width: var(--max-width);
+  margin: 0 auto;
+  padding: 0 var(--gutter);
+  height: 100%;
+}
+
+.wordmark {
+  text-decoration: none;
+  display: flex;
+  flex-direction: column;
+}
+
+.wordmarkName {
+  font-family: var(--font-display), Georgia, serif;
+  font-size: 18px;
+  font-weight: 700;
+  color: var(--white);
+  line-height: 1.2;
+}
+
+.wordmarkLabel {
+  font-family: var(--font-body), 'Helvetica Neue', sans-serif;
+  font-size: 10px;
+  text-transform: uppercase;
+  letter-spacing: 0.22em;
+  color: var(--gold-muted);
+  line-height: 1;
+}
+
+.wordmarkRule {
+  width: 36px;
+  height: 2px;
+  background: var(--gold);
+  margin-top: 6px;
+}
+
+.links {
+  display: flex;
+  align-items: center;
+  gap: 32px;
+}
+
+.link {
+  font-family: var(--font-body), 'Helvetica Neue', sans-serif;
+  font-size: 12px;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  color: rgba(255, 255, 255, 0.75);
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: 4px 0;
+  position: relative;
+  text-decoration: none;
+  transition: color 0.2s ease;
+}
+
+.link:hover {
+  color: var(--white);
+}
+
+.link::after {
+  content: '';
+  display: block;
+  height: 2px;
+  background: var(--gold);
+  transform: scaleX(0);
+  transition: transform 0.2s ease;
+  transform-origin: left;
+}
+
+.link:hover::after {
+  transform: scaleX(1);
+}
+
+.right {
+  display: flex;
+  align-items: center;
+  gap: 24px;
+}
+
+.phone {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-family: var(--font-body), 'Helvetica Neue', sans-serif;
+  font-size: 13px;
+  color: var(--white);
+  text-decoration: none;
+  transition: opacity 0.2s ease;
+}
+
+.phone:hover {
+  opacity: 0.8;
+}
+
+.hamburger {
+  display: none;
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: 8px;
+}
+
+.hamburgerLine {
+  display: block;
+  width: 24px;
+  height: 2px;
+  background: var(--white);
+  margin-bottom: 5px;
+}
+
+.hamburgerLine:last-child {
+  margin-bottom: 0;
+}
+
+@media (max-width: 1023px) {
+  .nav {
+    height: 60px;
+  }
+
+  .links {
+    display: none;
+  }
+
+  .phone {
+    display: none;
+  }
+
+  .right .bookBtn {
+    display: none;
+  }
+
+  .hamburger {
+    display: block;
+  }
+}

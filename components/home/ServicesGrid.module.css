@@ -1,0 +1,136 @@
+.section {
+  background: var(--white);
+  padding: 96px var(--gutter);
+}
+
+.header {
+  max-width: var(--max-width);
+  margin: 0 auto 56px;
+}
+
+.heading {
+  font-family: var(--font-display), Georgia, serif;
+  font-size: 38px;
+  font-weight: 700;
+  color: var(--navy);
+  line-height: 1.2;
+  margin-bottom: 16px;
+}
+
+.intro {
+  font-family: var(--font-body), 'Helvetica Neue', sans-serif;
+  font-size: 17px;
+  font-weight: 300;
+  color: var(--grey-600);
+  max-width: 580px;
+  line-height: 1.7;
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 24px;
+  max-width: var(--max-width);
+  margin: 0 auto;
+}
+
+.card {
+  background: var(--white);
+  border: 1px solid var(--grey-200);
+  border-radius: var(--radius-md);
+  overflow: hidden;
+  transition: transform 0.25s ease, box-shadow 0.25s ease;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
+.card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 8px 32px rgba(27, 43, 75, 0.1);
+}
+
+.accentBar {
+  height: 4px;
+  background: var(--navy);
+  flex-shrink: 0;
+}
+
+.cardContent {
+  padding: 28px;
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+}
+
+.iconCircle {
+  width: 52px;
+  height: 52px;
+  background: var(--navy);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 16px;
+}
+
+.cardTitle {
+  font-family: var(--font-display), Georgia, serif;
+  font-size: 20px;
+  font-weight: 700;
+  color: var(--navy);
+  margin-bottom: 10px;
+}
+
+.cardBody {
+  font-family: var(--font-body), 'Helvetica Neue', sans-serif;
+  font-size: 14px;
+  font-weight: 300;
+  color: var(--grey-600);
+  line-height: 1.7;
+  margin-bottom: 16px;
+  flex: 1;
+}
+
+.cardLink {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  font-family: var(--font-body), 'Helvetica Neue', sans-serif;
+  font-size: 13px;
+  font-weight: 700;
+  color: var(--gold);
+  text-decoration: none;
+  transition: gap 0.2s ease;
+}
+
+.cardLink:hover {
+  gap: 10px;
+}
+
+.bottomCta {
+  display: flex;
+  justify-content: center;
+  max-width: var(--max-width);
+  margin: 48px auto 0;
+}
+
+@media (max-width: 1023px) {
+  .grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 600px) {
+  .section {
+    padding: 64px var(--gutter-mob);
+  }
+
+  .grid {
+    grid-template-columns: 1fr;
+  }
+
+  .heading {
+    font-size: 30px;
+  }
+}
