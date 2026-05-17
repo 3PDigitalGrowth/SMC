@@ -94,7 +94,7 @@ export const IMAGES = {
     aspect: '4:3',
   },
   aboutHero: {
-    src: '/images/Steve-headshot-400pxw.jpg',
+    src: '/images/steven-about-hero.png',
     alt: 'Steven M Clark, founder and principal',
     caption: 'Steven M Clark. Founded the firm in 1985. Still its principal.',
     prompt: `Real client-supplied studio headshot. Do not regenerate.`,

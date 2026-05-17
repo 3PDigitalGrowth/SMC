@@ -65,7 +65,6 @@ export default function AboutPage() {
         }
         lede="Steven has lived in Gawler since 1971 and practised law here since 1985. The firm has been on the same street ever since. That is the short version. The longer version sits below."
         image={IMAGES.aboutHero}
-        imageCaption="Steven on Murray Street. Forty years on the same block."
       />
 
       <Editorial />

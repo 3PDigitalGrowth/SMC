@@ -38,7 +38,7 @@ const services = [
   {
     title: 'Property disputes',
     body: "Boundary lines, fences, easements, encroachments, and neighbours who will not see reason. We try to resolve before court. If court is needed, we are ready.",
-    href: '/gawler-property-lawyers',
+    href: '/property-disputes',
   },
   {
     title: 'Title searches and enquiries',
@@ -60,7 +60,6 @@ export default function PropertyPage() {
         }
         lede="Property decisions are usually the largest financial decisions a Gawler family makes. We have been advising on them since 1985, and we have read more contracts in this region than most agents have ever drafted."
         image={IMAGES.propertyHero}
-        imageCaption="A South Australian country property at the moment it changes hands."
       />
 
       <HubServices

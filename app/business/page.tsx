@@ -60,7 +60,6 @@ export default function BusinessPage() {
         }
         lede="We have run our own business on Adelaide Road for forty years. Most of what stresses you about running yours has stressed us too. We give you the advice we wish we had got."
         image={IMAGES.businessHero}
-        imageCaption="Murray Street, Gawler, just after seven. The town getting started."
       />
 
       <HubServices

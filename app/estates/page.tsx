@@ -33,7 +33,7 @@ const services = [
   {
     title: 'Power of Attorney',
     body: 'The document that lets a trusted person manage your finances if you cannot. Drafted with the same care as a Will, because it matters just as much.',
-    href: '/estate-planning',
+    href: '/power-of-attorney',
   },
   {
     title: 'Advance Care Directive',

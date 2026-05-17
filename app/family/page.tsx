@@ -18,22 +18,22 @@ const services = [
   {
     title: 'Separation and divorce',
     body: 'The legal end of a marriage or de facto relationship. We explain what you are entitled to, what the timeline looks like, and what each step actually costs.',
-    href: '/gawler-family-lawyers',
+    href: '/divorce-separation',
   },
   {
     title: 'Parenting and children',
     body: 'Parenting plans, custody, visitation, child support. Where possible, settled without going to court. Where necessary, we represent you firmly.',
-    href: '/gawler-family-lawyers',
+    href: '/parenting-children',
   },
   {
     title: 'Property settlement',
     body: 'Dividing assets after separation. We protect your interests, including any superannuation, family business stake, and the family home.',
-    href: '/gawler-family-lawyers',
+    href: '/property-settlement',
   },
   {
     title: 'Binding financial agreements',
     body: 'Often called prenuptials. A clear agreement, drafted properly, that holds up if things change later. Done quietly and respectfully.',
-    href: '/gawler-family-lawyers',
+    href: '/de-facto-relationships',
   },
   {
     title: 'Intervention orders',
@@ -43,7 +43,7 @@ const services = [
   {
     title: 'Family mediation',
     body: 'Where both sides are willing, mediation is faster, cheaper and easier on the children than court. We will tell you honestly if it is the right call.',
-    href: '/gawler-family-lawyers',
+    href: '/family-mediation',
   },
 ]
 
