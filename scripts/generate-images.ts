@@ -23,9 +23,9 @@ const MODEL = process.env.IMAGE_MODEL ?? 'gpt-image-1'
 
 const ASPECT_TO_SIZE: Record<ImageDef['aspect'], '1024x1024' | '1024x1536' | '1536x1024'> = {
   '1:1':  '1024x1024',
-  '4:5':  '1024x1536',
   '3:4':  '1024x1536',
-  '3:2':  '1536x1024',
+  '9:16': '1024x1536',
+  '4:3':  '1536x1024',
   '16:9': '1536x1024',
 }
 
