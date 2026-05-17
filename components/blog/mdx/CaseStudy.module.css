@@ -1,0 +1,84 @@
+.block {
+  margin: var(--space-5) 0;
+  padding: var(--space-4);
+  background: var(--paper-soft);
+  border-left: 3px solid var(--leaf);
+  border-radius: 0 var(--radius-md) var(--radius-md) 0;
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-2);
+}
+
+.industry {
+  font-family: var(--font-body), 'Inter', sans-serif;
+  font-size: 11px;
+  letter-spacing: 0.22em;
+  text-transform: uppercase;
+  color: var(--leaf);
+  margin: 0;
+}
+
+.metricRow {
+  display: flex;
+  align-items: baseline;
+  gap: 14px;
+  flex-wrap: wrap;
+}
+
+.metric {
+  font-family: var(--font-display), Georgia, serif;
+  font-size: clamp(32px, 5vw, 52px);
+  line-height: 1;
+  letter-spacing: -0.02em;
+  color: var(--ink);
+}
+
+.metricLabel {
+  font-family: var(--font-body), 'Inter', sans-serif;
+  font-size: 14px;
+  color: var(--ink-muted);
+  max-width: 30ch;
+  line-height: 1.4;
+}
+
+.body {
+  font-size: 16px;
+  line-height: 1.65;
+  color: var(--ink-soft);
+}
+
+.body p {
+  margin: 0;
+  max-width: none;
+}
+
+.quote {
+  font-family: var(--font-display), Georgia, serif;
+  font-style: italic;
+  font-size: 20px;
+  line-height: 1.4;
+  color: var(--ink);
+  padding-left: var(--space-3);
+  position: relative;
+  max-width: 36ch;
+  margin: var(--space-2) 0 0;
+}
+
+.quoteMark {
+  position: absolute;
+  left: -4px;
+  top: -10px;
+  font-size: 36px;
+  color: var(--leaf);
+  opacity: 0.4;
+  line-height: 1;
+}
+
+.author {
+  font-family: var(--font-body), 'Inter', sans-serif;
+  font-size: 12px;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  color: var(--ink-muted);
+  margin: 0;
+}

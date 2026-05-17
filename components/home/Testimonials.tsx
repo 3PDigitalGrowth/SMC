@@ -2,85 +2,119 @@ import SectionLabel from '@/components/ui/SectionLabel'
 import AnimateIn from '@/components/ui/AnimateIn'
 import styles from './Testimonials.module.css'
 
-function StarIcon() {
-  return (
-    <svg width="16" height="16" viewBox="0 0 24 24" fill="var(--gold)">
-      <path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z" />
-    </svg>
-  )
+export interface Testimonial {
+  quote: string
+  author: string
+  context?: string
+  rating?: number
 }
 
-const testimonials = [
+interface TestimonialsProps {
+  items?: Testimonial[]
+}
+
+const DEFAULT_ITEMS: Testimonial[] = [
   {
-    quote: 'Steven and his team guided me through the most difficult period of my life with patience, genuine expertise, and real care. I always knew exactly where things stood.',
-    initials: 'SJ',
-    name: 'SJ',
-    role: 'Family Law Client, Gawler, 2025',
+    quote:
+      "Steven and his team supported my dad for 20+ years. My dad chose wisely. As an expat with us as family based overseas, the closing down of his estate on his passing could have been a nightmare.",
+    author: 'Tony C.',
+    context: 'Estate · long-term client',
+    rating: 5,
   },
   {
-    quote: 'Clear, calm, and completely professional. Every step was explained in plain language. The property settlement outcome was far better than I expected.',
-    initials: 'MR',
-    name: 'MR',
-    role: 'Property Settlement Client, 2024',
+    quote:
+      'Very helpful, professional and dealt with our situation with sympathy and nothing was too much trouble.',
+    author: 'Andrea M.',
+    rating: 5,
   },
   {
-    quote: 'When I needed an intervention order urgently, they acted immediately. Discreet, compassionate, and effective. They made me feel safe when I needed it most.',
-    initials: 'AT',
-    name: 'AT',
-    role: 'Intervention Order Client, 2024',
+    quote:
+      'Steven and his team are very professional, caring and take the time to listen and explain how they set out to achieve the best outcome possible for you, the client.',
+    author: 'Russell P.',
+    rating: 5,
   },
 ]
 
-export default function Testimonials() {
+const GOOGLE_PROFILE_URL = 'https://maps.app.goo.gl/zKVSLimjnENP8s5Z9'
+
+export default function Testimonials({ items = DEFAULT_ITEMS }: TestimonialsProps) {
+  const hasItems = items.length > 0
+
   return (
     <section className={styles.section}>
-      <div className={styles.container}>
-        <SectionLabel>What Our Clients Say</SectionLabel>
-        <h2 className={styles.heading}>Real people. Real outcomes. Real Gawler.</h2>
-
-        <div className={styles.grid}>
-          {testimonials.map((t, index) => (
-            <AnimateIn key={index} delay={index * 120}>
-              <div className={styles.card}>
-                <span className={styles.quoteMark} aria-hidden="true">&ldquo;</span>
-                <div className={styles.stars}>
-                  <StarIcon />
-                  <StarIcon />
-                  <StarIcon />
-                  <StarIcon />
-                  <StarIcon />
-                </div>
-                <p className={styles.quote}>&ldquo;{t.quote}&rdquo;</p>
-                <hr className={styles.divider} />
-                <div className={styles.author}>
-                  <div className={styles.initials}>{t.initials}</div>
-                  <div>
-                    <div className={styles.authorName}>{t.name}</div>
-                    <div className={styles.authorRole}>{t.role}</div>
-                  </div>
-                </div>
-              </div>
-            </AnimateIn>
-          ))}
+      <div className={styles.inner}>
+        <div className={styles.head}>
+          <SectionLabel variant="leaf">What clients say</SectionLabel>
+          <h2 className={styles.heading}>
+            {hasItems ? (
+              <>
+                Words from the people we&apos;ve <em>actually helped</em>.
+              </>
+            ) : (
+              <>
+                Reviews from people we&apos;ve <em>actually helped</em>.
+              </>
+            )}
+          </h2>
+          <p className={styles.intro}>
+            Reproduced from our public Google profile. If we&apos;ve helped you before, a Google
+            review means a lot to a small firm.
+          </p>
         </div>
 
-        <p className={styles.disclaimer}>
-          Testimonials are from real clients. Names abbreviated for privacy.
-        </p>
+        {hasItems ? (
+          <ul className={styles.list}>
+            {items.map((t, i) => (
+              <AnimateIn key={`${t.author}-${i}`} delay={i * 80}>
+                <li className={styles.item}>
+                  {t.rating !== undefined && (
+                    <span className={styles.stars} aria-label={`${t.rating} out of 5 stars`}>
+                      {'★'.repeat(Math.round(t.rating))}
+                      <span className={styles.starsDim}>{'★'.repeat(5 - Math.round(t.rating))}</span>
+                    </span>
+                  )}
+                  <p className={styles.quote}>
+                    <span aria-hidden className={styles.quoteMark}>&ldquo;</span>
+                    {t.quote}
+                  </p>
+                  <p className={styles.author}>
+                    {t.author}
+                    {t.context && <span className={styles.context}> · {t.context}</span>}
+                  </p>
+                </li>
+              </AnimateIn>
+            ))}
+          </ul>
+        ) : (
+          <div className={styles.empty}>
+            <p className={styles.emptyHeading}>
+              We&apos;re reproducing reviews from our Google profile here shortly.
+            </p>
+            <p className={styles.emptyBody}>
+              In the meantime, you can read them directly, or add your own.
+            </p>
+          </div>
+        )}
 
-        {/* TODO: Add Google Review URL */}
-        <a href="#" className={styles.reviewLink}>
-          <svg width="16" height="16" viewBox="0 0 24 24" fill="none">
-            <path d="M22.56 12.25c0-.78-.07-1.53-.2-2.25H12v4.26h5.92a5.06 5.06 0 0 1-2.2 3.32v2.77h3.57c2.08-1.92 3.28-4.74 3.28-8.1z" fill="#4285F4" />
-            <path d="M12 23c2.97 0 5.46-.98 7.28-2.66l-3.57-2.77c-.98.66-2.23 1.06-3.71 1.06-2.86 0-5.29-1.93-6.16-4.53H2.18v2.84C3.99 20.53 7.7 23 12 23z" fill="#34A853" />
-            <path d="M5.84 14.09c-.22-.66-.35-1.36-.35-2.09s.13-1.43.35-2.09V7.07H2.18C1.43 8.55 1 10.22 1 12s.43 3.45 1.18 4.93l2.85-2.22.81-.62z" fill="#FBBC05" />
-            <path d="M12 5.38c1.62 0 3.06.56 4.21 1.64l3.15-3.15C17.45 2.09 14.97 1 12 1 7.7 1 3.99 3.47 2.18 7.07l3.66 2.84c.87-2.6 3.3-4.53 6.16-4.53z" fill="#EA4335" />
-          </svg>
-          See all our Google reviews
-          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="var(--gold)" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
-            <path d="M5 12h14M12 5l7 7-7 7" />
-          </svg>
-        </a>
+        <div className={styles.cta}>
+          <a
+            href={GOOGLE_PROFILE_URL}
+            target="_blank"
+            rel="noopener noreferrer"
+            className={styles.ctaLink}
+          >
+            Read all reviews on Google
+            <span aria-hidden>→</span>
+          </a>
+          <a
+            href={GOOGLE_PROFILE_URL}
+            target="_blank"
+            rel="noopener noreferrer"
+            className={styles.ctaSecondary}
+          >
+            Leave a review →
+          </a>
+        </div>
       </div>
     </section>
   )

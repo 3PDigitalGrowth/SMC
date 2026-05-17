@@ -1,31 +1,33 @@
 import Hero from '@/components/home/Hero'
-import SocialProofBar from '@/components/home/SocialProofBar'
-import EmpathySection from '@/components/home/EmpathySection'
-import ServicesGrid from '@/components/home/ServicesGrid'
-import WhyUs from '@/components/home/WhyUs'
-import LeadMagnet from '@/components/home/LeadMagnet'
+import Pathways from '@/components/home/Pathways'
 import Testimonials from '@/components/home/Testimonials'
-import TeamSection from '@/components/home/TeamSection'
-import BookingSection from '@/components/home/BookingSection'
-import LocationSection from '@/components/home/LocationSection'
-import ExitIntentModal from '@/components/home/ExitIntentModal'
+import Editorial from '@/components/home/Editorial'
+import Process from '@/components/home/Process'
+import Booking from '@/components/home/Booking'
+import LeadMagnet from '@/components/home/LeadMagnet'
 import StickyCTA from '@/components/home/StickyCTA'
+import ExitIntentModal from '@/components/home/ExitIntentModal'
+import { pageMetadata } from '@/lib/seo'
+
+export const metadata = pageMetadata({
+  path: '/',
+  title: 'Steven M Clark Lawyers, Gawler. Plain-English legal advice.',
+  description:
+    "Gawler's general law practice since 1985. Family, estates, property, business and Public Notary services. Free 15-minute call.",
+})
 
 export default function Home() {
   return (
     <>
       <Hero />
-      <SocialProofBar />
-      <EmpathySection />
-      <ServicesGrid />
-      <WhyUs />
-      <LeadMagnet />
+      <Pathways />
       <Testimonials />
-      <TeamSection />
-      <BookingSection />
-      <LocationSection />
-      <ExitIntentModal />
+      <Editorial />
+      <Process />
+      <Booking />
+      <LeadMagnet />
       <StickyCTA />
+      <ExitIntentModal />
     </>
   )
 }

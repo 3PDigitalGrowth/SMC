@@ -1,107 +1,117 @@
 import Link from 'next/link'
-import Button from '@/components/ui/Button'
 import styles from './Footer.module.css'
+
+const columns = [
+  {
+    title: 'Family',
+    links: [
+      { label: 'Divorce & separation', href: '/divorce-separation' },
+      { label: 'Parenting & children', href: '/parenting-children' },
+      { label: 'Property settlement', href: '/property-settlement' },
+      { label: 'Intervention orders', href: '/intervention-domestic-violence-lawyer' },
+    ],
+  },
+  {
+    title: 'Estates',
+    links: [
+      { label: 'Wills & probate', href: '/gawler-estate-lawyer' },
+      { label: 'Estate planning', href: '/estate-planning' },
+      { label: 'Power of attorney', href: '/power-of-attorney' },
+      { label: 'Advance care planning', href: '/gawler-estate-planning-lawyers' },
+      { label: 'Trusts', href: '/gawler-trust-lawyer' },
+    ],
+  },
+  {
+    title: 'Property & Business',
+    links: [
+      { label: 'Property law & conveyancing', href: '/gawler-property-lawyers' },
+      { label: 'Property disputes', href: '/property-disputes' },
+      { label: 'Commercial leases', href: '/gawler-lease-lawyer' },
+      { label: 'Business sale & purchase', href: '/gawler-business-lawyers' },
+      { label: 'Commercial & corporate', href: '/gawler-commercial-lawyers' },
+      { label: 'Debt recovery', href: '/gawler-debt-recovery' },
+      { label: 'Building & construction', href: '/gawler-construction-lawyer' },
+    ],
+  },
+  {
+    title: 'More',
+    links: [
+      { label: 'Criminal & traffic', href: '/criminal-defence-lawyer' },
+      { label: 'Personal injury', href: '/gawler-personal-injury-lawyers' },
+      { label: 'Motor vehicle accidents', href: '/gawler-compensation-lawyers' },
+      { label: 'Dispute resolution', href: '/gawler-dispute-resolution-lawyers' },
+      { label: 'Industrial relations', href: '/gawler-industrial-relations-lawyer' },
+      { label: 'Insolvency', href: '/gawler-insolvency-lawyer' },
+      { label: 'Notary Public', href: '/notary-public-gawler' },
+    ],
+  },
+]
 
 export default function Footer() {
   return (
     <footer className={styles.footer}>
-      <div className={styles.grid}>
-        <div>
-          <div className={styles.wordmark}>
-            <span className={styles.wordmarkName}>Steven M Clark</span>
-            <span className={styles.wordmarkLabel}>Legal</span>
-            <div className={styles.wordmarkRule} />
+      <div className={styles.top}>
+        <div className={styles.inner}>
+          <div className={styles.brandBlock}>
+            <Link href="/" className={styles.wordmark}>
+              <span className={styles.wordmarkName}>Steven M Clark</span>
+              <span className={styles.wordmarkLabel}>Lawyers · Gawler · Est. 1985</span>
+            </Link>
+            <p className={styles.tagline}>
+              The Gawler firm that&apos;s been on the same street since 1985.
+              Family, estates, property, business, and the only Public Notary between
+              North Adelaide and the Riverland.
+            </p>
+            <address className={styles.address}>
+              <div>1 Adelaide Rd, Gawler South SA 5118</div>
+              <div>Mon–Fri · 9:00am – 5:00pm</div>
+              <div><a href="tel:0885226025">(08) 8522 6025</a></div>
+              <div><a href="mailto:law@stevenmclark.com.au">law@stevenmclark.com.au</a></div>
+              <div>
+                <a
+                  href="https://maps.app.goo.gl/zKVSLimjnENP8s5Z9"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  Leave a Google review →
+                </a>
+              </div>
+            </address>
           </div>
-          <p className={styles.tagline}>Serving Gawler families since 1985.</p>
-          {/* TODO: Add Facebook page URL */}
-          <a
-            href="#"
-            className={styles.social}
-            target="_blank"
-            rel="noopener noreferrer"
-            aria-label="Facebook"
-          >
-            <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
-              <path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z" />
-            </svg>
-          </a>
-        </div>
 
-        <div>
-          <h4 className={styles.colHeading}>Family Law</h4>
-          <Link href="/gawler-family-lawyers" className={styles.footerLink}>
-            Divorce &amp; Family Law
-          </Link>
-          <Link href="/gawler-family-lawyers" className={styles.footerLink}>
-            Child Custody &amp; Parenting
-          </Link>
-          <Link href="/gawler-family-lawyers" className={styles.footerLink}>
-            Property Settlement
-          </Link>
-          <Link href="/intervention-domestic-violence-lawyer" className={styles.footerLink}>
-            Intervention Orders
-          </Link>
-          <Link href="/divorce-australia" className={styles.footerLink}>
-            Divorce in Australia
-          </Link>
-          <Link href="/gawler-family-lawyers" className={styles.footerLink}>
-            Family Mediation
-          </Link>
-        </div>
-
-        <div>
-          <h4 className={styles.colHeading}>All Services</h4>
-          <Link href="/gawler-property-lawyers" className={styles.footerLink}>
-            Property Law
-          </Link>
-          <Link href="/gawler-estate-lawyer" className={styles.footerLink}>
-            Wills &amp; Estate Planning
-          </Link>
-          <Link href="/gawler-criminal-lawyer" className={styles.footerLink}>
-            Criminal Defence
-          </Link>
-          <Link href="/gawler-business-lawyers" className={styles.footerLink}>
-            Business &amp; Commercial
-          </Link>
-          <Link href="/gawler-personal-injury-lawyer" className={styles.footerLink}>
-            Personal Injury
-          </Link>
-          <Link href="/contact-us" className={styles.footerLink}>
-            Notary Public
-          </Link>
-        </div>
-
-        <div>
-          <h4 className={styles.colHeading}>Get In Touch</h4>
-          <span className={styles.contactItem}>
-            1 Adelaide Rd, Gawler South SA 5118
-          </span>
-          <a href="tel:0885226025" className={styles.footerLink}>
-            (08) 8522 6025
-          </a>
-          <a href="mailto:law@stevenmclark.com.au" className={styles.footerLink}>
-            law@stevenmclark.com.au
-          </a>
-          <div style={{ marginTop: '20px' }}>
-            <Button variant="gold" size="sm" href="#book" fullWidth>
-              Book Free Consult
-            </Button>
+          <div className={styles.cols}>
+            {columns.map((col) => (
+              <div key={col.title}>
+                <h4 className={styles.colHeading}>{col.title}</h4>
+                {col.links.map((link) => (
+                  <Link key={link.label} href={link.href} className={styles.footerLink}>
+                    {link.label}
+                  </Link>
+                ))}
+              </div>
+            ))}
           </div>
         </div>
       </div>
 
       <div className={styles.bottom}>
-        <p className={styles.copyright}>
-          &copy; 2026 Steven M Clark Pty Ltd. All rights reserved. Liability limited by a scheme approved under Professional Standards Legislation.
-        </p>
-        <a
-          href="https://3pdigital.com.au"
-          target="_blank"
-          rel="noopener noreferrer"
-          className={styles.credit}
-        >
-          Website by 3P Digital
-        </a>
+        <div className={styles.inner}>
+          <p className={styles.copyright}>
+            &copy; {new Date().getFullYear()} Steven M Clark Pty Ltd. Liability limited by a scheme approved under Professional Standards Legislation.
+          </p>
+          <div className={styles.bottomRight}>
+            <Link href="/privacy" className={styles.bottomLink}>Privacy</Link>
+            <Link href="/terms" className={styles.bottomLink}>Terms</Link>
+            <a
+              href="https://3pdigital.com.au"
+              target="_blank"
+              rel="noopener noreferrer"
+              className={styles.bottomLink}
+            >
+              Website by 3P Digital
+            </a>
+          </div>
+        </div>
       </div>
     </footer>
   )

@@ -13,33 +13,49 @@ interface MobileMenuProps {
 
 const sections = [
   {
-    title: 'Family Law',
+    title: 'Family',
+    hubHref: '/family',
     links: [
-      { label: 'Divorce & Family Law', href: '/gawler-family-lawyers' },
-      { label: 'Child Custody & Parenting', href: '/gawler-family-lawyers' },
-      { label: 'Property Settlement', href: '/gawler-family-lawyers' },
-      { label: 'Intervention Orders', href: '/intervention-domestic-violence-lawyer' },
-      { label: 'Family Mediation', href: '/gawler-family-lawyers' },
-      { label: 'De Facto Relationships', href: '/gawler-family-lawyers' },
+      { label: 'Divorce & separation', href: '/divorce-separation' },
+      { label: 'Parenting & children', href: '/parenting-children' },
+      { label: 'Property settlement', href: '/property-settlement' },
+      { label: 'Intervention orders', href: '/intervention-domestic-violence-lawyer' },
+      { label: 'De facto relationships', href: '/de-facto-relationships' },
+      { label: 'Family mediation', href: '/family-mediation' },
+    ],
+  },
+  {
+    title: 'Estates',
+    hubHref: '/estates',
+    links: [
+      { label: 'Wills & probate', href: '/gawler-estate-lawyer' },
+      { label: 'Estate planning', href: '/estate-planning' },
+      { label: 'Advance care planning', href: '/gawler-estate-planning-lawyers' },
+      { label: 'Family & discretionary trusts', href: '/gawler-trust-lawyer' },
+      { label: 'Power of attorney', href: '/power-of-attorney' },
     ],
   },
   {
     title: 'Property',
+    hubHref: '/property',
     links: [
-      { label: 'Property Law', href: '/gawler-property-lawyers' },
-      { label: 'Building & Construction', href: '/gawler-construction-lawyer' },
-      { label: 'Retail & Commercial Leases', href: '/gawler-lease-lawyer' },
-      { label: 'Business & Purchase Sale', href: '/gawler-business-lawyers' },
-      { label: 'Commercial & Corporate', href: '/gawler-commercial-lawyers' },
+      { label: 'Property law & conveyancing', href: '/gawler-property-lawyers' },
+      { label: 'Property disputes', href: '/property-disputes' },
+      { label: 'Building & construction', href: '/gawler-construction-lawyer' },
+      { label: 'Retail & commercial leases', href: '/gawler-lease-lawyer' },
     ],
   },
   {
-    title: 'Wills & Estates',
+    title: 'Business',
+    hubHref: '/business',
     links: [
-      { label: 'Wills, Probate & Estate Planning', href: '/gawler-estate-lawyer' },
-      { label: 'Estate Planning', href: '/estate-planning' },
-      { label: 'Estate & Advance Care Planning', href: '/gawler-estate-planning-lawyers' },
-      { label: 'Unit, Discretionary & Family Trusts', href: '/gawler-trust-lawyer' },
+      { label: 'Commercial & corporate', href: '/gawler-commercial-lawyers' },
+      { label: 'Business sale & purchase', href: '/gawler-business-lawyers' },
+      { label: 'Debt recovery', href: '/gawler-debt-recovery' },
+      { label: 'Industrial relations', href: '/gawler-industrial-relations-lawyer' },
+      { label: 'Insolvency', href: '/gawler-insolvency-lawyer' },
+      { label: 'Criminal & traffic', href: '/criminal-defence-lawyer' },
+      { label: 'Notarial services', href: '/notary-public-gawler' },
     ],
   },
 ]
@@ -48,24 +64,17 @@ export default function MobileMenu({ isOpen, onClose }: MobileMenuProps) {
   const [expanded, setExpanded] = useState<string | null>(null)
 
   useEffect(() => {
-    if (isOpen) {
-      document.body.style.overflow = 'hidden'
-    } else {
-      document.body.style.overflow = ''
-    }
-    return () => {
-      document.body.style.overflow = ''
-    }
+    document.body.style.overflow = isOpen ? 'hidden' : ''
+    return () => { document.body.style.overflow = '' }
   }, [isOpen])
 
   useEffect(() => {
+    if (!isOpen) return
     const handleEscape = (e: KeyboardEvent) => {
       if (e.key === 'Escape') onClose()
     }
-    if (isOpen) {
-      document.addEventListener('keydown', handleEscape)
-      return () => document.removeEventListener('keydown', handleEscape)
-    }
+    document.addEventListener('keydown', handleEscape)
+    return () => document.removeEventListener('keydown', handleEscape)
   }, [isOpen, onClose])
 
   const handleBookClick = () => {
@@ -78,87 +87,93 @@ export default function MobileMenu({ isOpen, onClose }: MobileMenuProps) {
 
   return (
     <div className={`${styles.overlay} ${isOpen ? styles.open : ''}`}>
-      <button className={styles.closeBtn} onClick={onClose} aria-label="Close menu">
-        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="white" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
-          <path d="M18 6L6 18M6 6l12 12" />
-        </svg>
-      </button>
-
-      <div className={styles.wordmark}>
-        <span className={styles.wordmarkName}>Steven M Clark</span>
-        <span className={styles.wordmarkLabel}>Legal</span>
-        <div className={styles.wordmarkRule} />
+      <div className={styles.head}>
+        <div className={styles.wordmark}>
+          <span className={styles.wordmarkName}>Steven M Clark</span>
+          <span className={styles.wordmarkLabel}>Lawyers · Gawler · Est. 1985</span>
+        </div>
+        <button className={styles.closeBtn} onClick={onClose} aria-label="Close menu">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round">
+            <path d="M18 6L6 18M6 6l12 12" />
+          </svg>
+        </button>
       </div>
 
-      <hr className={styles.divider} />
-
-      {sections.map((section) => (
-        <div key={section.title} className={styles.accordion}>
-          <button
-            className={styles.accordionTrigger}
-            onClick={() =>
-              setExpanded(expanded === section.title ? null : section.title)
-            }
-            aria-expanded={expanded === section.title}
-          >
-            {section.title}
-            <svg
-              className={`${styles.chevron} ${
-                expanded === section.title ? styles.chevronOpen : ''
-              }`}
-              width="16"
-              height="16"
-              viewBox="0 0 24 24"
-              fill="none"
-              stroke="white"
-              strokeWidth="2"
-              strokeLinecap="round"
-              strokeLinejoin="round"
-            >
-              <path d="M6 9l6 6 6-6" />
-            </svg>
-          </button>
-          <div
-            className={`${styles.subLinks} ${
-              expanded === section.title ? styles.subLinksOpen : ''
-            }`}
-          >
-            <div className={styles.subLinksInner}>
-              {section.links.map((link) => (
+      <div className={styles.scrollArea}>
+        {sections.map((section) => {
+          const isOpenSec = expanded === section.title
+          return (
+            <div key={section.title} className={styles.accordion}>
+              <div className={styles.accordionTrigger}>
                 <Link
-                  key={link.label}
-                  href={link.href}
-                  className={styles.subLink}
+                  href={section.hubHref}
+                  className={styles.accordionLabel}
                   onClick={onClose}
                 >
-                  {link.label}
+                  {section.title}
                 </Link>
-              ))}
+                <button
+                  className={styles.accordionToggle}
+                  onClick={() => setExpanded(isOpenSec ? null : section.title)}
+                  aria-expanded={isOpenSec}
+                  aria-label={`${isOpenSec ? 'Collapse' : 'Expand'} ${section.title} sub-menu`}
+                >
+                  <svg
+                    className={`${styles.chevron} ${isOpenSec ? styles.chevronOpen : ''}`}
+                    width="18"
+                    height="18"
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    stroke="currentColor"
+                    strokeWidth="1.5"
+                    strokeLinecap="round"
+                  >
+                    <path d="M6 9l6 6 6-6" />
+                  </svg>
+                </button>
+              </div>
+              <div className={`${styles.subLinks} ${isOpenSec ? styles.subLinksOpen : ''}`}>
+                <div className={styles.subLinksInner}>
+                  <Link
+                    href={section.hubHref}
+                    className={`${styles.subLink} ${styles.subLinkHub}`}
+                    onClick={onClose}
+                  >
+                    View all {section.title.toLowerCase()} services →
+                  </Link>
+                  {section.links.map((link) => (
+                    <Link
+                      key={link.label}
+                      href={link.href}
+                      className={styles.subLink}
+                      onClick={onClose}
+                    >
+                      {link.label}
+                    </Link>
+                  ))}
+                </div>
+              </div>
             </div>
-          </div>
-        </div>
-      ))}
+          )
+        })}
 
-      <Link href="/our-team" className={styles.plainLink} onClick={onClose}>
-        About
-      </Link>
-      <Link href="/contact-us" className={styles.plainLink} onClick={onClose}>
-        Contact
-      </Link>
+        <Link href="/about" className={styles.plainLink} onClick={onClose}>About</Link>
+        <Link href="/insights" className={styles.plainLink} onClick={onClose}>Insights</Link>
+        <Link href="/contact" className={styles.plainLink} onClick={onClose}>Contact</Link>
+      </div>
 
-      <hr className={styles.divider} />
-
-      <a
-        href="tel:0885226025"
-        className={styles.phoneNumber}
-        onClick={() => trackPhoneClick()}
-      >
-        (08) 8522 6025
-      </a>
-
-      <Button variant="gold" size="lg" fullWidth onClick={handleBookClick}>
-        Book Free Consult
-      </Button>
+      <div className={styles.foot}>
+        <a
+          href="tel:0885226025"
+          className={styles.phoneNumber}
+          onClick={() => trackPhoneClick()}
+        >
+          (08) 8522 6025
+        </a>
+        <Button variant="leaf" size="lg" fullWidth onClick={handleBookClick}>
+          Book a free 15-minute call
+        </Button>
+      </div>
     </div>
   )
 }

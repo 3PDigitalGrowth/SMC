@@ -1,0 +1,55 @@
+.block {
+  margin: var(--space-4) 0;
+  padding: var(--space-3);
+  border-radius: var(--radius-md);
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  border: 1px solid;
+}
+
+.label {
+  font-family: var(--font-body), 'Inter', sans-serif;
+  font-size: 11px;
+  letter-spacing: 0.22em;
+  text-transform: uppercase;
+}
+
+.body {
+  font-size: 17px;
+  line-height: 1.6;
+  color: var(--ink-soft);
+}
+
+.body p {
+  margin: 0;
+  max-width: none;
+}
+
+.body p + p {
+  margin-top: 10px;
+}
+
+.info {
+  background: var(--paper-soft);
+  border-color: var(--rule);
+}
+.info .label {
+  color: var(--ink-muted);
+}
+
+.tip {
+  background: var(--leaf-pale);
+  border-color: var(--leaf);
+}
+.tip .label {
+  color: var(--leaf-deep);
+}
+
+.warning {
+  background: var(--ember-pale);
+  border-color: var(--ember);
+}
+.warning .label {
+  color: var(--ember);
+}

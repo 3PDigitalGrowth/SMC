@@ -1,0 +1,77 @@
+---
+title: "Test post — every block in one file"
+slug: "test-post"
+date: "2026-05-17"
+author: "Steven M Clark"
+readTime: "5 min read"
+metaTitle: "Test post — every block in one file"
+metaDescription: "A sandbox post for verifying the blog template renders all components correctly."
+primaryKeyword: "test post"
+keywords: ["test", "sandbox"]
+tags: ["test"]
+breadcrumb: ["Insights", "Test"]
+faqSchema:
+  - question: "Does the FAQ block render?"
+    answer: "Yes — with JSON-LD schema."
+  - question: "Does it support multiple questions?"
+    answer: "It does. Each one expands the structured data block."
+internalLinks:
+  - url: "/contact"
+    anchor: "get in touch"
+references:
+  - title: "Sample reference"
+    url: "https://example.com"
+    note: "Demonstrates references rendering"
+draft: true
+---
+
+This is the intro paragraph. Use it to set the frame for the article: who it is for, what the reader will know by the end, and the moment that justifies the read.
+
+<KeyTakeaways items={[
+  "The first thing the reader should walk away with",
+  "The second thing the reader should walk away with",
+  "The third thing the reader should walk away with",
+]} />
+
+## A section heading
+
+Body copy goes here. This is where the substance of the article lives — written in plain English, with concrete examples, and without legalese.
+
+A second paragraph in the same section, used for nuance or counter-examples. Articles read better when each section has at least two paragraphs of substance before the next heading.
+
+<Callout type="tip">
+  This is a tip callout. Use it for asides that help the reader without breaking the flow of the section.
+</Callout>
+
+<ComparisonTable
+  headers={["Factor", "Option A", "Option B"]}
+  rows={[
+    ["Cost", "$100", "$200"],
+    ["Speed", "Fast", "Slow"],
+    ["Best for", "Quick decisions", "High-stakes decisions"],
+  ]}
+/>
+
+<Stats items={[
+  { value: "1985", label: "Year the firm was founded" },
+  { value: "36+", label: "Years on the same street" },
+  { value: "1", label: "Public Notary between North Adelaide and the Riverland" },
+]} />
+
+<CaseStudy
+  industry="Family law"
+  metric="6 weeks"
+  metricLabel="from first call to settled property orders"
+  quote="The legal part stopped being the loud thing in the house."
+  author="Family client, Gawler"
+>
+  A Gawler couple separating after twelve years came in expecting a long, ugly process. We agreed early on a parenting plan and resolved property settlement in three meetings.
+</CaseStudy>
+
+<CTA slot="primary" />
+
+## Closing thoughts
+
+A final paragraph that ties the article back to action — what the reader should do next, or how to get in touch if their situation is genuinely live. Keep it warm, not pushy.
+
+<CTA slot="inline-form" />

@@ -1,0 +1,38 @@
+.section {
+  background: var(--paper);
+  padding: var(--space-5) 0 var(--space-7);
+}
+
+.inner {
+  max-width: 880px;
+  margin: 0 auto;
+  padding: 0 var(--gutter);
+}
+
+.list {
+  display: flex;
+  flex-direction: column;
+}
+
+.empty {
+  padding: var(--space-5) 0;
+  text-align: center;
+}
+
+.emptyEyebrow {
+  font-family: var(--font-body), 'Inter', sans-serif;
+  font-size: 11px;
+  letter-spacing: 0.22em;
+  text-transform: uppercase;
+  color: var(--leaf);
+  margin: 0 0 var(--space-2);
+}
+
+.emptyHeading {
+  font-family: var(--font-display), Georgia, serif;
+  font-size: clamp(24px, 3vw, 32px);
+  line-height: 1.25;
+  color: var(--ink);
+  margin: 0 auto;
+  max-width: 32ch;
+}

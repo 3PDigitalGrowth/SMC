@@ -2,13 +2,14 @@ import Link from 'next/link'
 import styles from './Button.module.css'
 
 interface ButtonProps {
-  variant: 'gold' | 'navy' | 'ghost' | 'outline'
+  variant: 'leaf' | 'ink' | 'quiet' | 'ghost' | 'onDark'
   size?: 'sm' | 'md' | 'lg'
   href?: string
   onClick?: () => void
   children: React.ReactNode
   fullWidth?: boolean
   type?: 'button' | 'submit'
+  disabled?: boolean
 }
 
 export default function Button({
@@ -19,6 +20,7 @@ export default function Button({
   children,
   fullWidth,
   type = 'button',
+  disabled,
 }: ButtonProps) {
   const className = [
     styles.btn,
@@ -38,7 +40,7 @@ export default function Button({
   }
 
   return (
-    <button type={type} className={className} onClick={onClick}>
+    <button type={type} className={className} onClick={onClick} disabled={disabled}>
       {children}
     </button>
   )

@@ -1,37 +1,34 @@
 import type { Metadata } from 'next'
-import { Playfair_Display, Lato } from 'next/font/google'
+import { Fraunces, Inter } from 'next/font/google'
 import Nav from '@/components/nav/Nav'
 import Footer from '@/components/footer/Footer'
+import SmoothScroll from '@/components/ui/SmoothScroll'
+import { LEGAL_SERVICE_JSON_LD } from '@/lib/seo'
 import './globals.css'
 
-const playfair = Playfair_Display({
+const fraunces = Fraunces({
   subsets: ['latin'],
-  weight: ['400', '600', '700'],
+  weight: ['400', '500', '600'],
   style: ['normal', 'italic'],
   variable: '--font-display',
   display: 'swap',
 })
 
-const lato = Lato({
+const inter = Inter({
   subsets: ['latin'],
-  weight: ['300', '400', '700'],
+  weight: ['300', '400', '500', '600'],
   variable: '--font-body',
   display: 'swap',
 })
 
 export const metadata: Metadata = {
-  title: 'Steven M Clark Legal | Gawler Family Lawyers Since 1985',
-  description:
-    "Gawler's trusted family law firm. Expert advice on divorce, child custody, property settlement, and intervention orders. Free 30-minute consultation.",
   metadataBase: new URL('https://stevenmclark.com.au'),
-  openGraph: {
-    title: 'Steven M Clark Legal | Gawler Family Lawyers Since 1985',
-    description: 'Calm, expert legal guidance for Gawler families since 1985.',
-    url: 'https://stevenmclark.com.au',
-    siteName: 'Steven M Clark Legal',
-    locale: 'en_AU',
-    type: 'website',
+  title: {
+    default: 'Steven M Clark Lawyers, Gawler. Plain-English legal advice since 1985.',
+    template: '%s',
   },
+  description:
+    "Gawler's general law practice since 1985. Family, estates, property, business and Public Notary services.",
 }
 
 export default function RootLayout({
@@ -40,12 +37,16 @@ export default function RootLayout({
   children: React.ReactNode
 }) {
   return (
-    <html lang="en-AU" className={`${playfair.variable} ${lato.variable}`}>
-      {/* TODO: Add Google Tag Manager <Script> block once GTM container ID is provided */}
+    <html lang="en-AU" className={`${fraunces.variable} ${inter.variable}`}>
       <body>
+        <SmoothScroll />
         <Nav />
         <main>{children}</main>
         <Footer />
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{ __html: LEGAL_SERVICE_JSON_LD }}
+        />
       </body>
     </html>
   )

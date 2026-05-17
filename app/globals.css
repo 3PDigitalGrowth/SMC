@@ -1,27 +1,79 @@
 :root {
-  --navy:        #1B2B4B;
-  --navy-light:  #243660;
-  --navy-dark:   #111C31;
-  --gold:        #B8860B;
-  --gold-light:  #D4A017;
-  --gold-pale:   #FDF6E3;
-  --gold-muted:  #C8A84B;
-  --cream:       #FAFAF7;
-  --white:       #FFFFFF;
-  --grey-100:    #F5F5F2;
-  --grey-200:    #E8E8E3;
-  --grey-400:    #AFAFAA;
-  --grey-600:    #6B6B66;
-  --grey-800:    #333330;
+  /* Surface — warm off-white, never stark */
+  --paper:        #F6F1E8;
+  --paper-soft:   #FBF7EE;
+  --paper-deep:   #EFE7D6;
 
-  --radius-sm:   4px;
-  --radius-md:   8px;
-  --radius-lg:   12px;
-  --radius-pill: 100px;
+  /* Ink — deep, warm, not corporate navy */
+  --ink:          #1A1814;
+  --ink-soft:     #2D2A22;
+  --ink-muted:    #6B6457;
+  --ink-faint:    #A39B8B;
+  --rule:         #D9D0BE;
 
-  --max-width:   1200px;
-  --gutter:      80px;
-  --gutter-mob:  24px;
+  /* Accent — eucalyptus, the SA bush */
+  --leaf:         #4F6B4A;
+  --leaf-deep:    #3A4F37;
+  --leaf-pale:    #DCE3D6;
+
+  /* Heritage warm — used sparingly, for moments of warmth */
+  --ember:        #B5462A;
+  --ember-pale:   #F2D9CE;
+
+  /* Glass — for Glassmorphism 2.0 surfaces */
+  --glass-light:  rgba(251, 247, 238, 0.65);
+  --glass-deep:   rgba(26, 24, 20, 0.55);
+  --glass-blur:   blur(20px) saturate(140%);
+  --glass-edge:   1px solid rgba(255, 255, 255, 0.4);
+
+  /* Type scale — editorial, generous */
+  --t-eyebrow:    11px;
+  --t-body-s:     14px;
+  --t-body:       17px;
+  --t-body-l:     20px;
+  --t-h4:         22px;
+  --t-h3:         32px;
+  --t-h2:         clamp(36px, 5vw, 64px);
+  --t-h1:         clamp(48px, 7.5vw, 104px);
+
+  /* Spacing — magazine generous */
+  --space-1:      8px;
+  --space-2:      16px;
+  --space-3:      24px;
+  --space-4:      40px;
+  --space-5:      64px;
+  --space-6:      96px;
+  --space-7:      144px;
+
+  /* Radii — soft, almost imperceptible */
+  --radius-sm:    4px;
+  --radius-md:    10px;
+  --radius-lg:    18px;
+  --radius-pill:  100px;
+
+  /* Motion — cinematic curves */
+  --ease-out:     cubic-bezier(0.16, 1, 0.3, 1);
+  --ease-in-out:  cubic-bezier(0.65, 0, 0.35, 1);
+  --dur-fast:     220ms;
+  --dur-med:      520ms;
+  --dur-slow:     1200ms;
+
+  --max-width:    1280px;
+  --measure:      640px;
+  --gutter:       80px;
+  --gutter-mob:   24px;
+
+  /* Spec-compliant brand-token aliases (blog-template-spec.md §5) */
+  --brand-primary:  var(--leaf);
+  --brand-accent:   var(--ember);
+  --brand-text:     var(--ink-soft);
+  --brand-heading:  var(--ink);
+  --brand-muted:    var(--ink-muted);
+  --brand-bg:       var(--paper);
+  --brand-surface:  var(--paper-soft);
+  --brand-border:   var(--rule);
+  --brand-cta-bg:   var(--leaf);
+  --brand-cta-text: var(--paper-soft);
 }
 
 *,
@@ -33,20 +85,39 @@
 }
 
 html {
-  scroll-behavior: smooth;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  text-rendering: optimizeLegibility;
 }
 
 body {
-  font-family: var(--font-body), 'Helvetica Neue', sans-serif;
-  background: var(--cream);
-  color: var(--grey-800);
-  line-height: 1.6;
+  font-family: var(--font-body), 'Inter', -apple-system, sans-serif;
+  font-size: var(--t-body);
+  background: var(--paper);
+  color: var(--ink);
+  line-height: 1.55;
+  font-feature-settings: 'ss01', 'cv11';
+  overflow-x: hidden;
 }
 
-h1, h2, h3, h4 {
+h1, h2, h3, h4, h5 {
   font-family: var(--font-display), Georgia, serif;
+  font-weight: 400;
+  letter-spacing: -0.015em;
+  line-height: 1.05;
+  color: var(--ink);
+}
+
+h1 { font-size: var(--t-h1); }
+h2 { font-size: var(--t-h2); }
+h3 { font-size: var(--t-h3); }
+h4 { font-size: var(--t-h4); }
+
+p { max-width: var(--measure); }
+
+em {
+  font-style: italic;
+  font-feature-settings: 'ss01';
 }
 
 img {
@@ -57,6 +128,7 @@ img {
 a {
   color: inherit;
   text-decoration: none;
+  transition: color var(--dur-fast) var(--ease-out);
 }
 
 button {
@@ -64,6 +136,7 @@ button {
   cursor: pointer;
   border: none;
   background: none;
+  color: inherit;
 }
 
 input,
@@ -71,14 +144,54 @@ select,
 textarea {
   font-family: inherit;
   font-size: inherit;
+  color: inherit;
 }
 
 ul, ol {
   list-style: none;
 }
 
-@media (max-width: 768px) {
+::selection {
+  background: var(--leaf);
+  color: var(--paper-soft);
+}
+
+/* Section primitives */
+.section-shell {
+  padding: var(--space-7) var(--gutter);
+}
+
+.section-inner {
+  max-width: var(--max-width);
+  margin: 0 auto;
+}
+
+/* Honour reduced motion */
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.001ms !important;
+    transition-duration: 0.001ms !important;
+  }
+}
+
+@media (max-width: 1023px) {
+  :root {
+    --gutter: 40px;
+    --space-7: 96px;
+    --space-6: 72px;
+  }
+}
+
+@media (max-width: 640px) {
   :root {
     --gutter: var(--gutter-mob);
+    --space-7: 72px;
+    --space-6: 56px;
+    --space-5: 48px;
+  }
+  body {
+    font-size: 16px;
   }
 }

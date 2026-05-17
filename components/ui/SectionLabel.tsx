@@ -2,13 +2,9 @@ import styles from './SectionLabel.module.css'
 
 interface SectionLabelProps {
   children: React.ReactNode
-  variant?: 'gold' | 'gold-muted'
+  variant?: 'leaf' | 'ink' | 'paper' | 'ember'
 }
 
-export default function SectionLabel({ children, variant = 'gold' }: SectionLabelProps) {
-  return (
-    <p className={`${styles.label} ${styles[variant]}`}>
-      {children}
-    </p>
-  )
+export default function SectionLabel({ children, variant = 'leaf' }: SectionLabelProps) {
+  return <p className={`${styles.label} ${styles[variant]}`}>{children}</p>
 }
