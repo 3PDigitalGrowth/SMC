@@ -23,26 +23,16 @@
 
 .wordmark {
   display: flex;
-  flex-direction: column;
-  gap: 4px;
   text-decoration: none;
-  color: var(--paper-soft);
   margin-bottom: var(--space-3);
 }
 
-.wordmarkName {
-  font-family: var(--font-display), Georgia, serif;
-  font-size: 24px;
-  letter-spacing: -0.02em;
-  line-height: 1;
-}
-
-.wordmarkLabel {
-  font-family: var(--font-body), 'Inter', sans-serif;
-  font-size: 10px;
-  text-transform: uppercase;
-  letter-spacing: 0.22em;
-  color: rgba(246, 241, 232, 0.6);
+.logo {
+  height: 44px;
+  width: auto;
+  display: block;
+  filter: brightness(0) invert(1);
+  opacity: 0.9;
 }
 
 .tagline {

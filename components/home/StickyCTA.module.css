@@ -1,9 +1,8 @@
 .bar {
   position: fixed;
   bottom: 20px;
-  left: 50%;
-  transform: translateX(-50%) translateY(120%);
-  z-index: 150;
+  right: var(--gutter);
+  z-index: 190;
   display: flex;
   align-items: center;
   gap: 4px;
@@ -11,13 +10,8 @@
   background: var(--ink);
   color: var(--paper-soft);
   border-radius: var(--radius-pill);
-  box-shadow: 0 20px 48px -16px rgba(0, 0, 0, 0.4);
-  transition: transform var(--dur-med) var(--ease-out);
+  box-shadow: 0 8px 28px -8px rgba(0, 0, 0, 0.35);
   font-family: var(--font-body), 'Inter', sans-serif;
-}
-
-.visible {
-  transform: translateX(-50%) translateY(0);
 }
 
 .phone {
@@ -54,32 +48,18 @@
   background: var(--leaf-deep);
 }
 
-.dismiss {
-  width: 32px;
-  height: 32px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  background: transparent;
-  border: none;
-  color: rgba(246, 241, 232, 0.5);
-  border-radius: 100px;
-  cursor: pointer;
-  transition: color var(--dur-fast) var(--ease-out);
-}
-
-.dismiss:hover {
-  color: var(--paper-soft);
+@media (max-width: 1023px) {
+  .bar {
+    top: auto;
+    bottom: 16px;
+    right: 16px;
+  }
 }
 
 @media (max-width: 640px) {
   .bar {
     left: 12px;
     right: 12px;
-    transform: translateY(120%);
     justify-content: center;
-  }
-  .visible {
-    transform: translateY(0);
   }
 }

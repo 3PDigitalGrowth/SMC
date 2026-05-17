@@ -31,7 +31,7 @@ export const IMAGES = {
     aspect: '3:4',
   },
   stevenAtDesk: {
-    src: '/images/Steve-headshot-400pxw.jpg',
+    src: '/images/steven-editorial-portrait.png',
     alt: 'Steven M Clark, Principal Solicitor',
     caption: 'Steven M Clark. The same desk, the same street, since 1985.',
     prompt: `Real client-supplied studio headshot. Do not regenerate.`,

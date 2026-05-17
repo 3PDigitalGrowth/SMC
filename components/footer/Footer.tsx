@@ -54,8 +54,12 @@ export default function Footer() {
         <div className={styles.inner}>
           <div className={styles.brandBlock}>
             <Link href="/" className={styles.wordmark}>
-              <span className={styles.wordmarkName}>Steven M Clark</span>
-              <span className={styles.wordmarkLabel}>Lawyers · Gawler · Est. 1985</span>
+              {/* eslint-disable-next-line @next/next/no-img-element */}
+              <img
+                src="/images/smc-logo.png"
+                alt="Steven M Clark — Barristers, Solicitors, Public Notary"
+                className={styles.logo}
+              />
             </Link>
             <p className={styles.tagline}>
               The Gawler firm that&apos;s been on the same street since 1985.

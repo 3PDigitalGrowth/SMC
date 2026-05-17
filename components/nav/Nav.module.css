@@ -4,6 +4,8 @@
   left: 0;
   right: 0;
   z-index: 200;
+  background: #f6f1e8;
+  box-shadow: 0 1px 0 var(--rule);
   transition:
     background var(--dur-med) var(--ease-out),
     backdrop-filter var(--dur-med) var(--ease-out),
@@ -32,27 +34,14 @@
 
 .wordmark {
   display: flex;
-  flex-direction: column;
-  gap: 2px;
+  flex-shrink: 0;
   text-decoration: none;
-  color: var(--ink);
 }
 
-.wordmarkName {
-  font-family: var(--font-display), Georgia, serif;
-  font-size: 22px;
-  font-weight: 500;
-  letter-spacing: -0.02em;
-  line-height: 1;
-}
-
-.wordmarkLabel {
-  font-family: var(--font-body), 'Inter', sans-serif;
-  font-size: 10px;
-  text-transform: uppercase;
-  letter-spacing: 0.22em;
-  color: var(--ink-muted);
-  line-height: 1;
+.logo {
+  height: 36px;
+  width: auto;
+  display: block;
 }
 
 .links {

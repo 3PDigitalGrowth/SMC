@@ -44,10 +44,12 @@ export default function Nav() {
       >
         <div className={styles.inner}>
           <Link href="/" className={styles.wordmark} aria-label="Steven M Clark Lawyers, home">
-            <span className={styles.wordmarkName}>
-              Steven M Clark
-            </span>
-            <span className={styles.wordmarkLabel}>Lawyers · Gawler · Est. 1985</span>
+            {/* eslint-disable-next-line @next/next/no-img-element */}
+            <img
+              src="/images/smc-logo.png"
+              alt="Steven M Clark — Barristers, Solicitors, Public Notary"
+              className={styles.logo}
+            />
           </Link>
 
           <div className={styles.links}>
