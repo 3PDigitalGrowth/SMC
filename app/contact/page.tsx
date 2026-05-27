@@ -9,7 +9,7 @@ export const metadata = pageMetadata({
   path: '/contact',
   title: 'Contact Steven M Clark Lawyers, Gawler. (08) 8522 6025.',
   description:
-    'Adelaide Road, Gawler South. One phone number, one email, one office, since 1985. Same-business-day callbacks.',
+    'Adelaide Road, Gawler South. One phone number, one email, one office, since 1986. Same-business-day callbacks.',
   image: IMAGES.contactHero.src,
 })
 
@@ -21,7 +21,7 @@ export default function ContactPage() {
         eyebrow="Get in touch"
         heading={
           <>
-            One phone number, one office, since <em>1985</em>.
+            One phone number, one office, since <em>1986</em>.
           </>
         }
         lede="No call centres. No referral mazes. You will speak to a person on Adelaide Road, and you will get a same-business-day reply, even if Steven is in court."

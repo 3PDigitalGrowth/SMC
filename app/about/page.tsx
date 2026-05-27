@@ -8,9 +8,9 @@ import { IMAGES } from '@/lib/images'
 
 export const metadata = pageMetadata({
   path: '/about',
-  title: 'About Steven M Clark Lawyers, Gawler. Since 1985.',
+  title: 'About Steven M Clark Lawyers, Gawler. Since 1986.',
   description:
-    'Admitted in 1983, founded the firm in 1985, walking the same Gawler street ever since. The story of Steven M Clark Lawyers, in plain words.',
+    'Admitted in 1983, commenced practice in 1986, serving the Gawler community ever since. The story of Steven M Clark Lawyers, in plain words.',
   image: IMAGES.aboutHero.src,
 })
 
@@ -18,7 +18,7 @@ const team = [
   {
     name: 'Steven M Clark',
     role: 'Principal Solicitor, Public Notary',
-    bio: 'Admitted 1983. Adelaide University law, graduate practice at the South Australian Institute of Technology (now UniSA). Founded the firm in 1985 and has been its principal ever since. The only Public Notary between North Adelaide and the Riverland.',
+    bio: 'Admitted 1983. Adelaide University law, graduate practice at the South Australian Institute of Technology (now UniSA). Commenced practice in 1986 and has continued serving the Gawler community ever since. The only Public Notary between North Adelaide and the Riverland.',
   },
   {
     name: 'Zahra Amin',
@@ -29,6 +29,11 @@ const team = [
     name: 'Jack Clark',
     role: 'Solicitor',
     bio: 'Property, business and commercial files. Local, accessible, direct.',
+  },
+  {
+    name: 'Mahima Sobti',
+    role: 'Solicitor',
+    bio: "Steven's diary, his calls, his correspondence. The reason he can give you a same-business-day reply.",
   },
   {
     name: 'Sophie Clark',
@@ -45,11 +50,6 @@ const team = [
     role: 'Reception',
     bio: 'The voice on the other end of (08) 8522 6025. You will speak to a person, not a queue.',
   },
-  {
-    name: 'Mahima Sobti',
-    role: 'Personal Assistant',
-    bio: "Steven's diary, his calls, his correspondence. The reason he can give you a same-business-day reply.",
-  },
 ]
 
 export default function AboutPage() {
@@ -60,10 +60,10 @@ export default function AboutPage() {
         eyebrow="About the firm"
         heading={
           <>
-            A Gawler firm, run by a <em>Gawler local</em>, since 1985.
+            A Gawler firm, run by a <em>Gawler local</em>, since 1986.
           </>
         }
-        lede="Steven has lived in Gawler since 1971 and practised law here since 1985. The firm has been on the same street ever since. That is the short version. The longer version sits below."
+        lede="Steven has lived in Gawler since 1971 and commenced practice here in 1986. The firm has continued serving the Gawler community ever since. That is the short version. The longer version sits below."
         image={IMAGES.aboutHero}
       />
 

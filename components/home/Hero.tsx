@@ -74,7 +74,7 @@ export default function Hero() {
         <div className={styles.copy}>
           <span className={styles.eyebrow}>
             <span className={styles.eyebrowDot} />
-            Gawler · Est. 1985
+            Gawler · Est. 1986
           </span>
 
           <h1 className={styles.heading}>
@@ -82,7 +82,7 @@ export default function Hero() {
           </h1>
 
           <p className={styles.lede}>
-            Steven M Clark Lawyers. 36 years of straight-talking legal advice
+            Steven M Clark Lawyers. Straight-talking legal advice
             for South Australian families and businesses.
           </p>
         </div>

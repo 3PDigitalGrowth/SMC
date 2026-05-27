@@ -90,7 +90,7 @@ export default function MobileMenu({ isOpen, onClose }: MobileMenuProps) {
       <div className={styles.head}>
         <div className={styles.wordmark}>
           <span className={styles.wordmarkName}>Steven M Clark</span>
-          <span className={styles.wordmarkLabel}>Lawyers · Gawler · Est. 1985</span>
+          <span className={styles.wordmarkLabel}>Lawyers · Gawler · Est. 1986</span>
         </div>
         <button className={styles.closeBtn} onClick={onClose} aria-label="Close menu">
           <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round">

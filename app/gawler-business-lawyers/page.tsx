@@ -12,7 +12,7 @@ export const metadata = pageMetadata({
   path: '/gawler-business-lawyers',
   title: 'Gawler business lawyers. Sale, purchase, commercial advice.',
   description:
-    'Business law for South Australian SMEs since 1985. Business sale and purchase, contracts, leases, due diligence, franchising, licence transfers.',
+    'Business law for South Australian SMEs since 1986. Business sale and purchase, contracts, leases, due diligence, franchising, licence transfers.',
   image: IMAGES.businessHero.src,
 })
 
@@ -104,14 +104,14 @@ export default function BusinessLawyersPage() {
             Business law for people who actually <em>run a business</em>.
           </>
         }
-        lede="We have run our own business on Adelaide Road for forty years. Most of what stresses you about running yours has stressed us too. We give you the advice we wish we had got."
+        lede="We have run our own business on Adelaide Road since 1986. Most of what stresses you about running yours has stressed us too. We give you the advice we wish we had got."
         image={IMAGES.businessHero}
         imageCaption="Murray Street, Gawler, just after seven. The town getting started."
       />
 
       <ServiceBody
         eyebrow="What we handle"
-        heading={<>The full range of business law, from a Gawler firm that has been doing it since 1985.</>}
+        heading={<>The full range of business law, from a Gawler firm that has been doing it since 1986.</>}
         paragraphs={[
           'Our Gawler business lawyers have the skills and the local experience to advise you on the purchase or sale of a business, and on the day-to-day legal work of running one. We work with sole traders, partnerships, family companies and trust structures across the Gawler region and South Australia.',
           "On the sale-and-purchase side, we give advice on the best business structure for you, the contract terms, put and call options, goodwill and asset valuation, tax considerations, lender liaison, transfers of liquor and equipment licences, franchising, and due diligence. We coordinate and attend settlement so you do not have to.",

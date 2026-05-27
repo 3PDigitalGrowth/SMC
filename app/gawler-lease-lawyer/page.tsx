@@ -12,7 +12,7 @@ export const metadata = pageMetadata({
   path: '/gawler-lease-lawyer',
   title: 'Commercial and retail lease lawyer, Gawler.',
   description:
-    'Retail and commercial leases drafted, reviewed, negotiated and disputed by a Gawler firm since 1985. Tenants and landlords.',
+    'Retail and commercial leases drafted, reviewed, negotiated and disputed by a Gawler firm since 1986. Tenants and landlords.',
   image: IMAGES.leaseHero.src,
 })
 

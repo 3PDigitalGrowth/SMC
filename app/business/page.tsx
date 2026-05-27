@@ -32,7 +32,7 @@ const services = [
   },
   {
     title: 'Debt recovery',
-    body: 'A letter from a lawyer is often all it takes. When it is not, we have spent forty years recovering debts for Gawler businesses without making enemies of customers worth keeping.',
+    body: 'A letter from a lawyer is often all it takes. When it is not, we have spent decades recovering debts for Gawler businesses without making enemies of customers worth keeping.',
     href: '/gawler-debt-recovery',
   },
   {
@@ -58,7 +58,7 @@ export default function BusinessPage() {
             Straight legal advice for businesses, from a firm that <em>runs one</em>.
           </>
         }
-        lede="We have run our own business on Adelaide Road for forty years. Most of what stresses you about running yours has stressed us too. We give you the advice we wish we had got."
+        lede="We have run our own business on Adelaide Road since 1986. Most of what stresses you about running yours has stressed us too. We give you the advice we wish we had got."
         image={IMAGES.businessHero}
       />
 

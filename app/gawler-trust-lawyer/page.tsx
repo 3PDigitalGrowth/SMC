@@ -12,7 +12,7 @@ export const metadata = pageMetadata({
   path: '/gawler-trust-lawyer',
   title: 'Trust lawyer, Gawler. Unit, discretionary and family trusts.',
   description:
-    'Family, unit and discretionary trusts drafted and reviewed by a Gawler practice since 1985. We tell you straight if a trust is the right structure.',
+    'Family, unit and discretionary trusts drafted and reviewed by a Gawler practice since 1986. We tell you straight if a trust is the right structure.',
   image: IMAGES.trustsHero.src,
 })
 

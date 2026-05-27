@@ -24,11 +24,11 @@ const inter = Inter({
 export const metadata: Metadata = {
   metadataBase: new URL('https://stevenmclark.com.au'),
   title: {
-    default: 'Steven M Clark Lawyers, Gawler. Plain-English legal advice since 1985.',
+    default: 'Steven M Clark Lawyers, Gawler. Plain-English legal advice since 1986.',
     template: '%s',
   },
   description:
-    "Gawler's general law practice since 1985. Family, estates, property, business and Public Notary services.",
+    "Gawler's general law practice since 1986. Family, estates, property, business and Public Notary services.",
 }
 
 export default function RootLayout({

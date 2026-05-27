@@ -31,11 +31,11 @@ export default function Editorial() {
           <div>
             <SectionLabel variant="leaf">Why people in Gawler call Steven</SectionLabel>
             <h2 className={styles.heading}>
-              A general practice that has been on the same street for <em>36 years</em>.
+              A general practice that has served the Gawler region <em>since 1986</em>.
             </h2>
           </div>
           <p className={styles.intro}>
-            Steven M Clark Lawyers has been part of the Gawler community since 1985.
+            Steven M Clark Lawyers has been part of the Gawler community since 1986.
             Generalist by design. We handle the call when you don&apos;t yet know which
             specialist you need, and we know when to bring one in.
           </p>
@@ -64,11 +64,11 @@ export default function Editorial() {
           <div className={styles.bodyCol}>
             <AnimateIn delay={120}>
               <p className={styles.lead}>
-                Steven founded the firm in 1985 and has been on Adelaide Road ever
-                since. The reason people drive past closer firms to see him is not
-                branding. It is that he has spent 36 years answering the call that
-                begins with <em>&ldquo;I&apos;m not sure whether I should even be
-                ringing you, but&hellip;&rdquo;</em>
+                Steven commenced practice in 1986 and has continued serving the
+                Gawler community ever since. The reason people drive past closer
+                firms to see him is not branding. It is that he has spent decades
+                answering the call that begins with <em>&ldquo;I&apos;m not sure
+                whether I should even be ringing you, but&hellip;&rdquo;</em>
               </p>
 
               <p className={styles.bodyText}>

@@ -12,7 +12,7 @@ export const metadata = pageMetadata({
   path: '/gawler-estate-lawyer',
   title: 'Gawler estate lawyer. Wills, probate, estate planning.',
   description:
-    'A Gawler estate practice since 1985. Wills, probate, estate planning, power of attorney, advance care directives, and trusts.',
+    'A Gawler estate practice since 1986. Wills, probate, estate planning, power of attorney, advance care directives, and trusts.',
   image: IMAGES.estatesHero.src,
 })
 

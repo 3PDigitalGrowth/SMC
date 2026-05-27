@@ -33,7 +33,7 @@ export const IMAGES = {
   stevenAtDesk: {
     src: '/images/steven-editorial-portrait.png',
     alt: 'Steven M Clark, Principal Solicitor',
-    caption: 'Steven M Clark. The same desk, the same street, since 1985.',
+    caption: 'Steven M Clark. Serving the Gawler community since 1986.',
     prompt: `Real client-supplied studio headshot. Do not regenerate.`,
     aspect: '4:3',
   },
@@ -96,7 +96,7 @@ export const IMAGES = {
   aboutHero: {
     src: '/images/steven-about-hero.png',
     alt: 'Steven M Clark, founder and principal',
-    caption: 'Steven M Clark. Founded the firm in 1985. Still its principal.',
+    caption: 'Steven M Clark. Commenced practice in 1986. Still its principal.',
     prompt: `Real client-supplied studio headshot. Do not regenerate.`,
     aspect: '3:4',
   },

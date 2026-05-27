@@ -8,7 +8,7 @@ import { IMAGES } from '@/lib/images'
 
 export const metadata = pageMetadata({
   path: '/property',
-  title: 'Property law and conveyancing, Gawler. Since 1985.',
+  title: 'Property law and conveyancing, Gawler. Since 1986.',
   description:
     'Conveyancing, building and construction, commercial and retail leases, property disputes. Done properly, in the Gawler region, by lawyers who live here.',
   image: IMAGES.propertyHero.src,
@@ -58,7 +58,7 @@ export default function PropertyPage() {
             The biggest cheque most people sign. Worth getting <em>properly</em> advised on.
           </>
         }
-        lede="Property decisions are usually the largest financial decisions a Gawler family makes. We have been advising on them since 1985, and we have read more contracts in this region than most agents have ever drafted."
+        lede="Property decisions are usually the largest financial decisions a Gawler family makes. We have been advising on them since 1986, and we have read more contracts in this region than most agents have ever drafted."
         image={IMAGES.propertyHero}
       />
 

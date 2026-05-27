@@ -12,7 +12,7 @@ export const metadata = pageMetadata({
   path: '/gawler-estate-planning-lawyers',
   title: 'Advance care planning, Gawler. POA and Advance Care Directive.',
   description:
-    'Power of Attorney and Advance Care Directive prepared by a Gawler practice since 1985. Make sure your family is never guessing.',
+    'Power of Attorney and Advance Care Directive prepared by a Gawler practice since 1986. Make sure your family is never guessing.',
   image: IMAGES.advanceCareHero.src,
 })
 

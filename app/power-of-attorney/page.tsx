@@ -12,7 +12,7 @@ export const metadata = pageMetadata({
   path: '/power-of-attorney',
   title: 'Power of Attorney, Gawler. General and Enduring.',
   description:
-    'Power of Attorney documents prepared by a Gawler practice since 1985. General and Enduring POAs that hold up when your family actually needs them.',
+    'Power of Attorney documents prepared by a Gawler practice since 1986. General and Enduring POAs that hold up when your family actually needs them.',
   image: IMAGES.advanceCareHero.src,
 })
 

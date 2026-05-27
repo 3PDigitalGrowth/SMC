@@ -10,7 +10,7 @@ export const metadata = pageMetadata({
   path: '/estates',
   title: 'Wills, estates and probate, Gawler. Get it right once.',
   description:
-    'Wills, estate planning, probate, power of attorney, advance care directives, and trusts. Done properly the first time, by a Gawler practice since 1985.',
+    'Wills, estate planning, probate, power of attorney, advance care directives, and trusts. Done properly the first time, by a Gawler practice since 1986.',
   image: IMAGES.estatesHero.src,
 })
 

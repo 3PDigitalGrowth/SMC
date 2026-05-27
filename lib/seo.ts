@@ -78,12 +78,12 @@ export const LEGAL_SERVICE_JSON_LD = JSON.stringify({
   name: 'Steven M Clark Lawyers',
   alternateName: 'Steven M Clark Pty Ltd',
   description:
-    "Gawler's general law practice since 1985. Family law, estates, property, business, and the only Public Notary between North Adelaide and the Riverland.",
+    "Gawler's general law practice since 1986. Family law, estates, property, business, and the only Public Notary between North Adelaide and the Riverland.",
   url: SITE_URL,
   telephone: '+61 8 8522 6025',
   email: 'law@stevenmclark.com.au',
   faxNumber: '+61 8 8312 4960',
-  foundingDate: '1985',
+  foundingDate: '1986',
   address: {
     '@type': 'PostalAddress',
     streetAddress: '1 Adelaide Road',

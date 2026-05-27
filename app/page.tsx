@@ -13,7 +13,7 @@ export const metadata = pageMetadata({
   path: '/',
   title: 'Steven M Clark Lawyers, Gawler. Plain-English legal advice.',
   description:
-    "Gawler's general law practice since 1985. Family, estates, property, business and Public Notary services. Free 15-minute call.",
+    "Gawler's general law practice since 1986. Family, estates, property, business and Public Notary services. Free 15-minute call.",
 })
 
 export default function Home() {

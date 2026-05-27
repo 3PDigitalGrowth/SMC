@@ -7,7 +7,7 @@ interface AuthorBioProps {
 
 const STEVEN_BIO = {
   role: 'Principal Solicitor, Public Notary',
-  body: "Admitted in 1983. Founded Steven M Clark Lawyers in 1985 and has been its principal ever since. Gawler resident since 1971, board member of the Central District Football Club, past Director of the Trinity College Foundation and the Gawler Health Service Foundation, and a Paul Harris Fellow.",
+  body: "Admitted in 1983. Commenced practice as Steven M Clark Lawyers in 1986 and has been its principal ever since. Gawler resident since 1971, board member of the Central District Football Club, past Director of the Trinity College Foundation and the Gawler Health Service Foundation, and a Paul Harris Fellow.",
   photo: '/images/Steve-headshot-400pxw.jpg',
 }
 

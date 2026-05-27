@@ -62,7 +62,7 @@ export default function Footer() {
               />
             </Link>
             <p className={styles.tagline}>
-              The Gawler firm that&apos;s been on the same street since 1985.
+              The Gawler firm that has served the community since 1986.
               Family, estates, property, business, and the only Public Notary between
               North Adelaide and the Riverland.
             </p>
