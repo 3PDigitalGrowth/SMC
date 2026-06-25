@@ -8,13 +8,22 @@ interface Section {
 interface LegalDocumentProps {
   lastUpdated: string
   sections: Section[]
+  intro?: string[]
+  closing?: string[]
 }
 
-export default function LegalDocument({ lastUpdated, sections }: LegalDocumentProps) {
+export default function LegalDocument({ lastUpdated, sections, intro, closing }: LegalDocumentProps) {
   return (
     <section className={styles.section}>
       <div className={styles.inner}>
         <p className={styles.meta}>Last updated · {lastUpdated}</p>
+        {intro && intro.length > 0 && (
+          <div className={styles.intro}>
+            {intro.map((p, i) => (
+              <p key={i} className={styles.paragraph}>{p}</p>
+            ))}
+          </div>
+        )}
         <div className={styles.body}>
           {sections.map((s, i) => (
             <div key={s.heading} className={styles.block}>
@@ -28,6 +37,13 @@ export default function LegalDocument({ lastUpdated, sections }: LegalDocumentPr
             </div>
           ))}
         </div>
+        {closing && closing.length > 0 && (
+          <div className={styles.closing}>
+            {closing.map((p, i) => (
+              <p key={i} className={styles.paragraph}>{p}</p>
+            ))}
+          </div>
+        )}
       </div>
     </section>
   )

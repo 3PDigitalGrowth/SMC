@@ -1,6 +1,7 @@
 'use client'
 
 import { useState, FormEvent } from 'react'
+import Link from 'next/link'
 import ArtImage from '@/components/ui/ArtImage'
 import { IMAGES } from '@/lib/images'
 import { submitBookingForm } from '@/lib/formHandlers'
@@ -99,6 +100,13 @@ export default function Booking() {
               <span className={styles.contactValue}>1 Adelaide Rd, Gawler South</span>
             </span>
           </div>
+          <p className={styles.amlNote}>
+            For certain matters, new national rules mean we verify your identity before we
+            start acting.{' '}
+            <Link href="/identity-checks" className={styles.amlLink}>
+              What to expect &rarr;
+            </Link>
+          </p>
         </div>
 
         <div className={`${styles.panel} ${success ? styles.panelSuccess : ''}`}>

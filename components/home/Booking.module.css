@@ -103,6 +103,27 @@ a.contactItem:hover .contactValue {
   color: var(--leaf-deep);
 }
 
+.amlNote {
+  font-family: var(--font-body), 'Inter', sans-serif;
+  font-size: 13px;
+  line-height: 1.6;
+  color: var(--ink-muted);
+  border-top: 1px solid var(--rule);
+  padding-top: var(--space-3);
+  margin-top: var(--space-2);
+}
+
+.amlLink {
+  color: var(--leaf-deep);
+  text-decoration: none;
+  border-bottom: 1px solid transparent;
+  transition: border-color var(--dur-fast) var(--ease-out);
+}
+
+.amlLink:hover {
+  border-bottom-color: var(--leaf-deep);
+}
+
 /* Panel */
 .panel {
   position: relative;

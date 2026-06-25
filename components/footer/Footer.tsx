@@ -45,6 +45,15 @@ const columns = [
       { label: 'Notary Public', href: '/notary-public-gawler' },
     ],
   },
+  {
+    title: 'Firm',
+    links: [
+      { label: 'About', href: '/about' },
+      { label: 'Privacy policy', href: '/privacy' },
+      { label: 'Terms of use', href: '/terms' },
+      { label: 'Identity checks', href: '/identity-checks' },
+    ],
+  },
 ]
 
 export default function Footer() {

@@ -26,6 +26,13 @@ const sections = [
     ],
   },
   {
+    heading: 'Identity verification and client due diligence',
+    paragraphs: [
+      "From 1 July 2026, Australian legal practices must comply with new obligations under the Anti-Money Laundering and Counter-Terrorism Financing Act 2006 (Cth). For certain categories of work, including conveyancing, business sales, company formation, trust and estate work, and the receipt or management of client funds, we are required to verify your identity, collect information about the purpose of your matter, and in some cases request additional information about the source of funds or the parties involved.",
+      "These are requirements of the national scheme and apply to every legal practice in Australia. They form part of confirming engagement before we act. You can read what to expect on our identity checks page, and how we handle the information you provide in our privacy policy.",
+    ],
+  },
+  {
     heading: 'Accuracy',
     paragraphs: [
       "We make a genuine effort to keep the content of this site accurate and up to date. Laws change, however, and content written months or years ago may no longer reflect the current position. If you are relying on information for an actual decision, ring us — that is what we are here for.",
@@ -76,7 +83,7 @@ export default function TermsPage() {
         }
         lede="The legal terms covering the use of this website. The short version: read the content, share it, get in touch — but treat the articles as general information, not advice."
       />
-      <LegalDocument lastUpdated="17 May 2026" sections={sections} />
+      <LegalDocument lastUpdated="24 June 2026" sections={sections} />
       <Booking />
     </>
   )

@@ -39,6 +39,7 @@ const STATIC_ROUTES = [
   '/gawler-personal-injury-lawyers',
   '/gawler-compensation-lawyers',
   '/gawler-dispute-resolution-lawyers',
+  '/identity-checks',
 ]
 
 export default function sitemap(): MetadataRoute.Sitemap {
