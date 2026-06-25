@@ -18,22 +18,46 @@ const team = [
   {
     name: 'Steven M Clark',
     role: 'Principal Solicitor, Public Notary',
-    bio: 'Admitted 1983. Adelaide University law, graduate practice at the South Australian Institute of Technology (now UniSA). Commenced practice in 1986 and has continued serving the Gawler community ever since. The only Public Notary between North Adelaide and the Riverland.',
+    bio: 'Admitted in 1983 and principal of the firm he founded. A Gawler local since 1971, and the only Public Notary between North Adelaide and the Riverland.',
+    fullBio: [
+      'Steven was admitted to practise in 1983 and has since maintained a longstanding practice in general law. He holds a law degree from the University of Adelaide and a graduate qualification in legal practice from the former Institute of Technology, now part of the University of Adelaide. In 1985, he established Steven M Clark Lawyers and has served as its principal continuously since that time.',
+      'Steven and his family have resided in Gawler since 1971. He is married and has seven children, together with a growing number of grandchildren.',
+      'Steven has demonstrated a longstanding commitment to community organisations and local initiatives through extensive voluntary service. He was instrumental in the establishment of both the Trinity College Foundation and the Gawler Health Service Foundation. He also served for 16 years on the Board of the Central District Football Club as both a director and club solicitor, a position he continues to hold, and in recognition of that service was awarded life membership. In addition, he has served as a director of the Trinity College Foundation, the Gawler Hospital Foundation, and the Gawler Business Development Board.',
+      'On 2 July 2016, Steven was awarded the Paul Harris Fellowship at the Rotary Club of Gawler Light handover dinner held at the Hewett Centre, in recognition of his tangible and significant service in advancing goodwill, understanding, and friendly relations among people throughout the world.',
+    ],
   },
   {
     name: 'Zahra Amin',
     role: 'Solicitor',
-    bio: 'Day-to-day work across family, estates and general practice files. Often the first person you will sit across from after the initial call.',
+    bio: 'Family law, criminal law and dispute resolution, with experience across the legal systems of Pakistan, the United Kingdom and Australia.',
+    fullBio: [
+      'Zahra Amin is a dedicated legal practitioner with extensive experience in family law, criminal law, and dispute resolution across multiple jurisdictions. Having practised law in Pakistan for over seven years before relocating to Australia, Zahra brings a unique international perspective and a strong commitment to achieving practical and effective outcomes for clients.',
+      'She graduated with a Bachelor of Laws (LLB) from Queen Mary University of London in 2017 and commenced legal practice in Pakistan shortly thereafter. During her legal career overseas, she regularly appeared before courts and tribunals, representing clients in a broad range of family law and criminal law matters. Her experience includes advising clients through complex disputes, negotiating settlements, preparing court documents, and acting as counsel in contested proceedings.',
+      'In pursuit of admission to legal practice in Australia, Zahra completed the required academic equivalency subjects through Deakin University and subsequently completed her Practical Legal Training through The College of Law. She is admitted to practise in the Supreme Court of Victoria, the Supreme Court of South Australia, and the High Court of Australia, is a member of the Law Society of South Australia, and is an Australian citizen.',
+      'With direct experience across the legal systems of Pakistan, the United Kingdom, and Australia, Zahra possesses valuable insight into diverse legal frameworks, cultural backgrounds, and client needs. This international experience enables her to effectively assist clients from a wide range of communities and backgrounds, particularly those navigating legal issues across different jurisdictions.',
+      'Known for her approachable manner, attention to detail, and strong advocacy skills, Zahra is committed to providing high-quality legal representation while ensuring clients feel informed and supported throughout every stage of their matter. Outside of legal practice, she is actively engaged in her local community, which further strengthens her ability to connect with and effectively represent a diverse range of clients.',
+    ],
   },
   {
     name: 'Jack Clark',
     role: 'Solicitor',
-    bio: 'Property, business and commercial files. Local, accessible, direct.',
+    bio: 'A Gawler-based lawyer who believes legal advice should be clear and practical, never overwhelming.',
+    fullBio: [
+      'Jack is a Gawler-based lawyer who sincerely cares about the law and the people he works with. He studied law at the University of South Australia, graduating with a Bachelor of Laws (Honours), and completed his Graduate Diploma of Legal Practice through the College of Law.',
+      'Jack believes that legal advice should be clear and practical, never overwhelming. He enjoys helping his clients understand the process and strives at each step to make their experience as easy and as stress-free as possible.',
+      'Outside of work, Jack is happiest when outdoors, whether skateboarding, cycling, hiking, or gardening. He also has a deep love of music and all things vintage.',
+    ],
   },
   {
     name: 'Mahima Sobti',
     role: 'Solicitor',
-    bio: "Steven's diary, his calls, his correspondence. The reason he can give you a same-business-day reply.",
+    bio: 'General practice, with particular interests in family law, medical negligence, and corporate and commercial matters. With the firm since 2023.',
+    fullBio: [
+      "Mahima is a Solicitor at Steven M Clark Lawyers, providing practical, client-focused legal advice across a broad range of practice areas. Her international educational background and experience working with people from diverse cultural and professional backgrounds allow her to approach legal issues with insight, adaptability, and a strong understanding of clients' varied needs.",
+      'Mahima was admitted as a solicitor in the Supreme Court of South Australia and the High Court of Australia in March 2026 and is also a member of the Law Society of South Australia. She joined the firm in 2023 initially as a paralegal while completing her Bachelor of Laws at Flinders University and Practical Legal Training through Leo Cussen, and worked in that role for over two years before joining the practice as a solicitor.',
+      'During her time at the firm, she has developed experience across general practice matters, including file management, client communication, legal research, and the preparation of court documents and correspondence. She practises across all areas of general practice, with particular interests in family law, medical negligence, and corporate and commercial matters. Mahima also holds a Master of Business Administration (MBA) from Canada, which adds valuable commercial insight when advising business clients.',
+      'She is committed to delivering clear, practical advice and guiding clients through complex legal issues with professionalism and care. Outside of work, Mahima enjoys spending time with family and friends, travelling, and maintaining interests that support balance and wellbeing. She values continuous improvement and remains committed to both her professional development and her connection with the community.',
+    ],
   },
   {
     name: 'Sophie Clark',
