@@ -46,8 +46,8 @@ export default function Hero() {
         name: form.name.trim(),
         phone: form.phone.trim(),
         email: form.email.trim(),
-        bestTime: '',
         message: form.about.trim(),
+        source: 'homepage_hero',
       })
       trackLeadCaptured('homepage_hero')
       setSuccess(true)

@@ -4,21 +4,46 @@ export async function submitLeadForm(data: {
   phone?: string
   source: string
 }) {
-  // TODO: Replace with actual Mailchimp / CRM API call
-  console.log('lead_captured', data)
-  await new Promise(resolve => setTimeout(resolve, 800))
-  // TODO: Replace with fetch('/api/lead', { method: 'POST', body: JSON.stringify(data) })
+  const res = await fetch('/api/lead', {
+    method: 'POST',
+    headers: { 'Content-Type': 'application/json' },
+    body: JSON.stringify({ ...data, page: currentPage() }),
+  })
+  if (!res.ok) {
+    const body = await res.json().catch(() => null)
+    throw new Error(body?.error || 'Submission failed')
+  }
+  return res.json()
 }
 
-export async function submitBookingForm(data: {
+export interface BookingSubmission {
   name: string
   phone: string
   email: string
-  bestTime: string
-  message: string
-}) {
-  // TODO: Replace with actual booking API call
-  console.log('booking_request', data)
-  await new Promise(resolve => setTimeout(resolve, 800))
-  // TODO: Replace with fetch('/api/booking', { method: 'POST', body: JSON.stringify(data) })
+  message?: string
+  source?: string
+}
+
+// Capture the page/practice-area context the enquiry came from, so the
+// confirmation and admin emails can speak to what the person asked about.
+function currentPage() {
+  if (typeof window === 'undefined') return undefined
+  return {
+    path: window.location.pathname,
+    title: document.title,
+    url: window.location.href,
+  }
+}
+
+export async function submitBookingForm(data: BookingSubmission) {
+  const res = await fetch('/api/booking', {
+    method: 'POST',
+    headers: { 'Content-Type': 'application/json' },
+    body: JSON.stringify({ ...data, page: currentPage() }),
+  })
+  if (!res.ok) {
+    const body = await res.json().catch(() => null)
+    throw new Error(body?.error || 'Submission failed')
+  }
+  return res.json()
 }

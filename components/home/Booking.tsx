@@ -45,8 +45,8 @@ export default function Booking() {
         name: form.name.trim(),
         phone: form.phone.trim(),
         email: form.email.trim(),
-        bestTime: '',
         message: form.about.trim(),
+        source: 'homepage_booking',
       })
       trackLeadCaptured('homepage_booking')
       setSuccess(true)
