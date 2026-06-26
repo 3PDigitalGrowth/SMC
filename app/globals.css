@@ -74,6 +74,9 @@
   --brand-border:   var(--rule);
   --brand-cta-bg:   var(--leaf);
   --brand-cta-text: var(--paper-soft);
+
+  /* Height of the fixed AML notice banner; set at runtime by AMLBanner. */
+  --aml-banner-h: 0px;
 }
 
 *,
@@ -98,6 +101,8 @@ body {
   line-height: 1.55;
   font-feature-settings: 'ss01', 'cv11';
   overflow-x: hidden;
+  /* Push content below the fixed AML banner (0 when absent or dismissed). */
+  padding-top: var(--aml-banner-h);
 }
 
 h1, h2, h3, h4, h5 {

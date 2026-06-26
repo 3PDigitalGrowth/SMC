@@ -1,0 +1,77 @@
+.banner {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 260; /* above the nav (200) */
+  background: var(--leaf-deep);
+  color: var(--paper-soft);
+  border-bottom: 1px solid rgba(0, 0, 0, 0.18);
+}
+
+.inner {
+  max-width: var(--max-width);
+  margin: 0 auto;
+  padding: 9px var(--gutter);
+  display: flex;
+  align-items: center;
+  gap: var(--space-3);
+}
+
+.text {
+  margin: 0;
+  /* Override the global p { max-width: var(--measure) } so the notice runs
+     the full width of the menu container instead of wrapping early. */
+  max-width: none;
+  flex: 1;
+  font-family: var(--font-body), 'Inter', sans-serif;
+  font-size: 13px;
+  line-height: 1.5;
+  letter-spacing: 0.005em;
+  color: var(--paper-soft);
+}
+
+.lead {
+  color: #fff;
+  font-weight: 600;
+}
+
+.link {
+  color: var(--leaf-pale);
+  text-decoration: underline;
+  text-underline-offset: 2px;
+  white-space: nowrap;
+  font-weight: 500;
+}
+
+.link:hover {
+  color: #fff;
+}
+
+.close {
+  margin-left: auto;
+  flex-shrink: 0;
+  background: none;
+  border: none;
+  color: var(--paper-soft);
+  font-size: 22px;
+  line-height: 1;
+  cursor: pointer;
+  padding: 0 2px;
+  opacity: 0.75;
+  transition: opacity var(--dur-fast) var(--ease-out);
+}
+
+.close:hover {
+  opacity: 1;
+}
+
+@media (max-width: 1023px) {
+  .inner {
+    padding: 8px var(--gutter-mob);
+    gap: var(--space-2);
+  }
+  .text {
+    font-size: 12px;
+  }
+}

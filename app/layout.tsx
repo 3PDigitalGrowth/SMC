@@ -1,5 +1,6 @@
 import type { Metadata } from 'next'
 import { Fraunces, Inter } from 'next/font/google'
+import AMLBanner from '@/components/nav/AMLBanner'
 import Nav from '@/components/nav/Nav'
 import Footer from '@/components/footer/Footer'
 import SmoothScroll from '@/components/ui/SmoothScroll'
@@ -24,7 +25,7 @@ const inter = Inter({
 export const metadata: Metadata = {
   metadataBase: new URL('https://stevenmclark.com.au'),
   title: {
-    default: 'Steven M Clark Lawyers, Gawler. Plain-English legal advice since 1986.',
+    default: 'Steven M Clark Lawyers, Gawler.',
     template: '%s',
   },
   description:
@@ -40,6 +41,7 @@ export default function RootLayout({
     <html lang="en-AU" className={`${fraunces.variable} ${inter.variable}`}>
       <body>
         <SmoothScroll />
+        <AMLBanner />
         <Nav />
         <main>{children}</main>
         <Footer />

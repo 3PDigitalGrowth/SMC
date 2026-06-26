@@ -63,12 +63,17 @@
   line-height: 1.55;
   color: var(--ink-muted);
   margin-top: 10px;
+  text-align: justify;
 }
 
 .full {
-  display: flex;
+  display: none;
   flex-direction: column;
   gap: var(--space-2);
+}
+
+.full.fullOpen {
+  display: flex;
 }
 
 .toggle {

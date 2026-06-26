@@ -62,7 +62,12 @@ const team = [
   {
     name: 'Sophie Clark',
     role: 'Legal Secretary, Paralegal',
-    bio: 'The reason your file is where it should be when you ring up. Drafts, lodgements, and the careful work that keeps a matter on track.',
+    bio: 'More than 21 years of dedicated service. A highly experienced Paralegal known for professionalism, reliability and exceptional client service.',
+    fullBio: [
+      'With more than 21 years of dedicated service, Sophie is a highly experienced Paralegal who has built a reputation for professionalism, reliability, and exceptional client service. Throughout her career, she has worked closely with solicitors across a broad range of legal matters, providing invaluable support through every stage of the legal process.',
+      'Known for her meticulous attention to detail, strong organisational skills, and practical approach, Sophie is committed to ensuring matters are managed efficiently and clients feel informed and supported. Her extensive experience allows her to anticipate the needs of both clients and legal practitioners, helping to deliver seamless outcomes.',
+      'Having been an integral member of the firm for over two decades, Sophie is valued not only for her legal knowledge and expertise but also for the trusted relationships she has developed with colleagues and clients alike. She takes pride in contributing to a collaborative team environment and is dedicated to maintaining the high standard of service the firm is known for.',
+    ],
   },
   {
     name: 'Rachel East',
