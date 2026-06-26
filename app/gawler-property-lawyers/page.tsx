@@ -12,7 +12,7 @@ export const metadata = pageMetadata({
   path: '/gawler-property-lawyers',
   title: 'Gawler property lawyers. Conveyancing, leases, disputes.',
   description:
-    'Property law and conveyancing in the Gawler region since 1986. Buying, selling, leases, subdivisions, building disputes.',
+    'Property law and conveyancing in the Gawler region since 1985. Buying, selling, leases, subdivisions, building disputes.',
   image: IMAGES.propertyDetailHero.src,
 })
 
@@ -113,7 +113,7 @@ export default function PropertyLawyersPage() {
         eyebrow="What we handle"
         heading={<>Every kind of property work, from the standard to the awkward.</>}
         paragraphs={[
-          'Property transactions are a big decision and a significant matter for most people. We have been doing them in the Gawler region since 1986 — residential, rural, commercial, off-the-plan, the lot.',
+          'Property transactions are a big decision and a significant matter for most people. We have been doing them in the Gawler region since 1985 — residential, rural, commercial, off-the-plan, the lot.',
           "On the buying and selling side, we handle the Contract for Sale, the cooling-off period, stamp duty calculations, lender requirements, title searches, settlement and exchange. On the development side, we handle subdivisions, building contracts, and the council approvals that always take longer than anyone expects.",
           "When property goes sideways — a building dispute, a boundary disagreement, a defective fence, a neighbour with a different view of the easement — we work the matter the same way: write the right letter first, escalate only when we need to, and stop the moment it stops being economic to fight.",
         ]}

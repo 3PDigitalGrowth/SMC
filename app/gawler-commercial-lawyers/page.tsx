@@ -12,7 +12,7 @@ export const metadata = pageMetadata({
   path: '/gawler-commercial-lawyers',
   title: 'Commercial and corporate lawyer, Gawler.',
   description:
-    'Commercial and corporate legal work for South Australian businesses and not-for-profits since 1986. Structures, contracts, employment, IP, governance.',
+    'Commercial and corporate legal work for South Australian businesses and not-for-profits since 1985. Structures, contracts, employment, IP, governance.',
   image: IMAGES.commercialHero.src,
 })
 

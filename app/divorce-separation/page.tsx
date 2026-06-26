@@ -91,7 +91,7 @@ export default function DivorceSeparationPage() {
       <PageHero
         eyebrow="Family · Divorce · Separation"
         heading={<>The legal end of a marriage, done <em>plainly</em>.</>}
-        lede="Most clients separating after a long relationship are not after a fight. They want a fair, quick, dignified resolution. We have done this work since 1986."
+        lede="Most clients separating after a long relationship are not after a fight. They want a fair, quick, dignified resolution. We have done this work since 1985."
         image={IMAGES.divorceHero}
       />
       <ServiceBody

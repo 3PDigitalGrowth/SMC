@@ -28,11 +28,10 @@
 }
 
 .logo {
-  height: 44px;
+  height: 64px;
   width: auto;
   display: block;
-  filter: brightness(0) invert(1);
-  opacity: 0.9;
+  opacity: 0.95;
 }
 
 .tagline {

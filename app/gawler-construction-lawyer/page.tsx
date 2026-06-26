@@ -12,7 +12,7 @@ export const metadata = pageMetadata({
   path: '/gawler-construction-lawyer',
   title: 'Building and construction lawyer, Gawler. Contracts, disputes.',
   description:
-    'Building and construction lawyers since 1986. Pre-contract review, payment claims, defective work, dispute resolution, court appearances when needed.',
+    'Building and construction lawyers since 1985. Pre-contract review, payment claims, defective work, dispute resolution, court appearances when needed.',
   image: IMAGES.constructionHero.src,
 })
 
@@ -92,7 +92,7 @@ export default function ConstructionLawyerPage() {
       <PageHero
         eyebrow="Building · Construction"
         heading={<>The legal work behind the build, by lawyers who have <em>read the contract before</em>.</>}
-        lede="Commercial, industrial, rural and domestic building disputes — we have handled them all since 1986. The same firm advises before the contract is signed and acts when something goes wrong."
+        lede="Commercial, industrial, rural and domestic building disputes — we have handled them all since 1985. The same firm advises before the contract is signed and acts when something goes wrong."
         image={IMAGES.constructionHero}
       />
       <ServiceBody

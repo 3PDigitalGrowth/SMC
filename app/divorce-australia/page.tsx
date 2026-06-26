@@ -94,7 +94,7 @@ export default function DivorceAustraliaPage() {
       <PageHero
         eyebrow="Read first · Divorce"
         heading={<>Divorce in Australia, in <em>plain English</em>.</>}
-        lede="A short guide written by a Gawler family lawyer practising since 1986. The 12-month rule, the timeline, the parts that catch people out, and what you can actually do right now."
+        lede="A short guide written by a Gawler family lawyer practising since 1985. The 12-month rule, the timeline, the parts that catch people out, and what you can actually do right now."
         image={IMAGES.divorceHero}
       />
       <ServiceBody

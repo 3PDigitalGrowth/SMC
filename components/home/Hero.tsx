@@ -74,7 +74,7 @@ export default function Hero() {
         <div className={styles.copy}>
           <span className={styles.eyebrow}>
             <span className={styles.eyebrowDot} />
-            Gawler · Est. 1986
+            Gawler · Est. 1985
           </span>
 
           <h1 className={styles.heading}>

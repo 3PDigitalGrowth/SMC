@@ -12,7 +12,7 @@ export const metadata = pageMetadata({
   path: '/gawler-insolvency-lawyer',
   title: 'Insolvency lawyer, Gawler. Bankruptcy and admin.',
   description:
-    'Personal and business insolvency advice in the Gawler region since 1986. Bankruptcy, voluntary administration, personal insolvency arrangements, negotiated debt reduction.',
+    'Personal and business insolvency advice in the Gawler region since 1985. Bankruptcy, voluntary administration, personal insolvency arrangements, negotiated debt reduction.',
   image: IMAGES.insolvencyHero.src,
 })
 

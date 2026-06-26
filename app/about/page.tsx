@@ -8,9 +8,9 @@ import { IMAGES } from '@/lib/images'
 
 export const metadata = pageMetadata({
   path: '/about',
-  title: 'About Steven M Clark Lawyers, Gawler. Since 1986.',
+  title: 'About Steven M Clark Lawyers, Gawler. Since 1985.',
   description:
-    'Admitted in 1983, commenced practice in 1986, serving the Gawler community ever since. The story of Steven M Clark Lawyers, in plain words.',
+    'Admitted in 1983, commenced practice in 1985, serving the Gawler community ever since. The story of Steven M Clark Lawyers, in plain words.',
   image: IMAGES.aboutHero.src,
 })
 
@@ -89,10 +89,10 @@ export default function AboutPage() {
         eyebrow="About the firm"
         heading={
           <>
-            A Gawler firm, run by a <em>Gawler local</em>, since 1986.
+            A Gawler firm, run by a <em>Gawler local</em>, since 1985.
           </>
         }
-        lede="Steven has lived in Gawler since 1971 and commenced practice here in 1986. The firm has continued serving the Gawler community ever since. That is the short version. The longer version sits below."
+        lede="Steven has lived in Gawler since 1971 and commenced practice here in 1985. The firm has continued serving the Gawler community ever since. That is the short version. The longer version sits below."
         image={IMAGES.aboutHero}
       />
 

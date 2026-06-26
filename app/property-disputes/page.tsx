@@ -12,7 +12,7 @@ export const metadata = pageMetadata({
   path: '/property-disputes',
   title: 'Property disputes lawyer, Gawler. Fences, boundaries, easements.',
   description:
-    'Property disputes in the Gawler region since 1986. Fences and boundaries, easements and encroachments, caveats, neighbour disputes, and quiet enjoyment.',
+    'Property disputes in the Gawler region since 1985. Fences and boundaries, easements and encroachments, caveats, neighbour disputes, and quiet enjoyment.',
   image: IMAGES.disputeResolutionHero.src,
 })
 

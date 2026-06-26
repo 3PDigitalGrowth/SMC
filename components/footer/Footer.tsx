@@ -65,13 +65,13 @@ export default function Footer() {
             <Link href="/" className={styles.wordmark}>
               {/* eslint-disable-next-line @next/next/no-img-element */}
               <img
-                src="/images/smc-logo.png"
+                src="/images/smclogo-footer.png"
                 alt="Steven M Clark — Barristers, Solicitors, Public Notary"
                 className={styles.logo}
               />
             </Link>
             <p className={styles.tagline}>
-              The Gawler firm that has served the community since 1986.
+              The Gawler firm that has served the community since 1985.
               Family, estates, property, business, and the only Public Notary between
               North Adelaide and the Riverland.
             </p>

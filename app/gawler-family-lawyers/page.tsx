@@ -12,7 +12,7 @@ export const metadata = pageMetadata({
   path: '/gawler-family-lawyers',
   title: 'Gawler family lawyers. Separation, divorce, children.',
   description:
-    'A Gawler family law practice since 1986. Separation, divorce, parenting and property settlement, handled plainly and confidentially.',
+    'A Gawler family law practice since 1985. Separation, divorce, parenting and property settlement, handled plainly and confidentially.',
   image: IMAGES.familyHero.src,
 })
 
@@ -109,7 +109,7 @@ export default function FamilyLawyersPage() {
 
       <ServiceBody
         eyebrow="What we handle"
-        heading={<>The full range of family law, by a generalist firm that has been doing it since 1986.</>}
+        heading={<>The full range of family law, by a generalist firm that has been doing it since 1985.</>}
         paragraphs={[
           'Family law is one of the busiest parts of our practice. Most weeks, someone in the Gawler region is sitting in our office on the worst day of their year, and the job is to make the legal part of that day smaller, not larger.',
           'We act for the partner leaving, the partner left, parents fighting for or about their children, grandparents seeking access, and clients on both sides of intervention order applications. We work mainly under fixed quotes or close estimates so there are no surprises on the invoice.',

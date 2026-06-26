@@ -11,7 +11,7 @@ export const metadata = pageMetadata({
   path: '/insights',
   title: 'Insights from Steven M Clark Lawyers, Gawler.',
   description:
-    'Plain-English articles on family law, estates, property and business, written by a Gawler practice since 1986.',
+    'Plain-English articles on family law, estates, property and business, written by a Gawler practice since 1985.',
   image: IMAGES.insightsHero.src,
 })
 
@@ -28,7 +28,7 @@ export default function InsightsIndex() {
             Plain-English notes on the law, from <em>Adelaide Road</em>.
           </>
         }
-        lede="A handful of short reads on what comes up most often. Written by a Gawler practice serving the community since 1986, without the legalese."
+        lede="A handful of short reads on what comes up most often. Written by a Gawler practice serving the community since 1985, without the legalese."
         image={IMAGES.insightsHero}
       />
 

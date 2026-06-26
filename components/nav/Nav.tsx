@@ -46,7 +46,7 @@ export default function Nav() {
           <Link href="/" className={styles.wordmark} aria-label="Steven M Clark Lawyers, home">
             {/* eslint-disable-next-line @next/next/no-img-element */}
             <img
-              src="/images/smc-logo.png"
+              src="/images/smclogo-web.png"
               alt="Steven M Clark — Barristers, Solicitors, Public Notary"
               className={styles.logo}
             />
