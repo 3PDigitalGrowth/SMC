@@ -50,6 +50,10 @@
   overflow: hidden;
 }
 
+.imageWrapWide {
+  aspect-ratio: 4 / 3;
+}
+
 .imageCaption {
   position: absolute;
   bottom: 0;
@@ -75,5 +79,8 @@
   .imageWrap {
     aspect-ratio: 3 / 4;
     max-height: 60vh;
+  }
+  .imageWrapWide {
+    aspect-ratio: 4 / 3;
   }
 }

@@ -26,7 +26,8 @@ export default function ContactPage() {
         }
         lede="No call centres. No referral mazes. You will speak to a person on Adelaide Road, and you will get a same-business-day reply, even if Steven is in court."
         image={IMAGES.contactHero}
-        imageCaption="The Adelaide Road office, just before nine."
+        imageCaption="The team at the Adelaide Road office."
+        wideImage
       />
 
       <ContactBlock />

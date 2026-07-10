@@ -63,7 +63,7 @@ export default function Hero() {
       <div className={styles.backdrop} aria-hidden="true">
         {/* eslint-disable-next-line @next/next/no-img-element */}
         <img
-          src="/images/hero-office.png"
+          src="/images/home-hero-team.jpg"
           alt=""
           className={styles.backdropImg}
         />

@@ -40,6 +40,21 @@
   border-top: 1px solid var(--rule);
 }
 
+.photoWrap {
+  aspect-ratio: 3 / 4;
+  width: 100%;
+  border-radius: var(--radius-md);
+  overflow: hidden;
+  margin-bottom: var(--space-2);
+}
+
+.photo {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
 .name {
   font-family: var(--font-display), Georgia, serif;
   font-size: 24px;

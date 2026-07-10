@@ -46,9 +46,9 @@ export default function Editorial() {
             <AnimateIn>
               <div className={styles.portraitWrap}>
                 <ArtImage
-                  src={IMAGES.stevenAtDesk.src}
-                  alt={IMAGES.stevenAtDesk.alt}
-                  caption={IMAGES.stevenAtDesk.caption}
+                  src={IMAGES.teamHallway.src}
+                  alt={IMAGES.teamHallway.alt}
+                  caption={IMAGES.teamHallway.caption}
                   fill
                   treatment="static"
                   sizes="(max-width: 1023px) 90vw, 45vw"
@@ -56,7 +56,7 @@ export default function Editorial() {
               </div>
               <p className={styles.portraitCaption}>
                 <span className={styles.portraitName}>Steven M Clark</span>
-                <span>. Founder &amp; Principal. Admitted 1983. Public Notary, the only one between North Adelaide and the Riverland.</span>
+                <span> and the team. Steven was admitted in 1983 and is the only Public Notary between North Adelaide and the Riverland.</span>
               </p>
             </AnimateIn>
           </div>

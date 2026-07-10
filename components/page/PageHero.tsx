@@ -9,9 +9,11 @@ interface PageHeroProps {
   lede: string
   image?: ImageDef
   imageCaption?: string
+  /** 4:3 landscape image frame instead of the default 4:5 portrait. */
+  wideImage?: boolean
 }
 
-export default function PageHero({ eyebrow, heading, lede, image, imageCaption }: PageHeroProps) {
+export default function PageHero({ eyebrow, heading, lede, image, imageCaption, wideImage }: PageHeroProps) {
   return (
     <section className={styles.hero}>
       <div className={styles.inner}>
@@ -22,7 +24,7 @@ export default function PageHero({ eyebrow, heading, lede, image, imageCaption }
         </div>
 
         {image && (
-          <div className={styles.imageWrap}>
+          <div className={`${styles.imageWrap} ${wideImage ? styles.imageWrapWide : ''}`}>
             <ArtImage
               src={image.src}
               alt={image.alt}

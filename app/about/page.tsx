@@ -18,6 +18,8 @@ const team = [
   {
     name: 'Steven M Clark',
     role: 'Principal Solicitor, Public Notary',
+    photo: IMAGES.bioSteven.src,
+    photoAlt: IMAGES.bioSteven.alt,
     bio: 'Admitted in 1983 and principal of the firm he founded. A Gawler local since 1971, and the only Public Notary between North Adelaide and the Riverland.',
     fullBio: [
       'Steven was admitted to practise in 1983 and has since maintained a longstanding practice in general law. He holds a law degree from the University of Adelaide and a graduate qualification in legal practice from the former Institute of Technology, now part of the University of Adelaide. In 1985, he established Steven M Clark Lawyers and has served as its principal continuously since that time.',
@@ -29,6 +31,8 @@ const team = [
   {
     name: 'Zahra Amin',
     role: 'Solicitor',
+    photo: IMAGES.bioZahra.src,
+    photoAlt: IMAGES.bioZahra.alt,
     bio: 'Family law, criminal law and dispute resolution, with experience across the legal systems of Pakistan, the United Kingdom and Australia.',
     fullBio: [
       'Zahra Amin is a dedicated legal practitioner with extensive experience in family law, criminal law, and dispute resolution across multiple jurisdictions. Having practised law in Pakistan for over seven years before relocating to Australia, Zahra brings a unique international perspective and a strong commitment to achieving practical and effective outcomes for clients.',
@@ -41,6 +45,8 @@ const team = [
   {
     name: 'Jack Clark',
     role: 'Solicitor',
+    photo: IMAGES.bioJack.src,
+    photoAlt: IMAGES.bioJack.alt,
     bio: 'A Gawler-based lawyer who believes legal advice should be clear and practical, never overwhelming.',
     fullBio: [
       'Jack is a Gawler-based lawyer who sincerely cares about the law and the people he works with. He studied law at the University of South Australia, graduating with a Bachelor of Laws (Honours), and completed his Graduate Diploma of Legal Practice through the College of Law.',
@@ -51,6 +57,8 @@ const team = [
   {
     name: 'Mahima Sobti',
     role: 'Solicitor',
+    photo: IMAGES.bioMahima.src,
+    photoAlt: IMAGES.bioMahima.alt,
     bio: 'General practice, with particular interests in family law, medical negligence, and corporate and commercial matters. With the firm since 2023.',
     fullBio: [
       "Mahima is a Solicitor at Steven M Clark Lawyers, providing practical, client-focused legal advice across a broad range of practice areas. Her international educational background and experience working with people from diverse cultural and professional backgrounds allow her to approach legal issues with insight, adaptability, and a strong understanding of clients' varied needs.",
@@ -94,6 +102,7 @@ export default function AboutPage() {
         }
         lede="Steven has lived in Gawler since 1971 and commenced practice here in 1985. The firm has continued serving the Gawler community ever since. That is the short version. The longer version sits below."
         image={IMAGES.aboutHero}
+        wideImage
       />
 
       <Editorial />
