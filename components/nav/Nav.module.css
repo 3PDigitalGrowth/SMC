@@ -11,7 +11,7 @@
     backdrop-filter var(--dur-med) var(--ease-out),
     box-shadow var(--dur-med) var(--ease-out),
     padding var(--dur-med) var(--ease-out);
-  padding: 24px 0;
+  padding: 8px 0;
 }
 
 .scrolled {
@@ -19,7 +19,7 @@
   backdrop-filter: var(--glass-blur);
   -webkit-backdrop-filter: var(--glass-blur);
   box-shadow: 0 1px 0 var(--rule);
-  padding: 12px 0;
+  padding: 6px 0;
 }
 
 .inner {
@@ -39,9 +39,14 @@
 }
 
 .logo {
-  height: 52px;
+  height: 84px;
   width: auto;
   display: block;
+  transition: height var(--dur-med) var(--ease-out);
+}
+
+.scrolled .logo {
+  height: 64px;
 }
 
 .links {
