@@ -10,7 +10,7 @@ export interface CtaSlotConfig {
 export const CTA_SLOTS: Record<'primary' | 'secondary' | 'inline-form', CtaSlotConfig> = {
   primary: {
     variant: 'primary',
-    eyebrow: 'Talk to Steven',
+    eyebrow: 'Talk to Us',
     heading: 'A first call costs nothing and changes everything.',
     body: "Confidential, unhurried, no pressure. By the end of it you will know where you stand and what your real options are.",
     buttonLabel: 'Book a confidential call',

@@ -28,6 +28,7 @@ export default function ContactPage() {
         image={IMAGES.contactHero}
         imageCaption="The team at the Adelaide Road office."
         wideImage
+        imageAspect="3 / 2"
       />
 
       <ContactBlock />

@@ -1,7 +1,7 @@
 import ArtImage from '@/components/ui/ArtImage'
 import SectionLabel from '@/components/ui/SectionLabel'
 import AnimateIn from '@/components/ui/AnimateIn'
-import { IMAGES } from '@/lib/images'
+import { IMAGES, type ImageDef } from '@/lib/images'
 import styles from './Editorial.module.css'
 
 const principles = [
@@ -23,13 +23,18 @@ const principles = [
   },
 ]
 
-export default function Editorial() {
+interface EditorialProps {
+  /** Portrait photo for the spread. Defaults to the team hallway shot used on the home page. */
+  image?: ImageDef
+}
+
+export default function Editorial({ image = IMAGES.teamHallway }: EditorialProps) {
   return (
     <section className={styles.section}>
       <div className={styles.inner}>
         <div className={styles.headRow}>
           <div>
-            <SectionLabel variant="leaf">Why people in Gawler call Steven</SectionLabel>
+            <SectionLabel variant="leaf">Why people in Gawler call us</SectionLabel>
             <h2 className={styles.heading}>
               A general practice that has served the Gawler region <em>since 1985</em>.
             </h2>
@@ -46,9 +51,9 @@ export default function Editorial() {
             <AnimateIn>
               <div className={styles.portraitWrap}>
                 <ArtImage
-                  src={IMAGES.teamHallway.src}
-                  alt={IMAGES.teamHallway.alt}
-                  caption={IMAGES.teamHallway.caption}
+                  src={image.src}
+                  alt={image.alt}
+                  caption={image.caption}
                   fill
                   treatment="static"
                   sizes="(max-width: 1023px) 90vw, 45vw"
@@ -72,17 +77,19 @@ export default function Editorial() {
               </p>
 
               <p className={styles.bodyText}>
-                He has lived in Gawler since 1971, raised seven children here, sits on
-                the board of the Central District Football Club as Director and Club
-                Solicitor, and is a Paul Harris Fellow with the Rotary Club of Gawler
-                Light. Past board roles include Trinity College Foundation, the
-                Gawler Hospital Foundation and the Gawler Business Development Board.
+                He has lived in Gawler since 1971, raised seven children here, and is
+                a Paul Harris Fellow with the Rotary Club of Gawler Light. Steve
+                served as a member of the Board of the Central District Football Club
+                from 2006 to 2020. He continues to be a Life Member and remains the
+                Club Solicitor. Past board roles include Trinity College Foundation,
+                the Gawler Hospital Foundation and the Gawler Business Development
+                Board.
               </p>
 
               <p className={styles.bodyText}>
-                Today he works alongside a team of seven: solicitors Zahra Amin and
-                Jack Clark, and the support team who keep the door open Monday to
-                Friday.
+                Today he works alongside a team of seven: solicitors Zahra Amin,
+                Jack Clark and Mahima Sobti, and the support team who keep the door
+                open Monday to Friday.
               </p>
 
               <div className={styles.principles}>

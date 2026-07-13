@@ -19,7 +19,7 @@ export interface ImageDef {
   alt: string
   caption: string
   prompt: string
-  aspect: '1:1' | '3:4' | '4:3' | '16:9' | '9:16'
+  aspect: '1:1' | '3:4' | '4:3' | '3:2' | '16:9' | '9:16'
 }
 
 export const IMAGES = {
@@ -94,23 +94,30 @@ export const IMAGES = {
     aspect: '4:3',
   },
   aboutHero: {
-    src: '/images/about-firm-reception.jpg',
-    alt: 'The Steven M Clark Lawyers team at the firm reception in Gawler',
-    caption: 'The team at reception, under the sign that has meant the same thing since 1985.',
+    src: '/images/about-firm-team.jpg',
+    alt: 'The Steven M Clark Lawyers legal team: Zahra Amin, Jack Clark and Mahima Sobti with Steven M Clark seated',
+    caption: 'Zahra, Jack and Mahima with Steven. The people on the other end of the phone.',
     prompt: `Real client-supplied photograph. Do not regenerate.`,
     aspect: '4:3',
   },
   contactHero: {
-    src: '/images/contact-team-boardroom.jpg',
+    src: '/images/contact-team-boardroom-wide.jpg',
     alt: 'The Steven M Clark Lawyers team at the boardroom table',
     caption: 'The boardroom table. Where the careful conversations happen.',
     prompt: `Real client-supplied photograph. Do not regenerate.`,
-    aspect: '4:3',
+    aspect: '3:2',
   },
   teamHallway: {
     src: '/images/team-hallway.jpg',
     alt: 'Steven M Clark in conversation with his team in the office hallway',
     caption: 'Mid-conversation in the hallway. A working firm, not a brochure shoot.',
+    prompt: `Real client-supplied photograph. Do not regenerate.`,
+    aspect: '4:3',
+  },
+  aboutEditorial: {
+    src: '/images/about-editorial-hallway.jpg',
+    alt: 'Jack Clark, Steven M Clark, Zahra Amin and Mahima Sobti in the heritage hallway of the Gawler office',
+    caption: 'The team in the hallway on Adelaide Road. Heritage arches, working firm.',
     prompt: `Real client-supplied photograph. Do not regenerate.`,
     aspect: '4:3',
   },
@@ -136,7 +143,7 @@ export const IMAGES = {
     aspect: '3:4',
   },
   bioMahima: {
-    src: '/images/bio-mahima.jpg',
+    src: '/images/bio-mahima-2.jpg',
     alt: 'Mahima Sobti, Solicitor',
     caption: 'Mahima Sobti. Solicitor.',
     prompt: `Real client-supplied studio portrait. Do not regenerate.`,

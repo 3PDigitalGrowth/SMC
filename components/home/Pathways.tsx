@@ -12,7 +12,7 @@ const cards = [
     title: 'Going through a separation.',
     body: 'You do not have to figure this out alone. A confidential first call clarifies what your options actually are: what you are entitled to, what comes next, and what it will cost.',
     link: '#book',
-    linkLabel: 'Talk to Steven',
+    linkLabel: 'Talk to Us',
   },
   {
     image: IMAGES.pathwayEstate,

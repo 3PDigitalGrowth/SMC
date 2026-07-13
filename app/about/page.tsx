@@ -24,7 +24,7 @@ const team = [
     fullBio: [
       'Steven was admitted to practise in 1983 and has since maintained a longstanding practice in general law. He holds a law degree from the University of Adelaide and a graduate qualification in legal practice from the former Institute of Technology, now part of the University of Adelaide. In 1985, he established Steven M Clark Lawyers and has served as its principal continuously since that time.',
       'Steven and his family have resided in Gawler since 1971. He is married and has seven children, together with a growing number of grandchildren.',
-      'Steven has demonstrated a longstanding commitment to community organisations and local initiatives through extensive voluntary service. He was instrumental in the establishment of both the Trinity College Foundation and the Gawler Health Service Foundation. He also served for 16 years on the Board of the Central District Football Club as both a director and club solicitor, a position he continues to hold, and in recognition of that service was awarded life membership. In addition, he has served as a director of the Trinity College Foundation, the Gawler Hospital Foundation, and the Gawler Business Development Board.',
+      'Steven has demonstrated a longstanding commitment to community organisations and local initiatives through extensive voluntary service. He was instrumental in the establishment of both the Trinity College Foundation and the Gawler Health Service Foundation. He served on the Board of the Central District Football Club from 2006 to 2020 as both a director and club solicitor, and in recognition of that service was awarded life membership. He remains the Club Solicitor today. In addition, he has served as a director of the Trinity College Foundation, the Gawler Hospital Foundation, and the Gawler Business Development Board.',
       'On 2 July 2016, Steven was awarded the Paul Harris Fellowship at the Rotary Club of Gawler Light handover dinner held at the Hewett Centre, in recognition of his tangible and significant service in advancing goodwill, understanding, and friendly relations among people throughout the world.',
     ],
   },
@@ -105,7 +105,7 @@ export default function AboutPage() {
         wideImage
       />
 
-      <Editorial />
+      <Editorial image={IMAGES.aboutEditorial} />
 
       <TeamGrid
         eyebrow="The people"
