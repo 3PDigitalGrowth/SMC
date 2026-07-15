@@ -1,12 +1,22 @@
 'use client'
 
-import { FormEvent, useState } from 'react'
+import { FormEvent, useEffect, useState } from 'react'
 import Link from 'next/link'
 import { trackLeadCaptured, trackPhoneClick } from '@/lib/analytics'
 import { submitBookingForm } from '@/lib/formHandlers'
 import styles from './Hero.module.css'
 
-export default function Hero() {
+export type HeroVariant = 'default' | 'band' | 'split' | 'frost' | 'cta'
+
+const variantClasses: Record<HeroVariant, string> = {
+  default: '',
+  band: styles.heroBand,
+  split: styles.heroSplit,
+  frost: styles.heroFrost,
+  cta: `${styles.heroFrost} ${styles.heroCta}`,
+}
+
+export default function Hero({ variant = 'default' }: { variant?: HeroVariant }) {
   const [form, setForm] = useState({
     name: '',
     phone: '',
@@ -16,6 +26,16 @@ export default function Hero() {
   const [errors, setErrors] = useState<Record<string, string>>({})
   const [loading, setLoading] = useState(false)
   const [success, setSuccess] = useState(false)
+  const [modalOpen, setModalOpen] = useState(false)
+
+  useEffect(() => {
+    if (!modalOpen) return
+    const handler = (e: KeyboardEvent) => {
+      if (e.key === 'Escape') setModalOpen(false)
+    }
+    document.addEventListener('keydown', handler)
+    return () => document.removeEventListener('keydown', handler)
+  }, [modalOpen])
 
   function update(field: keyof typeof form, value: string) {
     setForm((prev) => ({ ...prev, [field]: value }))
@@ -47,7 +67,7 @@ export default function Hero() {
         phone: form.phone.trim(),
         email: form.email.trim(),
         message: form.about.trim(),
-        source: 'homepage_hero',
+        source: variant === 'cta' ? 'homepage_hero_modal' : 'homepage_hero',
       })
       trackLeadCaptured('homepage_hero')
       setSuccess(true)
@@ -58,8 +78,88 @@ export default function Hero() {
     }
   }
 
+  const successBlock = (
+    <div className={styles.success}>
+      <span className={styles.formEyebrow}>Received</span>
+      <h2 className={styles.formTitle}>We&apos;ll call you back today.</h2>
+      <p className={styles.successText}>
+        Your message is with our team. If it&apos;s urgent, call us directly on{' '}
+        <a href="tel:0885226025" onClick={() => trackPhoneClick()}>
+          (08) 8522 6025
+        </a>.
+      </p>
+    </div>
+  )
+
+  const formBlock = (
+    <form onSubmit={handleSubmit} noValidate className={styles.form}>
+      <span className={styles.formEyebrow}>Free 15-minute call</span>
+      <h2 className={styles.formTitle}>Tell us where to reach you.</h2>
+
+      <div className={styles.fields}>
+        <label className={styles.field}>
+          <span>{errors.name ?? 'Your name'}</span>
+          <input
+            type="text"
+            value={form.name}
+            onChange={(e) => update('name', e.target.value)}
+            aria-invalid={Boolean(errors.name)}
+          />
+        </label>
+
+        <label className={styles.field}>
+          <span>{errors.phone ?? 'Phone'}</span>
+          <input
+            type="tel"
+            value={form.phone}
+            onChange={(e) => update('phone', e.target.value)}
+            aria-invalid={Boolean(errors.phone)}
+          />
+        </label>
+
+        <label className={styles.field}>
+          <span>{errors.email ?? 'Email'}</span>
+          <input
+            type="email"
+            value={form.email}
+            onChange={(e) => update('email', e.target.value)}
+            aria-invalid={Boolean(errors.email)}
+          />
+        </label>
+
+        <label className={styles.field}>
+          <span>What&apos;s this about? <em>Optional</em></span>
+          <textarea
+            value={form.about}
+            onChange={(e) => update('about', e.target.value)}
+            rows={3}
+          />
+        </label>
+      </div>
+
+      {errors.form && <p className={styles.formError}>{errors.form}</p>}
+
+      <button type="submit" className={styles.primary} disabled={loading}>
+        {loading ? 'Sending...' : 'Book a free 15-minute call'}
+        {!loading && <span aria-hidden>→</span>}
+      </button>
+
+      <p className={styles.offerNote}>
+        Confidential · No obligation · Same-business-day reply
+      </p>
+
+      <a
+        href="tel:0885226025"
+        className={styles.secondary}
+        onClick={() => trackPhoneClick()}
+      >
+        Prefer to call? (08) 8522 6025
+      </a>
+    </form>
+  )
+
   return (
-    <section className={styles.hero}>
+    <section className={`${styles.hero} ${variantClasses[variant]}`.trim()}>
       <div className={styles.backdrop} aria-hidden="true">
         {/* eslint-disable-next-line @next/next/no-img-element */}
         <img
@@ -85,77 +185,17 @@ export default function Hero() {
             Steven M Clark Lawyers. Straight-talking legal advice
             for South Australian families and businesses.
           </p>
-        </div>
 
-        <aside className={`${styles.contactPanel} ${success ? styles.contactPanelSuccess : ''}`} aria-label="Book a free 15-minute call">
-          {success ? (
-            <div className={styles.success}>
-              <span className={styles.formEyebrow}>Received</span>
-              <h2 className={styles.formTitle}>We&apos;ll call you back today.</h2>
-              <p className={styles.successText}>
-                Your message is with our team. If it&apos;s urgent, call us directly on{' '}
-                <a href="tel:0885226025" onClick={() => trackPhoneClick()}>
-                  (08) 8522 6025
-                </a>.
-              </p>
-            </div>
-          ) : (
-            <form onSubmit={handleSubmit} noValidate className={styles.form}>
-              <span className={styles.formEyebrow}>Free 15-minute call</span>
-              <h2 className={styles.formTitle}>Tell us where to reach you.</h2>
-
-              <div className={styles.fields}>
-                <label className={styles.field}>
-                  <span>{errors.name ?? 'Your name'}</span>
-                  <input
-                    type="text"
-                    value={form.name}
-                    onChange={(e) => update('name', e.target.value)}
-                    aria-invalid={Boolean(errors.name)}
-                  />
-                </label>
-
-                <label className={styles.field}>
-                  <span>{errors.phone ?? 'Phone'}</span>
-                  <input
-                    type="tel"
-                    value={form.phone}
-                    onChange={(e) => update('phone', e.target.value)}
-                    aria-invalid={Boolean(errors.phone)}
-                  />
-                </label>
-
-                <label className={styles.field}>
-                  <span>{errors.email ?? 'Email'}</span>
-                  <input
-                    type="email"
-                    value={form.email}
-                    onChange={(e) => update('email', e.target.value)}
-                    aria-invalid={Boolean(errors.email)}
-                  />
-                </label>
-
-                <label className={styles.field}>
-                  <span>What&apos;s this about? <em>Optional</em></span>
-                  <textarea
-                    value={form.about}
-                    onChange={(e) => update('about', e.target.value)}
-                    rows={3}
-                  />
-                </label>
-              </div>
-
-              {errors.form && <p className={styles.formError}>{errors.form}</p>}
-
-              <button type="submit" className={styles.primary} disabled={loading}>
-                {loading ? 'Sending...' : 'Book a free 15-minute call'}
-                {!loading && <span aria-hidden>→</span>}
+          {variant === 'cta' && (
+            <div className={styles.ctaRow}>
+              <button
+                type="button"
+                className={`${styles.primary} ${styles.ctaButton}`}
+                onClick={() => setModalOpen(true)}
+              >
+                Quick enquiry
+                <span aria-hidden>→</span>
               </button>
-
-              <p className={styles.offerNote}>
-                Confidential · No obligation · Same-business-day reply
-              </p>
-
               <a
                 href="tel:0885226025"
                 className={styles.secondary}
@@ -163,10 +203,40 @@ export default function Hero() {
               >
                 Prefer to call? (08) 8522 6025
               </a>
-            </form>
+            </div>
           )}
-        </aside>
+        </div>
+
+        {variant !== 'cta' && (
+          <aside className={`${styles.contactPanel} ${success ? styles.contactPanelSuccess : ''}`} aria-label="Book a free 15-minute call">
+            {success ? successBlock : formBlock}
+          </aside>
+        )}
       </div>
+
+      {variant === 'cta' && modalOpen && (
+        <div
+          className={styles.modalOverlay}
+          onClick={() => setModalOpen(false)}
+          role="dialog"
+          aria-modal="true"
+          aria-label="Quick enquiry"
+        >
+          <div className={styles.modalCard} onClick={(e) => e.stopPropagation()}>
+            <button
+              type="button"
+              className={styles.modalClose}
+              onClick={() => setModalOpen(false)}
+              aria-label="Close"
+            >
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round">
+                <path d="M18 6L6 18M6 6l12 12" />
+              </svg>
+            </button>
+            {success ? successBlock : formBlock}
+          </div>
+        </div>
+      )}
 
       <div className={styles.trustRail}>
         <div className={styles.trustInner}>
