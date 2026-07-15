@@ -19,7 +19,7 @@ export const metadata = pageMetadata({
 export default function Home() {
   return (
     <>
-      <Hero />
+      <Hero variant="cta" />
       <Pathways />
       <Testimonials />
       <Editorial />
