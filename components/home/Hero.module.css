@@ -587,6 +587,27 @@
   object-position: center 75%;
 }
 
+/* The photo is square; wider viewports crop it vertically much harder,
+   so the focal point must slide up as the aspect ratio grows or the
+   faces get cut off at the top. */
+@media (min-aspect-ratio: 17/10) {
+  .heroCta .backdropImg {
+    object-position: center 60%;
+  }
+}
+
+@media (min-aspect-ratio: 15/8) {
+  .heroCta .backdropImg {
+    object-position: center 50%;
+  }
+}
+
+@media (min-aspect-ratio: 21/10) {
+  .heroCta .backdropImg {
+    object-position: center 42%;
+  }
+}
+
 /* No glass panel: copy sits straight on the photo in white, so the
    overlay carries legibility instead. */
 .heroCta .inner::before {
