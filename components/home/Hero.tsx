@@ -164,6 +164,8 @@ export default function Hero({ variant = 'default' }: { variant?: HeroVariant })
         {/* eslint-disable-next-line @next/next/no-img-element */}
         <img
           src="/images/home-hero-team.jpg"
+          srcSet="/images/home-hero-team.jpg 1080w, /images/home-hero-team-2560.jpg 2560w"
+          sizes="100vw"
           alt=""
           className={styles.backdropImg}
         />
