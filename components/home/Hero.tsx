@@ -163,8 +163,16 @@ export default function Hero({ variant = 'default' }: { variant?: HeroVariant })
       <div className={styles.backdrop} aria-hidden="true">
         {/* eslint-disable-next-line @next/next/no-img-element */}
         <img
-          src="/images/home-hero-team.jpg"
-          srcSet="/images/home-hero-team.jpg 1080w, /images/home-hero-team-2560.jpg 2560w"
+          src={
+            variant === 'cta'
+              ? '/images/hero-team-portrait-1280.jpg'
+              : '/images/home-hero-team.jpg'
+          }
+          srcSet={
+            variant === 'cta'
+              ? '/images/hero-team-portrait-1280.jpg 1280w, /images/hero-team-portrait-2333.jpg 2333w'
+              : '/images/home-hero-team.jpg 1080w, /images/home-hero-team-2560.jpg 2560w'
+          }
           sizes="100vw"
           alt=""
           className={styles.backdropImg}

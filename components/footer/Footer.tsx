@@ -66,7 +66,7 @@ export default function Footer() {
               {/* eslint-disable-next-line @next/next/no-img-element */}
               <img
                 src="/images/smclogo-footer.png"
-                alt="Steven M Clark — Barristers, Solicitors, Public Notary"
+                alt="Steven M Clark, Barristers, Solicitors, Public Notary"
                 className={styles.logo}
               />
             </Link>
@@ -103,6 +103,26 @@ export default function Footer() {
                 ))}
               </div>
             ))}
+          </div>
+        </div>
+      </div>
+
+      <div className={styles.memberships}>
+        <div className={styles.inner}>
+          <span className={styles.membershipsLabel}>Professional memberships</span>
+          <div className={styles.membershipLogos}>
+            {/* eslint-disable-next-line @next/next/no-img-element */}
+            <img
+              src="/images/anzcn-member.jpg"
+              alt="Member of the Australian and New Zealand College of Notaries"
+              className={styles.membershipLogo}
+            />
+            {/* eslint-disable-next-line @next/next/no-img-element */}
+            <img
+              src="/images/notaries-society-sa.png"
+              alt="Notaries' Society of South Australia Inc."
+              className={styles.membershipLogo}
+            />
           </div>
         </div>
       </div>

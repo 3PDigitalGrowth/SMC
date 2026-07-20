@@ -583,29 +583,11 @@
 
 /* Option 4 (cta): frost treatment, no form panel. Copy sits alone with a
    quick-enquiry button that opens a modal form. */
+/* Portrait source (2333x3500): faces sit ~45% down the frame, and with a
+   portrait image the cover-crop focal point holds steady across desktop
+   aspect ratios, so one value serves all widths. */
 .heroCta .backdropImg {
-  object-position: center 75%;
-}
-
-/* The photo is square; wider viewports crop it vertically much harder,
-   so the focal point must slide up as the aspect ratio grows or the
-   faces get cut off at the top. */
-@media (min-aspect-ratio: 17/10) {
-  .heroCta .backdropImg {
-    object-position: center 60%;
-  }
-}
-
-@media (min-aspect-ratio: 15/8) {
-  .heroCta .backdropImg {
-    object-position: center 50%;
-  }
-}
-
-@media (min-aspect-ratio: 21/10) {
-  .heroCta .backdropImg {
-    object-position: center 42%;
-  }
+  object-position: center 52%;
 }
 
 /* No glass panel: copy sits straight on the photo in white, so the
@@ -770,6 +752,65 @@
     border-left: none !important;
     border-bottom: 1px solid var(--rule);
     padding: 16px var(--gutter-mob);
+  }
+}
+
+/* Mobile: the photo gets its own clear band up top, and the copy moves
+   onto solid paper below it so text never covers the team. */
+@media (max-width: 1023px) {
+  .heroCta .backdrop {
+    position: relative;
+    inset: auto;
+    height: 56vh;
+    min-height: 340px;
+  }
+
+  .heroCta .backdropImg {
+    object-position: center 26%;
+  }
+
+  .heroCta .overlay {
+    background: linear-gradient(
+      180deg,
+      rgba(26, 24, 20, 0.10) 0%,
+      rgba(26, 24, 20, 0.02) 50%,
+      rgba(26, 24, 20, 0.16) 100%
+    );
+  }
+
+  .heroCta .inner {
+    background: var(--paper);
+    padding-top: var(--space-4);
+    padding-bottom: var(--space-4);
+  }
+
+  .heroCta .copy {
+    padding-top: 0;
+  }
+
+  .heroCta .eyebrow {
+    color: var(--ink-muted);
+    text-shadow: none;
+  }
+
+  .heroCta .heading {
+    color: var(--ink);
+  }
+
+  .heroCta .heading em {
+    color: var(--leaf-deep);
+  }
+
+  .heroCta .lede {
+    color: var(--ink-muted);
+  }
+
+  .heroCta .secondary {
+    color: var(--ink-muted);
+  }
+
+  .heroCta .secondary::after {
+    background: var(--ink-muted);
   }
 }
 
