@@ -581,58 +581,63 @@
   -webkit-backdrop-filter: blur(10px) saturate(120%);
 }
 
-/* Option 4 (cta): the team photo gets its own clear band at every screen
-   size. Copy and the enquiry button sit on solid paper below it, so text
-   never covers the team (client request, 20-21 Jul 2026). */
-.heroCta {
-  display: block;
-  min-height: auto;
-  background: var(--paper);
+/* Option 4 (cta): frost treatment, no form panel. Copy sits alone with a
+   quick-enquiry button that opens a modal form. */
+/* Portrait source (2333x3500): faces sit ~45% down the frame, and with a
+   portrait image the cover-crop focal point holds steady across desktop
+   aspect ratios, so one value serves all widths. */
+.heroCta .backdropImg {
+  object-position: center 52%;
 }
 
-.heroCta .backdrop {
-  position: relative;
-  inset: auto;
+/* No glass panel: copy sits straight on the photo in white, so the
+   overlay carries legibility instead. */
+.heroCta .inner::before {
+  display: none;
 }
 
-/* Desktop band. Square source (2560x2560): faces sit ~38% down the frame;
-   anchoring the cover-crop window at 30% keeps every face clear of both
-   band edges across desktop aspect ratios. */
-@media (min-width: 1024px) {
-  .heroCta .backdrop {
-    height: clamp(440px, 64vh, 760px);
-  }
-
-  .heroCta .backdropImg {
-    object-position: center 30%;
-  }
-}
-
-/* Text no longer sits on the photo, so the overlay only needs a whisper
-   of grading to seat the band against the page. */
 .heroCta .overlay {
   background:
     linear-gradient(
       180deg,
-      rgba(26, 24, 20, 0.10) 0%,
-      rgba(26, 24, 20, 0.02) 50%,
-      rgba(26, 24, 20, 0.16) 100%
+      rgba(26, 24, 20, 0.30) 0%,
+      rgba(26, 24, 20, 0.42) 52%,
+      rgba(26, 24, 20, 0.74) 100%
     );
+}
+
+.heroCta .heading {
+  color: var(--paper-soft);
+}
+
+.heroCta .heading em {
+  color: #A9C4A0;
+}
+
+.heroCta .lede {
+  color: rgba(251, 247, 238, 0.82);
+}
+
+.heroCta .secondary {
+  color: rgba(251, 247, 238, 0.85);
+}
+
+.heroCta .secondary::after {
+  background: rgba(251, 247, 238, 0.85);
+}
+
+.heroCta .secondary:hover {
+  color: var(--paper-soft);
 }
 
 .heroCta .inner {
   grid-template-columns: 1fr;
-  background: var(--paper);
-  backdrop-filter: none;
-  -webkit-backdrop-filter: none;
-  box-shadow: none;
-  border-radius: 0;
-  padding-top: var(--space-4);
-  padding-bottom: var(--space-4);
+  align-self: end;
+  align-items: end;
 }
 
 .heroCta .copy {
-  padding-top: 0;
+  padding-top: clamp(120px, 20vh, 200px);
 }
 
 .heroCta .heading {
@@ -750,15 +755,62 @@
   }
 }
 
-/* Mobile band: portrait crop, taller window. */
+/* Mobile: the photo gets its own clear band up top, and the copy moves
+   onto solid paper below it so text never covers the team. */
 @media (max-width: 1023px) {
   .heroCta .backdrop {
+    position: relative;
+    inset: auto;
     height: 56vh;
     min-height: 340px;
   }
 
   .heroCta .backdropImg {
     object-position: center 26%;
+  }
+
+  .heroCta .overlay {
+    background: linear-gradient(
+      180deg,
+      rgba(26, 24, 20, 0.10) 0%,
+      rgba(26, 24, 20, 0.02) 50%,
+      rgba(26, 24, 20, 0.16) 100%
+    );
+  }
+
+  .heroCta .inner {
+    background: var(--paper);
+    padding-top: var(--space-4);
+    padding-bottom: var(--space-4);
+  }
+
+  .heroCta .copy {
+    padding-top: 0;
+  }
+
+  .heroCta .eyebrow {
+    color: var(--ink-muted);
+    text-shadow: none;
+  }
+
+  .heroCta .heading {
+    color: var(--ink);
+  }
+
+  .heroCta .heading em {
+    color: var(--leaf-deep);
+  }
+
+  .heroCta .lede {
+    color: var(--ink-muted);
+  }
+
+  .heroCta .secondary {
+    color: var(--ink-muted);
+  }
+
+  .heroCta .secondary::after {
+    background: var(--ink-muted);
   }
 }
 

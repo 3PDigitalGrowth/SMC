@@ -13,7 +13,7 @@ const variantClasses: Record<HeroVariant, string> = {
   band: styles.heroBand,
   split: styles.heroSplit,
   frost: styles.heroFrost,
-  cta: styles.heroCta,
+  cta: `${styles.heroFrost} ${styles.heroCta}`,
 }
 
 export default function Hero({ variant = 'default' }: { variant?: HeroVariant }) {
@@ -161,34 +161,22 @@ export default function Hero({ variant = 'default' }: { variant?: HeroVariant })
   return (
     <section className={`${styles.hero} ${variantClasses[variant]}`.trim()}>
       <div className={styles.backdrop} aria-hidden="true">
-        {variant === 'cta' ? (
-          /* Desktop band uses the square crop (less vertical trim across a
-             wide band); the portrait crop still serves phones. */
-          <picture>
-            <source
-              media="(min-width: 1024px)"
-              srcSet="/images/home-hero-team.jpg 1080w, /images/home-hero-team-2560.jpg 2560w"
-              sizes="100vw"
-            />
-            {/* eslint-disable-next-line @next/next/no-img-element */}
-            <img
-              src="/images/hero-team-portrait-1280.jpg"
-              srcSet="/images/hero-team-portrait-1280.jpg 1280w, /images/hero-team-portrait-2333.jpg 2333w"
-              sizes="100vw"
-              alt=""
-              className={styles.backdropImg}
-            />
-          </picture>
-        ) : (
-          /* eslint-disable-next-line @next/next/no-img-element */
-          <img
-            src="/images/home-hero-team.jpg"
-            srcSet="/images/home-hero-team.jpg 1080w, /images/home-hero-team-2560.jpg 2560w"
-            sizes="100vw"
-            alt=""
-            className={styles.backdropImg}
-          />
-        )}
+        {/* eslint-disable-next-line @next/next/no-img-element */}
+        <img
+          src={
+            variant === 'cta'
+              ? '/images/hero-team-portrait-1280.jpg'
+              : '/images/home-hero-team.jpg'
+          }
+          srcSet={
+            variant === 'cta'
+              ? '/images/hero-team-portrait-1280.jpg 1280w, /images/hero-team-portrait-2333.jpg 2333w'
+              : '/images/home-hero-team.jpg 1080w, /images/home-hero-team-2560.jpg 2560w'
+          }
+          sizes="100vw"
+          alt=""
+          className={styles.backdropImg}
+        />
         <div className={styles.overlay} />
       </div>
 
