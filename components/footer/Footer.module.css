@@ -28,10 +28,12 @@
 }
 
 .logo {
-  height: 64px;
+  /* Client request (21 Jul 2026): brighter and slightly larger against
+     the dark footer. The asset itself carries the tonal lift (paper-tinted
+     density map regenerated from smclogo-web.png). */
+  height: 80px;
   width: auto;
   display: block;
-  opacity: 0.95;
 }
 
 .tagline {
@@ -93,42 +95,42 @@
   padding-left: 4px;
 }
 
+/* Memberships sit with the firm logo and tagline so all the logos read
+   together in one place (client request, 21 Jul 2026). */
 .memberships {
-  border-bottom: 1px solid rgba(246, 241, 232, 0.1);
-}
-
-.memberships .inner {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  gap: var(--space-4);
-  grid-template-columns: none;
-  padding-top: var(--space-4);
-  padding-bottom: var(--space-4);
+  margin-bottom: var(--space-3);
 }
 
 .membershipsLabel {
+  display: block;
   font-family: var(--font-body), 'Inter', sans-serif;
   font-size: 11px;
   font-weight: 500;
   text-transform: uppercase;
   letter-spacing: 0.22em;
   color: var(--leaf-pale);
+  margin-bottom: var(--space-2);
 }
 
 .membershipLogos {
   display: flex;
   align-items: center;
-  gap: var(--space-3);
+  gap: var(--space-2);
   flex-wrap: wrap;
 }
 
 .membershipLogo {
-  height: 88px;
+  height: 64px;
   width: auto;
   background: #fff;
   border-radius: var(--radius-md);
   padding: 8px 12px;
+}
+
+/* The Law Society wordmark is wide and short: give it more breathing
+   room inside the same card height. */
+.membershipLogoWide {
+  padding: 14px 16px;
 }
 
 .bottom {
@@ -179,12 +181,7 @@
     flex-direction: column;
     align-items: flex-start;
   }
-  .memberships .inner {
-    flex-direction: column;
-    align-items: flex-start;
-    gap: var(--space-3);
-  }
   .membershipLogo {
-    height: 72px;
+    height: 56px;
   }
 }

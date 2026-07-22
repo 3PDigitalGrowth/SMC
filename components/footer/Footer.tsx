@@ -75,6 +75,29 @@ export default function Footer() {
               Family, estates, property, business, and the only Public Notary between
               North Adelaide and the Riverland.
             </p>
+            <div className={styles.memberships}>
+              <span className={styles.membershipsLabel}>Professional memberships</span>
+              <div className={styles.membershipLogos}>
+                {/* eslint-disable-next-line @next/next/no-img-element */}
+                <img
+                  src="/images/anzcn-member.jpg"
+                  alt="Member of the Australian and New Zealand College of Notaries"
+                  className={styles.membershipLogo}
+                />
+                {/* eslint-disable-next-line @next/next/no-img-element */}
+                <img
+                  src="/images/notaries-society-sa.png"
+                  alt="Notaries' Society of South Australia Inc."
+                  className={styles.membershipLogo}
+                />
+                {/* eslint-disable-next-line @next/next/no-img-element */}
+                <img
+                  src="/images/law-society-sa.svg"
+                  alt="The Law Society of South Australia"
+                  className={`${styles.membershipLogo} ${styles.membershipLogoWide}`}
+                />
+              </div>
+            </div>
             <address className={styles.address}>
               <div>1 Adelaide Rd, Gawler South SA 5118</div>
               <div>Mon–Fri · 9:00am – 5:00pm</div>
@@ -103,26 +126,6 @@ export default function Footer() {
                 ))}
               </div>
             ))}
-          </div>
-        </div>
-      </div>
-
-      <div className={styles.memberships}>
-        <div className={styles.inner}>
-          <span className={styles.membershipsLabel}>Professional memberships</span>
-          <div className={styles.membershipLogos}>
-            {/* eslint-disable-next-line @next/next/no-img-element */}
-            <img
-              src="/images/anzcn-member.jpg"
-              alt="Member of the Australian and New Zealand College of Notaries"
-              className={styles.membershipLogo}
-            />
-            {/* eslint-disable-next-line @next/next/no-img-element */}
-            <img
-              src="/images/notaries-society-sa.png"
-              alt="Notaries' Society of South Australia Inc."
-              className={styles.membershipLogo}
-            />
           </div>
         </div>
       </div>
