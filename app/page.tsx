@@ -1,4 +1,5 @@
 import Hero from '@/components/home/Hero'
+import TeamIntro from '@/components/home/TeamIntro'
 import Pathways from '@/components/home/Pathways'
 import Testimonials from '@/components/home/Testimonials'
 import Editorial from '@/components/home/Editorial'
@@ -19,7 +20,8 @@ export const metadata = pageMetadata({
 export default function Home() {
   return (
     <>
-      <Hero variant="cta" />
+      <Hero />
+      <TeamIntro />
       <Pathways />
       <Testimonials />
       <Editorial />
