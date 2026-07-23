@@ -21,7 +21,7 @@ export default function TeamIntro() {
             </div>
             <p className={styles.caption}>
               <span className={styles.captionNames}>
-                Zahra Amin, Steven Clark, Jack Clark and Mahima Sobti
+                Mahima Sobti, Steven Clark, Jack Clark and Zahra Amin
               </span>
               <span> on the front steps at 1 Adelaide Road, Gawler South.</span>
             </p>
@@ -36,14 +36,10 @@ export default function TeamIntro() {
             </h2>
             <p className={styles.body}>
               Principal Steven Clark and solicitors Zahra Amin, Jack Clark and
-              Mahima Sobti, photographed outside the office the firm has worked
-              from for decades. Alongside them, a support team keeps the door
-              open Monday to Friday.
-            </p>
-            <p className={styles.body}>
-              No call centre, no triage queue. When you ring, you reach the
-              people on these steps, and one of them will know exactly what to
-              do next.
+              Mahima Sobti are pictured outside the firm&apos;s long-established
+              office. Together with a dedicated support team, they ensure
+              clients receive professional service and assistance throughout
+              the week, Monday to Friday.
             </p>
             <Link href="/about" className={styles.link}>
               Meet the full team
