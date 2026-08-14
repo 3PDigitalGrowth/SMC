@@ -1,6 +1,7 @@
 import { NextResponse } from 'next/server'
 import type { EnquiryPayload } from '@/lib/enquiry'
 import { leadConfirmationEmail, leadAdminEmail, sendEmail } from '@/lib/emails'
+import { clientIp, screenSubmission } from '@/lib/spam'
 
 export const runtime = 'nodejs'
 
@@ -11,8 +12,10 @@ const FIRM_REPLY_TO = 'law@stevenmclark.com.au'
 
 const EMAIL_RE = /^[^\s@]+@[^\s@]+\.[^\s@]+$/
 
+type SubmittedPayload = EnquiryPayload & { hp?: string; elapsedMs?: number }
+
 export async function POST(request: Request) {
-  let data: EnquiryPayload
+  let data: SubmittedPayload
   try {
     data = await request.json()
   } catch {
@@ -30,6 +33,20 @@ export async function POST(request: Request) {
   }
 
   const payload: EnquiryPayload = { name, email, phone: '', source: data.source, page: data.page }
+
+  const screen = screenSubmission({
+    name,
+    email,
+    hp: data.hp,
+    elapsedMs: data.elapsedMs,
+    ip: clientIp(request),
+  })
+
+  // Return the same success shape a person sees; send nothing, log it instead.
+  if (screen.verdict !== 'clean') {
+    console.warn(`[lead] ${screen.verdict} submission:`, screen.reasons.join('; '))
+    return NextResponse.json({ success: true })
+  }
 
   // Deliver the guides to the person first: this is what they asked for.
   const confirmation = leadConfirmationEmail(payload)

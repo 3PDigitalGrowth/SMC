@@ -5,6 +5,7 @@ import {
   adminNotificationEmail,
   sendEmail,
 } from '@/lib/emails'
+import { clientIp, screenSubmission } from '@/lib/spam'
 
 export const runtime = 'nodejs'
 
@@ -15,8 +16,10 @@ const FIRM_REPLY_TO = 'law@stevenmclark.com.au'
 
 const EMAIL_RE = /^[^\s@]+@[^\s@]+\.[^\s@]+$/
 
+type SubmittedPayload = EnquiryPayload & { hp?: string; elapsedMs?: number }
+
 export async function POST(request: Request) {
-  let data: EnquiryPayload
+  let data: SubmittedPayload
   try {
     data = await request.json()
   } catch {
@@ -41,6 +44,41 @@ export async function POST(request: Request) {
     message: (data.message || '').trim(),
     source: data.source,
     page: data.page,
+  }
+
+  const screen = screenSubmission({
+    name,
+    email,
+    phone,
+    message: payload.message,
+    hp: data.hp,
+    elapsedMs: data.elapsedMs,
+    ip: clientIp(request),
+  })
+
+  // A bot gets the same success response a person does, so it learns nothing.
+  if (screen.verdict === 'block') {
+    console.warn('[booking] blocked submission:', screen.reasons.join('; '))
+    return NextResponse.json({ success: true })
+  }
+
+  // Suspected marketing pitch: keep it out of the firm's inbox, but send it to
+  // the agency so a wrongly flagged enquiry can still be rescued.
+  if (screen.verdict === 'quarantine') {
+    console.warn('[booking] quarantined submission:', screen.reasons.join('; '))
+    const flagged = adminNotificationEmail(payload)
+    try {
+      await sendEmail({
+        from: FROM,
+        to: ADMIN_BCC,
+        replyTo: payload.email,
+        subject: `[Possible spam] ${flagged.subject}`,
+        html: flagged.html,
+      })
+    } catch (err) {
+      console.error('[booking] quarantine notification failed:', err)
+    }
+    return NextResponse.json({ success: true })
   }
 
   // Admin notification is the critical path: if the firm does not hear about

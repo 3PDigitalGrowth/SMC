@@ -1,7 +1,8 @@
 'use client'
 
 import { useState, FormEvent } from 'react'
-import { submitLeadForm } from '@/lib/formHandlers'
+import { submitLeadForm, honeypotValue } from '@/lib/formHandlers'
+import HoneypotField from '@/components/ui/HoneypotField'
 import { trackLeadCaptured } from '@/lib/analytics'
 import styles from './LeadMagnet.module.css'
 
@@ -14,6 +15,7 @@ export default function LeadMagnet() {
 
   async function handleSubmit(e: FormEvent) {
     e.preventDefault()
+    const hp = honeypotValue(e.currentTarget as HTMLFormElement)
     setError('')
     if (!name.trim()) return setError('Please enter your name.')
     if (!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email)) return setError('Please enter a valid email.')
@@ -23,6 +25,7 @@ export default function LeadMagnet() {
         name: name.trim(),
         email: email.trim(),
         source: 'homepage_checklist',
+        hp,
       })
       trackLeadCaptured('homepage_checklist')
       setSuccess(true)
@@ -48,6 +51,7 @@ export default function LeadMagnet() {
         </div>
 
         <form onSubmit={handleSubmit} className={styles.form} noValidate>
+          <HoneypotField />
           {success ? (
             <div className={styles.success}>
               <span className={styles.successMark}>✓</span>

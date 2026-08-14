@@ -149,7 +149,7 @@ export function clientConfirmationEmail(data: EnquiryPayload): { subject: string
       </td>
     </tr>
     ${stepRow('1', 'We read your enquiry', 'A real person at the firm, not a queue.')}
-    ${stepRow('2', 'Steven or one of the team calls you back', 'The same business day, on the number you gave us.')}
+    ${stepRow('2', 'One of our solicitors calls you back', 'The same business day, on the number you gave us.')}
     ${stepRow('3', 'A free 15-minute conversation', 'Confidential, no obligation, no pressure to engage us afterwards.', true)}
   </table>`
 
@@ -177,7 +177,7 @@ export function clientConfirmationEmail(data: EnquiryPayload): { subject: string
   const body = `
     ${heading(`Thank you, ${fname}.`)}
     ${para(aboutLine)}
-    ${para('Your message is with our team. Steven personally aims to call every enquiry back the same business day.')}
+    ${para('Your message is with our team. We aim to call every enquiry back the same business day.')}
     <table role="presentation" width="100%" cellpadding="0" cellspacing="0" style="background:${C.paper}; border:1px solid ${C.rule}; border-radius:10px; margin:8px 0 24px;">
       ${detailRow('Name', escapeHtml(data.name))}
       ${detailRow('Phone', escapeHtml(data.phone))}
@@ -255,7 +255,7 @@ export function adminNotificationEmail(data: EnquiryPayload): { subject: string;
 
   const body = `
     ${heading(isGeneral ? 'New website enquiry' : `New enquiry: ${escapeHtml(service)}`)}
-    ${para(`<strong style="color:${C.ink};">${escapeHtml(data.name)}</strong> asked to be called back. Steven aims to reply the same business day.`)}
+    ${para(`<strong style="color:${C.ink};">${escapeHtml(data.name)}</strong> asked to be called back. We aim to reply the same business day.`)}
     <table role="presentation" width="100%" cellpadding="0" cellspacing="0" style="background:${C.paper}; border:1px solid ${C.rule}; border-radius:10px; margin:8px 0 24px;">
       ${detailRow('Name', escapeHtml(data.name))}
       ${detailRow('Phone', escapeHtml(data.phone), `tel:${escapeHtml(data.phone.replace(/[^+\d]/g, ''))}`)}

@@ -4,7 +4,8 @@ import { useState, FormEvent } from 'react'
 import Link from 'next/link'
 import ArtImage from '@/components/ui/ArtImage'
 import { IMAGES } from '@/lib/images'
-import { submitBookingForm } from '@/lib/formHandlers'
+import { submitBookingForm, honeypotValue } from '@/lib/formHandlers'
+import HoneypotField from '@/components/ui/HoneypotField'
 import { trackPhoneClick, trackLeadCaptured } from '@/lib/analytics'
 import styles from './Booking.module.css'
 
@@ -38,6 +39,7 @@ export default function Booking() {
 
   async function handleSubmit(e: FormEvent) {
     e.preventDefault()
+    const hp = honeypotValue(e.currentTarget as HTMLFormElement)
     if (!validate()) return
     setLoading(true)
     try {
@@ -47,6 +49,7 @@ export default function Booking() {
         email: form.email.trim(),
         message: form.about.trim(),
         source: 'homepage_booking',
+        hp,
       })
       trackLeadCaptured('homepage_booking')
       setSuccess(true)
@@ -113,6 +116,7 @@ export default function Booking() {
           <div className={`${styles.formFace} ${success ? styles.faceHidden : ''}`}>
             <form onSubmit={handleSubmit} noValidate className={styles.form}>
               <h3 className={styles.formTitle}>Request a callback</h3>
+              <HoneypotField />
 
               <div className={styles.fields}>
                 <div className={styles.field}>

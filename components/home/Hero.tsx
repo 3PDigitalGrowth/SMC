@@ -3,7 +3,8 @@
 import { FormEvent, useEffect, useState } from 'react'
 import Link from 'next/link'
 import { trackLeadCaptured, trackPhoneClick } from '@/lib/analytics'
-import { submitBookingForm } from '@/lib/formHandlers'
+import { submitBookingForm, honeypotValue } from '@/lib/formHandlers'
+import HoneypotField from '@/components/ui/HoneypotField'
 import styles from './Hero.module.css'
 
 export type HeroVariant = 'default' | 'band' | 'split' | 'frost' | 'cta'
@@ -58,6 +59,7 @@ export default function Hero({ variant = 'default' }: { variant?: HeroVariant })
 
   async function handleSubmit(e: FormEvent<HTMLFormElement>) {
     e.preventDefault()
+    const hp = honeypotValue(e.currentTarget)
     if (!validate()) return
 
     setLoading(true)
@@ -68,6 +70,7 @@ export default function Hero({ variant = 'default' }: { variant?: HeroVariant })
         email: form.email.trim(),
         message: form.about.trim(),
         source: variant === 'cta' ? 'homepage_hero_modal' : 'homepage_hero',
+        hp,
       })
       trackLeadCaptured('homepage_hero')
       setSuccess(true)
@@ -93,6 +96,7 @@ export default function Hero({ variant = 'default' }: { variant?: HeroVariant })
 
   const formBlock = (
     <form onSubmit={handleSubmit} noValidate className={styles.form}>
+      <HoneypotField />
       <span className={styles.formEyebrow}>Free 15-minute call</span>
       <h2 className={styles.formTitle}>Tell us where to reach you.</h2>
 
