@@ -9,7 +9,7 @@ Console property and the published GTM container.
 |---|---|---|
 | GTM | `GTM-N2ZSJVLJ` | Container "www.stevenmclark.com.au", account 6366172043, container 258380211, live version 3 |
 | GA4 | Property 545683343, stream `G-9HMHVNBY0B` | "Steven M Clark Solicitors" under the 3P Master MCC. Stream URI is the www host |
-| GSC | `https://www.stevenmclark.com.au/` | Verified, siteOwner. No domain property |
+| GSC | `https://www.stevenmclark.com.au/` and `https://stevenmclark.com.au/` | Both prefix properties verified, siteOwner. Domain property still pending a DNS TXT record |
 
 Both GTM and a hardcoded gtag snippet load from `app/layout.tsx`. That is
 deliberate: site events reach GA4 directly through gtag even when no GTM tag
@@ -55,51 +55,49 @@ GA4:
 Search Console:
 - `https://www.stevenmclark.com.au/sitemap.xml` submitted. It had never been
   submitted despite the route serving correctly since May.
+- The apex host verified and added as a second prefix property. The ANALYTICS
+  verification method failed ("the necessary verification token could not be
+  found on your site") because gtag loads in the body and Google's checker
+  reads the head. TAG_MANAGER verification passed against the same page, using
+  the container that was already there.
 
-## Open items in GTM
+## GTM cleanup, built and waiting to publish
 
-These need write access to the container. The delegated service account
-(`id-p-digital-g-ads-ai-agent@recaptcha-3p-for-1749881494023.iam.gserviceaccount.com`,
-client ID `115796183789131613694`) currently holds `tagmanager.readonly` only.
-Adding `https://www.googleapis.com/auth/tagmanager.edit.containers` and
-`https://www.googleapis.com/auth/tagmanager.publish` to the domain-wide
-delegation entry in Workspace Admin would let this be scripted. Otherwise the
-work is manual in the GTM UI.
+Prepared 16 August 2026 in workspace **"3P tracking cleanup 16 Aug 2026"**
+(workspace 5). None of it affects the live container until that workspace is
+published. Version 3 remains live in the meantime.
 
-**1. Trigger evt_003 fires on nothing.** It listens for a dataLayer event named
-`guide_signup`. The site pushes `lead_captured` with `source=homepage_checklist`
-instead, so the tag "GA4 Event - generate_lead (evt_003)" has never fired.
-Delete both the tag and the trigger. Guide downloads already reach GA4 through
-evt_002 and are identifiable by the `source` parameter.
+Removed, with the triggers that existed only to serve them:
 
-**2. Trigger evt_006 fires on nothing.** It waits for a page URL containing
-"thank". The forms morph in place with no navigation, so there is no thank-you
-page and never will be. Delete the tag and the trigger.
+| Tag | Why |
+|---|---|
+| generate_lead (evt_003) | Listened for a dataLayer event named `guide_signup`. The site pushes `lead_captured` with `source=homepage_checklist`, so this never fired once. Guide downloads already reach GA4 through evt_002 and are identifiable by `source` |
+| generate_lead (evt_006) | Waited for a page URL containing "thank". The forms morph in place with no navigation, so no such page exists |
+| contact (evt_004) | Fired on any click whose text contained "Book a free 15-minute call". That text sits on four mega-menu links, the mobile menu, the exit-intent button and the hero form's submit button, so it counted scroll-to-form clicks and failed submissions as conversions. Phone taps are the real contact signal and reach GA4 directly as `phone_click` |
+| view_item (evt_007) | Fired on click text containing "Business sale & purchase". Brittle against any copy edit, and a service link click is not a conversion |
 
-**3. Tag evt_004 counts the wrong thing.** It fires GA4 `contact` on any click
-whose text contains "Book a free 15-minute call". That text is on four mega-menu
-links, the mobile menu link, the exit-intent button and the hero form's submit
-button, so the event counts scroll-to-form clicks and failed submissions as
-contacts. `contact` is a key event in GA4, so those all report as conversions.
-Repoint the trigger at the `phone_click` dataLayer event with `method=phone`,
-or delete it and rely on the `phone_click` key event now set in GA4.
+Added: a Data Layer Variable `dlv - source`, wired as a `source` event
+parameter on both surviving tags, so GTM-sent events populate the "Lead source"
+dimension the same way the direct gtag events already do.
 
-**4. Tag evt_007 is brittle.** It fires on click text containing
-"Business sale & purchase". Any copy edit silently kills it, and a service link
-click is not a conversion. Delete it.
+Surviving tags: generate_lead (evt_002) on the `lead_captured` dataLayer event,
+and view_item (evt_005) on practice-area page views, which is now a plain
+engagement event rather than a conversion.
 
-**5. No dataLayer variables exist in the container.** Create a Data Layer
-Variable named `source` and add it as an event parameter on the remaining GA4
-event tags, so GTM-sent events populate the "Lead source" dimension the same
-way the direct gtag events do.
+**After publishing:** unmark `contact` as a key event in GA4. Once evt_004 is
+gone nothing feeds it, and leaving it marked keeps a dead conversion in the
+reports.
 
 ## Other open items
 
-- **No domain property in Search Console.** Only the www prefix property is
-  verified, so apex and any subdomain traffic sit outside it. Adding a domain
-  property needs a DNS TXT record at the registrar.
-- **`contact` remains a key event** while evt_004 still feeds it. Fix the
-  trigger first, then decide whether to keep the event marked.
+- **No domain property in Search Console.** Both prefix properties are now
+  verified, but a `sc-domain:` property covers every host and protocol variant
+  in one place. Domain properties accept DNS_TXT or DNS_CNAME only, whatever
+  tags sit on the page, so this one needs a record added at the registrar.
+  Nameservers are ns1/ns2/ns3.nameserver.net.au. The verification token has
+  been issued and is with Alex. Add it as an additional TXT record: the
+  existing apex TXT is the Outlook SPF record and mail breaks if it is
+  replaced.
 - **`purchase`, `qualify_lead` and `close_convert_lead`** are marked as key
   events and mean nothing on this site. They never fire, so they are harmless,
   but they clutter the conversion list.
