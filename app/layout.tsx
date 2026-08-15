@@ -1,4 +1,4 @@
-import type { Metadata } from 'next'
+﻿import type { Metadata } from 'next'
 import Script from 'next/script'
 import { Fraunces, Inter } from 'next/font/google'
 import AMLBanner from '@/components/nav/AMLBanner'
@@ -24,7 +24,7 @@ const inter = Inter({
 })
 
 export const metadata: Metadata = {
-  metadataBase: new URL('https://stevenmclark.com.au'),
+  metadataBase: new URL('https://www.stevenmclark.com.au'),
   title: {
     default: 'Steven M Clark Lawyers, Gawler.',
     template: '%s',

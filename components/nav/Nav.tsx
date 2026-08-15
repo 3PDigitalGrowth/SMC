@@ -74,7 +74,7 @@ export default function Nav() {
             <a
               href="tel:0885226025"
               className={styles.phone}
-              onClick={() => trackPhoneClick()}
+              onClick={() => trackPhoneClick('nav')}
             >
               <span className={styles.phoneDot} />
               (08) 8522 6025

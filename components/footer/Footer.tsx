@@ -1,4 +1,5 @@
 import Link from 'next/link'
+import PhoneLink from '@/components/ui/PhoneLink'
 import styles from './Footer.module.css'
 
 const columns = [
@@ -101,7 +102,7 @@ export default function Footer() {
             <address className={styles.address}>
               <div>1 Adelaide Rd, Gawler South SA 5118</div>
               <div>Mon–Fri · 9:00am – 5:00pm</div>
-              <div><a href="tel:0885226025">(08) 8522 6025</a></div>
+              <div><PhoneLink location="footer">(08) 8522 6025</PhoneLink></div>
               <div><a href="mailto:law@stevenmclark.com.au">law@stevenmclark.com.au</a></div>
               <div>
                 <a

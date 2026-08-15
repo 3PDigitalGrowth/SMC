@@ -30,9 +30,11 @@ export async function POST(request: Request) {
   const email = (data.email || '').trim()
   const phone = (data.phone || '').trim()
 
-  if (!name || !phone || !EMAIL_RE.test(email)) {
+  // A callback request only needs a name and a number. Email is optional
+  // (the blog inline form does not ask for one), but must be valid if given.
+  if (!name || !phone || (email && !EMAIL_RE.test(email))) {
     return NextResponse.json(
-      { success: false, error: 'Please provide your name, phone and a valid email.' },
+      { success: false, error: 'Please provide your name and a phone number.' },
       { status: 422 },
     )
   }
@@ -71,7 +73,7 @@ export async function POST(request: Request) {
       await sendEmail({
         from: FROM,
         to: ADMIN_BCC,
-        replyTo: payload.email,
+        replyTo: payload.email || FIRM_REPLY_TO,
         subject: `[Possible spam] ${flagged.subject}`,
         html: flagged.html,
       })
@@ -90,7 +92,7 @@ export async function POST(request: Request) {
       from: FROM,
       to: ADMIN_TO,
       bcc: ADMIN_BCC,
-      replyTo: payload.email,
+      replyTo: payload.email || FIRM_REPLY_TO,
       subject: admin.subject,
       html: admin.html,
     })
@@ -100,6 +102,11 @@ export async function POST(request: Request) {
       { success: false, error: 'We could not send your enquiry. Please call us on (08) 8522 6025.' },
       { status: 502 },
     )
+  }
+
+  // No email address means no confirmation to send: the callback still stands.
+  if (!payload.email) {
+    return NextResponse.json({ success: true })
   }
 
   // Client confirmation is best-effort: never block the success response on it.

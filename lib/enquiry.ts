@@ -60,8 +60,10 @@ const SERVICE_BY_PATH: Record<string, string> = {
 
 const SOURCE_LABELS: Record<string, string> = {
   homepage_hero: 'Homepage hero form',
+  homepage_hero_modal: 'Homepage quick enquiry',
   homepage_booking: 'Callback form',
   homepage_checklist: 'Guide download',
+  blog_inline_form: 'Article callback form',
 }
 
 // Derive a clean service label from the page the enquiry came from.

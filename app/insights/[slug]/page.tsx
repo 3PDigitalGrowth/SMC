@@ -1,4 +1,4 @@
-import type { Metadata } from 'next'
+﻿import type { Metadata } from 'next'
 import { notFound } from 'next/navigation'
 import BlogTemplate from '@/components/blog/BlogTemplate'
 import { getAllSlugs, getPostBySlug, getRelatedPosts } from '@/lib/blog'
@@ -15,7 +15,7 @@ export function generateMetadata({ params }: RouteParams): Metadata {
   const post = getPostBySlug(params.slug)
   if (!post) return { title: 'Not found' }
   const { frontmatter } = post
-  const canonical = `https://stevenmclark.com.au/insights/${frontmatter.slug}`
+  const canonical = `https://www.stevenmclark.com.au/insights/${frontmatter.slug}`
   const isDraft = !!frontmatter.draft
 
   return {
@@ -59,9 +59,9 @@ export default function InsightPage({ params }: RouteParams) {
       name: 'Steven M Clark Lawyers',
     },
     image: post.frontmatter.heroImage
-      ? `https://stevenmclark.com.au${post.frontmatter.heroImage}`
+      ? `https://www.stevenmclark.com.au${post.frontmatter.heroImage}`
       : undefined,
-    mainEntityOfPage: `https://stevenmclark.com.au/insights/${post.frontmatter.slug}`,
+    mainEntityOfPage: `https://www.stevenmclark.com.au/insights/${post.frontmatter.slug}`,
   }
 
   const breadcrumbJsonLd = {
@@ -74,9 +74,9 @@ export default function InsightPage({ params }: RouteParams) {
         name: label,
         item:
           i === 0
-            ? 'https://stevenmclark.com.au/insights'
+            ? 'https://www.stevenmclark.com.au/insights'
             : i === arr.length - 1
-              ? `https://stevenmclark.com.au/insights/${post.frontmatter.slug}`
+              ? `https://www.stevenmclark.com.au/insights/${post.frontmatter.slug}`
               : undefined,
       }),
     ),

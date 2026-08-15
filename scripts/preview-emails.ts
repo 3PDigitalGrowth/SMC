@@ -1,4 +1,4 @@
-// Renders the enquiry emails to /tmp HTML files for visual review.
+﻿// Renders the enquiry emails to /tmp HTML files for visual review.
 // Run: npx tsx scripts/preview-emails.ts
 import { writeFileSync } from 'fs'
 import { join } from 'path'
@@ -15,7 +15,7 @@ const sample: EnquiryPayload = {
   page: {
     path: '/gawler-property-lawyers',
     title: 'Property law and conveyancing, Gawler. Steven M Clark Lawyers.',
-    url: 'https://stevenmclark.com.au/gawler-property-lawyers',
+    url: 'https://www.stevenmclark.com.au/gawler-property-lawyers',
   },
 }
 

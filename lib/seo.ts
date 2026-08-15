@@ -1,6 +1,6 @@
-import type { Metadata } from 'next'
+﻿import type { Metadata } from 'next'
 
-const SITE_URL = 'https://stevenmclark.com.au'
+const SITE_URL = 'https://www.stevenmclark.com.au'
 const DEFAULT_OG_IMAGE = '/images/hero-portrait.jpg'
 
 export interface PageMetadataInput {

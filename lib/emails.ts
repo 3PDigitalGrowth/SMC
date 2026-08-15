@@ -1,4 +1,4 @@
-// Branded transactional emails for website enquiries, sent via Resend.
+﻿// Branded transactional emails for website enquiries, sent via Resend.
 // Two emails per submission: a warm client confirmation, and an admin
 // notification to the firm. Both are context aware (practice area + page).
 
@@ -11,7 +11,7 @@ import {
   submittedAt,
 } from './enquiry'
 
-const SITE = 'https://stevenmclark.com.au'
+const SITE = 'https://www.stevenmclark.com.au'
 const PHONE_DISPLAY = '(08) 8522 6025'
 const PHONE_TEL = '0885226025'
 const EMAIL = 'law@stevenmclark.com.au'
@@ -259,7 +259,9 @@ export function adminNotificationEmail(data: EnquiryPayload): { subject: string;
     <table role="presentation" width="100%" cellpadding="0" cellspacing="0" style="background:${C.paper}; border:1px solid ${C.rule}; border-radius:10px; margin:8px 0 24px;">
       ${detailRow('Name', escapeHtml(data.name))}
       ${detailRow('Phone', escapeHtml(data.phone), `tel:${escapeHtml(data.phone.replace(/[^+\d]/g, ''))}`)}
-      ${detailRow('Email', escapeHtml(data.email), `mailto:${escapeHtml(data.email)}`)}
+      ${data.email
+        ? detailRow('Email', escapeHtml(data.email), `mailto:${escapeHtml(data.email)}`)
+        : detailRow('Email', 'Not supplied, call them back')}
       ${detailRow('Enquiry about', escapeHtml(service))}
       ${messageBlock}
       ${detailRow('Submitted from', pageLink)}

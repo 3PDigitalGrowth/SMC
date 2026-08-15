@@ -3,6 +3,8 @@
 import { useState } from 'react'
 import Link from 'next/link'
 import { CTA_SLOTS, INLINE_FORM_FIELDS } from '@/lib/cta-config'
+import { trackLeadCaptured, trackPhoneClick } from '@/lib/analytics'
+import HoneypotField from '@/components/ui/HoneypotField'
 import styles from './CTA.module.css'
 
 interface CTAProps {
@@ -54,14 +56,25 @@ function InlineForm({ config }: { config: typeof CTA_SLOTS['inline-form'] }) {
     setState('submitting')
     setError(null)
     const formData = new FormData(e.currentTarget)
-    const payload = Object.fromEntries(formData.entries())
+    const { company, topic, ...fields } = Object.fromEntries(formData.entries())
     try {
       const res = await fetch(config.href, {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
-        body: JSON.stringify({ ...payload, source: 'blog-inline-form' }),
+        body: JSON.stringify({
+          ...fields,
+          message: topic,
+          hp: company,
+          source: 'blog_inline_form',
+          page: {
+            path: window.location.pathname,
+            title: document.title,
+            url: window.location.href,
+          },
+        }),
       })
       if (!res.ok) throw new Error('Submission failed')
+      trackLeadCaptured('blog_inline_form')
       setState('success')
     } catch {
       setState('error')
@@ -76,7 +89,11 @@ function InlineForm({ config }: { config: typeof CTA_SLOTS['inline-form'] }) {
         <h3 className={styles.successHeading}>We will be in touch the same business day.</h3>
         <p className={styles.successBody}>
           If your matter is urgent, ring us directly on{' '}
-          <a href="tel:0885226025" className={styles.successLink}>(08) 8522 6025</a>.
+          <a
+            href="tel:0885226025"
+            className={styles.successLink}
+            onClick={() => trackPhoneClick('blog_success')}
+          >(08) 8522 6025</a>.
         </p>
       </aside>
     )
@@ -88,6 +105,7 @@ function InlineForm({ config }: { config: typeof CTA_SLOTS['inline-form'] }) {
       <h3 className={styles.primaryHeading}>{config.heading}</h3>
       <p className={styles.primaryBody}>{config.body}</p>
       <form className={styles.form} onSubmit={handleSubmit} noValidate>
+        <HoneypotField />
         {INLINE_FORM_FIELDS.map((field) => (
           <label key={field.name} className={styles.field}>
             <span className={styles.fieldLabel}>{field.label}{field.required && ' *'}</span>

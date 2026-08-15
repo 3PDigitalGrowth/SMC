@@ -166,7 +166,7 @@ export default function MobileMenu({ isOpen, onClose }: MobileMenuProps) {
         <a
           href="tel:0885226025"
           className={styles.phoneNumber}
-          onClick={() => trackPhoneClick()}
+          onClick={() => trackPhoneClick('mobile_menu')}
         >
           (08) 8522 6025
         </a>

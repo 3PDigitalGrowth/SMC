@@ -1,7 +1,7 @@
-import type { MetadataRoute } from 'next'
+﻿import type { MetadataRoute } from 'next'
 import { getAllPosts } from '@/lib/blog'
 
-const BASE_URL = 'https://stevenmclark.com.au'
+const BASE_URL = 'https://www.stevenmclark.com.au'
 
 const STATIC_ROUTES = [
   '',

@@ -14,7 +14,7 @@ export default function StickyCTA() {
       <a
         href="tel:0885226025"
         className={styles.phone}
-        onClick={() => trackPhoneClick()}
+        onClick={() => trackPhoneClick('sticky_cta')}
       >
         <span className={styles.dot} />
         (08) 8522 6025

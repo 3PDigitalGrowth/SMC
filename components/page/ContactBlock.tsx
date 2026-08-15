@@ -1,4 +1,5 @@
 import SectionLabel from '@/components/ui/SectionLabel'
+import PhoneLink from '@/components/ui/PhoneLink'
 import AnimateIn from '@/components/ui/AnimateIn'
 import styles from './ContactBlock.module.css'
 
@@ -30,9 +31,9 @@ export default function ContactBlock() {
           <AnimateIn delay={80}>
             <div className={styles.column}>
               <SectionLabel variant="leaf">Call or write</SectionLabel>
-              <a href="tel:0885226025" className={styles.bigLink}>
+              <PhoneLink location="contact_page" className={styles.bigLink}>
                 (08) 8522 6025
-              </a>
+              </PhoneLink>
               <a href="mailto:law@stevenmclark.com.au" className={styles.bigLink}>
                 law@stevenmclark.com.au
               </a>

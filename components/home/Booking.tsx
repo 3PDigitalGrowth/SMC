@@ -6,6 +6,7 @@ import ArtImage from '@/components/ui/ArtImage'
 import { IMAGES } from '@/lib/images'
 import { submitBookingForm, honeypotValue } from '@/lib/formHandlers'
 import HoneypotField from '@/components/ui/HoneypotField'
+import PhoneLink from '@/components/ui/PhoneLink'
 import { trackPhoneClick, trackLeadCaptured } from '@/lib/analytics'
 import styles from './Booking.module.css'
 
@@ -89,7 +90,7 @@ export default function Booking() {
             <a
               href="tel:0885226025"
               className={styles.contactItem}
-              onClick={() => trackPhoneClick()}
+              onClick={() => trackPhoneClick('booking_section')}
             >
               <span className={styles.contactLabel}>By phone</span>
               <span className={styles.contactValue}>(08) 8522 6025</span>
@@ -199,7 +200,7 @@ export default function Booking() {
             </h3>
             <p className={styles.successBody}>
               Your message is with our team. If it&apos;s urgent, you&apos;re welcome to call
-              us directly on <a href="tel:0885226025">(08) 8522 6025</a>.
+              us directly on <PhoneLink location="booking_success">(08) 8522 6025</PhoneLink>.
             </p>
             <div className={styles.signature}>
               <span className={styles.signatureName}>Steven M Clark</span>

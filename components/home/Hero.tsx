@@ -87,7 +87,7 @@ export default function Hero({ variant = 'default' }: { variant?: HeroVariant })
       <h2 className={styles.formTitle}>We&apos;ll call you back today.</h2>
       <p className={styles.successText}>
         Your message is with our team. If it&apos;s urgent, call us directly on{' '}
-        <a href="tel:0885226025" onClick={() => trackPhoneClick()}>
+        <a href="tel:0885226025" onClick={() => trackPhoneClick('hero_success')}>
           (08) 8522 6025
         </a>.
       </p>
@@ -155,7 +155,7 @@ export default function Hero({ variant = 'default' }: { variant?: HeroVariant })
       <a
         href="tel:0885226025"
         className={styles.secondary}
-        onClick={() => trackPhoneClick()}
+        onClick={() => trackPhoneClick('hero_form')}
       >
         Prefer to call? (08) 8522 6025
       </a>
@@ -213,7 +213,7 @@ export default function Hero({ variant = 'default' }: { variant?: HeroVariant })
               <a
                 href="tel:0885226025"
                 className={styles.secondary}
-                onClick={() => trackPhoneClick()}
+                onClick={() => trackPhoneClick('hero_cta')}
               >
                 Prefer to call? (08) 8522 6025
               </a>
