@@ -9,7 +9,8 @@
   margin: 0 auto;
   padding: 0 var(--gutter);
   display: grid;
-  grid-template-columns: minmax(0, 1.1fr) minmax(0, 1fr);
+  /* Overridable so layout previews can hand more width to the photo. */
+  grid-template-columns: var(--ph-cols, minmax(0, 1.1fr) minmax(0, 1fr));
   gap: var(--space-6);
   align-items: center;
 }
@@ -44,14 +45,14 @@
 
 .imageWrap {
   position: relative;
-  aspect-ratio: 4 / 5;
+  aspect-ratio: var(--ph-aspect, 4 / 5);
   width: 100%;
   border-radius: var(--radius-md);
   overflow: hidden;
 }
 
 .imageWrapWide {
-  aspect-ratio: 4 / 3;
+  aspect-ratio: var(--ph-aspect-wide, 4 / 3);
 }
 
 .imageCaption {

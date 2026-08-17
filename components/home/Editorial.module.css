@@ -40,7 +40,8 @@
 
 .spread {
   display: grid;
-  grid-template-columns: 0.95fr 1fr;
+  /* Portrait column first. Overridable so layout previews can enlarge it. */
+  grid-template-columns: var(--ed-spread-cols, 0.95fr 1fr);
   gap: var(--space-6);
   align-items: start;
   margin-bottom: var(--space-6);
@@ -53,7 +54,7 @@
 
 .portraitWrap {
   position: relative;
-  aspect-ratio: 4 / 3;
+  aspect-ratio: var(--ed-portrait-aspect, 4 / 3);
   width: 100%;
   border-radius: var(--radius-md);
   overflow: hidden;

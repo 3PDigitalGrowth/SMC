@@ -9,7 +9,8 @@
   margin: 0 auto;
   padding: 0 var(--gutter);
   display: grid;
-  grid-template-columns: 0.95fr 1fr;
+  /* Photo column first. Overridable so layout previews can enlarge it. */
+  grid-template-columns: var(--ti-cols, 0.95fr 1fr);
   gap: var(--space-6);
   align-items: center;
 }
