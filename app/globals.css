@@ -58,7 +58,7 @@
   --dur-med:      520ms;
   --dur-slow:     1200ms;
 
-  --max-width:    1280px;
+  --max-width:    1560px; /* widened from 1280 per client approval, Aug 2026 */
   --measure:      640px;
   --gutter:       80px;
   --gutter-mob:   24px;

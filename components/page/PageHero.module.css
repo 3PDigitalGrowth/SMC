@@ -9,8 +9,8 @@
   margin: 0 auto;
   padding: 0 var(--gutter);
   display: grid;
-  /* Overridable so layout previews can hand more width to the photo. */
-  grid-template-columns: var(--ph-cols, minmax(0, 1.1fr) minmax(0, 1fr));
+  /* Photo-forward split, approved Aug 2026. Overridable for layout previews. */
+  grid-template-columns: var(--ph-cols, minmax(0, 0.9fr) minmax(0, 1.1fr));
   gap: var(--space-6);
   align-items: center;
 }
@@ -45,14 +45,20 @@
 
 .imageWrap {
   position: relative;
-  aspect-ratio: var(--ph-aspect, 4 / 5);
+  aspect-ratio: var(--ph-aspect, 3 / 4);
   width: 100%;
   border-radius: var(--radius-md);
   overflow: hidden;
 }
 
 .imageWrapWide {
-  aspect-ratio: var(--ph-aspect-wide, 4 / 3);
+  aspect-ratio: var(--ph-aspect-wide, 5 / 4);
+}
+
+/* No image supplied: let the copy own the full band instead of sitting in a
+   narrowed text track beside an empty column. */
+.innerNoImage {
+  grid-template-columns: minmax(0, 1fr);
 }
 
 .imageCaption {

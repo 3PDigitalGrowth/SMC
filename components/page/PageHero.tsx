@@ -18,7 +18,7 @@ interface PageHeroProps {
 export default function PageHero({ eyebrow, heading, lede, image, imageCaption, wideImage, imageAspect }: PageHeroProps) {
   return (
     <section className={styles.hero}>
-      <div className={styles.inner}>
+      <div className={`${styles.inner} ${image ? '' : styles.innerNoImage}`}>
         <div className={styles.copy}>
           <SectionLabel variant="leaf">{eyebrow}</SectionLabel>
           <h1 className={styles.heading}>{heading}</h1>

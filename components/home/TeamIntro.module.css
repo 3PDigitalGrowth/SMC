@@ -9,8 +9,8 @@
   margin: 0 auto;
   padding: 0 var(--gutter);
   display: grid;
-  /* Photo column first. Overridable so layout previews can enlarge it. */
-  grid-template-columns: var(--ti-cols, 0.95fr 1fr);
+  /* Photo column first and dominant, approved Aug 2026. */
+  grid-template-columns: var(--ti-cols, 1.25fr 0.85fr);
   gap: var(--space-6);
   align-items: center;
 }
