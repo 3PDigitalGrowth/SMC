@@ -1,0 +1,179 @@
+"""Steven M Clark Lawyers: email signature generator.
+
+Reproduces the signature approved by Mahima Sobti on 18 Aug 2026 ("looks
+perfect, please implement it for everyone"): the 29 Jul FINAL layout with the
+logo watermark scaled to fit the full body of the block so the
+"Barristers Solicitors Public Notary" line is never cut off.
+
+Differences from the 29 Jul file:
+- Images are hosted on the firm's own site (https://www.stevenmclark.com.au/
+  signature/...) instead of base64 data URIs. Classic Outlook for Windows
+  does not display data-URI images, so the hosted versions are needed there.
+- The watermark uses background-size: contain (Gmail, Apple Mail, iOS,
+  Outlook.com) with a VML fallback for classic Outlook for Windows.
+
+Run:  python docs/signatures/build_signatures.py
+Outputs one .html per person plus index.html into docs/signatures/.
+Then run screenshot step (needs playwright): python build_signatures.py --png
+"""
+
+import sys
+from pathlib import Path
+
+HERE = Path(__file__).resolve().parent
+BASE = "https://www.stevenmclark.com.au/signature"
+
+PHONE = "(08) 8522 6025"
+FAX = "(08) 8312 4960"
+ADDRESS = "1 Adelaide Road, Gawler South SA 5118"
+WEB = "www.stevenmclark.com.au"
+WEB_URL = "https://www.stevenmclark.com.au"
+
+# Misdirected-mail address used in the disclaimer. The firm's existing
+# signatures (Mahima's and Steven's, seen Sep 2026) all point this at
+# sophiec@; Steven's approved FINAL pointed at his own address. Kept as-is
+# for Steven, sophiec@ for everyone else.
+DEFAULT_RETURN_TO = "sophiec@stevenmclark.com.au"
+
+# Width 610 and block height 172 match the approved mockup.
+BLOCK_W = 610
+BLOCK_H = 172
+
+STAFF = [
+    # slug, display name, title, email, return_to override
+    ("steven-clark", "Steven M. Clark", "Principal &amp; Director", "smclark@stevenmclark.com.au", "smclark@stevenmclark.com.au"),
+    ("zahra-amin", "Zahra Amin", "Solicitor", "zahraa@stevenmclark.com.au", None),
+    ("jack-clark", "Jack Clark", "Solicitor", "jackc@stevenmclark.com.au", None),
+    ("mahima-sobti", "Mahima Sobti", "Solicitor", "mahimas@stevenmclark.com.au", None),
+    ("sophie-clark", "Sophie Clark", "Practice Manager / Paralegal", "sophiec@stevenmclark.com.au", None),
+    ("abby-torkington", "Abby Torkington", "Legal Secretary", "abbyt@stevenmclark.com.au", None),
+    # Addresses below not yet confirmed by the firm. Placeholder text is
+    # deliberately loud so it cannot be installed by accident.
+    ("rachel-east", "Rachel East", "Administration", "EMAIL-TBC@stevenmclark.com.au", None),
+    ("emma-vandenham", "Emma Vandenham", "Reception", "EMAIL-TBC@stevenmclark.com.au", None),
+]
+
+
+def signature_html(name: str, title: str, email: str, return_to: str) -> str:
+    wm = f"{BASE}/watermark.png"
+    contact = f"""
+<div style="font-family:Georgia,'Times New Roman',serif;font-size:21px;font-weight:bold;color:#1E211A;line-height:1.12;">{name}</div>
+<div style="font-family:Georgia,'Times New Roman',serif;font-style:italic;font-size:13px;color:#5B6649;padding:3px 0 0 0;">{title}</div>
+<table role="presentation" cellpadding="0" cellspacing="0" border="0" style="margin:11px 0 12px 0;"><tr><td width="46" height="2" style="width:46px;height:2px;background-color:#AB8C4A;font-size:0;line-height:0;">&nbsp;</td></tr></table>
+<div style="font-family:Arial,Helvetica,sans-serif;font-size:12px;line-height:1.75;color:#3C3A33;">
+<span style="color:#AB8C4A;font-weight:bold;">T</span>&nbsp; {PHONE} &nbsp;&nbsp;<span style="color:#AB8C4A;font-weight:bold;">F</span>&nbsp; {FAX}<br>
+<span style="color:#AB8C4A;font-weight:bold;">A</span>&nbsp; {ADDRESS}<br>
+<span style="color:#AB8C4A;font-weight:bold;">E</span>&nbsp; <a href="mailto:{email}" style="color:#5B6649;text-decoration:none;">{email}</a><br>
+<span style="color:#AB8C4A;font-weight:bold;">W</span>&nbsp; <a href="{WEB_URL}" style="color:#5B6649;text-decoration:none;">{WEB}</a>
+</div>"""
+
+    logos = f"""
+<img src="{BASE}/law-society.png" width="112" alt="Law Society of South Australia Gold Alliance Firm" style="display:block;width:112px;height:auto;margin:0 auto 9px;">
+<table role="presentation" cellpadding="0" cellspacing="0" border="0" align="center"><tr>
+<td align="center" style="padding:0 8px 0 0;"><img src="{BASE}/notaries-sa.png" height="44" alt="Notaries Society of South Australia" style="display:block;height:44px;width:auto;"></td>
+<td align="center"><img src="{BASE}/anzcn.png" width="92" alt="The Australian and New Zealand College of Notaries" style="display:block;width:92px;height:auto;"></td>
+</tr></table>"""
+
+    block_style = (
+        f"border-left:3px solid #6F7B5C;"
+        f"background-image:url('{wm}');background-repeat:no-repeat;"
+        f"background-position:center center;background-size:contain;"
+        f"padding:6px 0 6px 18px;"
+    )
+
+    return f"""<!--
+  STEVEN M CLARK LAWYERS EMAIL SIGNATURE: {name}
+  Approved layout 18 Aug 2026 (watermark fitted to the full block).
+  Images hosted at {BASE}/ so they render in every mail client.
+  Generated by docs/signatures/build_signatures.py. Do not hand-edit; edit the generator.
+-->
+<table role="presentation" cellpadding="0" cellspacing="0" border="0" width="{BLOCK_W}" style="width:{BLOCK_W}px;border-collapse:collapse;font-family:Arial,Helvetica,sans-serif;color:#3C3A33;">
+<tr><td background="{wm}" valign="top" style="{block_style}">
+<!--[if gte mso 9]>
+<v:rect xmlns:v="urn:schemas-microsoft-com:vml" fill="true" stroke="false" style="width:{BLOCK_W - 21}px;height:{BLOCK_H}px;">
+<v:fill type="frame" src="{wm}" color="#FFFFFF" aspect="atmost" />
+<v:textbox inset="0,0,0,0">
+<![endif]-->
+<table role="presentation" cellpadding="0" cellspacing="0" border="0" width="100%" style="width:100%;"><tr>
+<td valign="top" style="padding:0 14px 0 0;">{contact}</td>
+<td valign="middle" align="center" width="160" style="width:160px;padding:0 4px 0 12px;border-left:1px solid #E2DBCB;">{logos}
+</td>
+</tr></table>
+<!--[if gte mso 9]>
+</v:textbox>
+</v:rect>
+<![endif]-->
+</td></tr>
+<tr><td style="padding:12px 0 0 0;font-family:Georgia,'Times New Roman',serif;font-style:italic;font-size:10.5px;color:#5B6649;">Liability limited by a scheme approved under Professional Standards Legislation.</td></tr>
+<tr><td style="padding:9px 0 0 0;"><div style="border-top:1px solid #DAD3C3;font-size:0;line-height:0;">&nbsp;</div></td></tr>
+<tr><td style="padding:8px 0 0 0;font-family:Arial,Helvetica,sans-serif;font-size:9px;line-height:1.5;color:#8E8A7A;">
+This email is intended only for the use of the named recipient. It may contain information that is privileged, confidential and exempt from disclosure under applicable law. If the reader of this message is not the intended recipient or the employee or agent responsible for delivering the message to the intended recipient, you are hereby notified that any dissemination, distribution or copying of this communication is strictly prohibited. If you have received this communication in error please notify our office immediately by telephone and return the original message to {return_to}<br><br>
+<span style="font-weight:bold;color:#7A7568;letter-spacing:0.3px;">FRAUD ALERT</span> There are reports of an increasing occurrence of fraudsters intercepting emails and inserting their bank account details in place of the intended account details. To mitigate this risk, you must not deposit or transfer funds using account details provided by us (or anyone else) via email only. If you receive such an email, phone our office and verify the account details first.
+</td></tr>
+</table>
+"""
+
+
+def build() -> list[Path]:
+    out = []
+    cards = []
+    for slug, name, title, email, return_to in STAFF:
+        html = signature_html(name, title, email, return_to or DEFAULT_RETURN_TO)
+        path = HERE / f"{slug}.html"
+        path.write_text(html, encoding="utf-8", newline="\n")
+        out.append(path)
+        note = ""
+        if "TBC" in email:
+            note = ' <span style="color:#B00020;font-weight:bold;">(email address to be confirmed by the firm)</span>'
+        cards.append(
+            f'<h2 style="font:600 15px Arial,sans-serif;color:#1E211A;margin:36px 0 10px;">{name} &middot; '
+            f'<span style="font-weight:400;color:#5B6649;">{title}</span>{note} '
+            f'<a href="{slug}.html" style="font-size:12px;margin-left:10px;">open file</a></h2>\n'
+            f'<div style="background:#fff;padding:20px;border:1px solid #E2DBCB;display:inline-block;">{html}</div>'
+        )
+    index = (
+        "<!doctype html><html lang=\"en-AU\"><head><meta charset=\"utf-8\">"
+        "<title>Steven M Clark Lawyers signatures</title></head>"
+        "<body style=\"margin:0;padding:32px;background:#F3F0E8;font-family:Arial,sans-serif;\">"
+        "<h1 style=\"font:700 22px Georgia,serif;color:#1E211A;margin:0 0 4px;\">Steven M Clark Lawyers: email signatures</h1>"
+        "<p style=\"color:#5B6649;margin:0;\">Approved layout 18 Aug 2026. One file per person. Generated "
+        "by build_signatures.py.</p>"
+        + "\n".join(cards)
+        + "</body></html>"
+    )
+    (HERE / "index.html").write_text(index, encoding="utf-8", newline="\n")
+    return out
+
+
+def screenshots(paths: list[Path]) -> None:
+    from playwright.sync_api import sync_playwright
+
+    with sync_playwright() as p:
+        browser = p.chromium.launch()
+        page = browser.new_page(viewport={"width": 700, "height": 420}, device_scale_factor=2)
+        for path in paths:
+            # Render against the local copies so previews work before deploy.
+            local_assets = (HERE.parent.parent / "public" / "signature").resolve().as_uri()
+            wrapper = (
+                "<!doctype html><html><head><meta charset='utf-8'></head>"
+                "<body style='margin:0;background:#fff;'><div id='sig' style='display:inline-block;padding:16px;'>"
+                + path.read_text(encoding="utf-8").replace(BASE, local_assets)
+                + "</div></body></html>"
+            )
+            # Navigate to a real file so file:// images are permitted.
+            tmp = path.with_name(f"_preview_{path.stem}.tmp.html")
+            tmp.write_text(wrapper, encoding="utf-8")
+            page.goto(tmp.as_uri(), wait_until="networkidle")
+            el = page.locator("#sig")
+            el.screenshot(path=str(path.with_suffix(".png")))
+            tmp.unlink()
+            print("png", path.with_suffix(".png").name)
+        browser.close()
+
+
+if __name__ == "__main__":
+    written = build()
+    for w in written:
+        print("html", w.name)
+    if "--png" in sys.argv:
+        screenshots(written)
