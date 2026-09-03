@@ -69,12 +69,20 @@ const team = [
   },
   {
     name: 'Sophie Clark',
-    role: 'Legal Secretary, Paralegal',
+    role: 'Practice Manager / Paralegal',
     bio: 'More than 21 years of dedicated service. A highly experienced Paralegal known for professionalism, reliability and exceptional client service.',
     fullBio: [
       'With more than 21 years of dedicated service, Sophie is a highly experienced Paralegal who has built a reputation for professionalism, reliability, and exceptional client service. Throughout her career, she has worked closely with solicitors across a broad range of legal matters, providing invaluable support through every stage of the legal process.',
       'Known for her meticulous attention to detail, strong organisational skills, and practical approach, Sophie is committed to ensuring matters are managed efficiently and clients feel informed and supported. Her extensive experience allows her to anticipate the needs of both clients and legal practitioners, helping to deliver seamless outcomes.',
       'Having been an integral member of the firm for over two decades, Sophie is valued not only for her legal knowledge and expertise but also for the trusted relationships she has developed with colleagues and clients alike. She takes pride in contributing to a collaborative team environment and is dedicated to maintaining the high standard of service the firm is known for.',
+    ],
+  },
+  {
+    name: 'Abby Torkington',
+    role: 'Legal Secretary',
+    bio: 'Administrative and secretarial support to the legal team. Documents, files, client correspondence and the appointment diary.',
+    fullBio: [
+      'Abby provides comprehensive administrative and secretarial support to the legal team, assisting with the preparation of legal documentation, file management, client correspondence and the coordination of appointments and legal matters. She plays an integral role in ensuring the efficient and professional management of day-to-day operations.',
     ],
   },
   {
@@ -111,7 +119,7 @@ export default function AboutPage() {
         eyebrow="The people"
         heading={
           <>
-            Seven of us, working on the same files, on the same street, every week.
+            Eight of us, working on the same files, on the same street, every week.
           </>
         }
         members={team}

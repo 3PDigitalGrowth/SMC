@@ -75,17 +75,18 @@ If you want to clean disk: delete `hero-portrait.jpg`, `steven-at-desk.jpg`. Lea
 
 ### Team headshots for `/about` → TeamGrid
 
-The about page lists **seven team members** by name and role:
+The about page lists **eight team members** by name and role:
 
 - Steven M Clark — Principal Solicitor, Public Notary
 - Zahra Amin — Solicitor
 - Jack Clark — Solicitor
-- Sophie Clark — Legal Secretary, Paralegal
+- Sophie Clark — Practice Manager / Paralegal
+- Abby Torkington — Legal Secretary
 - Rachel East — Administration
 - Emma Vandenham — Reception
-- Mahima Sobti — Personal Assistant
+- Mahima Sobti — Solicitor
 
-Currently the [TeamGrid component](components/page/TeamGrid.tsx) renders **text-only cards**. With seven real people, this section would be more compelling with small circular headshots beside each name.
+Currently the [TeamGrid component](components/page/TeamGrid.tsx) renders **text-only cards**. With eight real people, this section would be more compelling with small circular headshots beside each name.
 
 **Two paths:**
 

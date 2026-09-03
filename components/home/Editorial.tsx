@@ -87,7 +87,7 @@ export default function Editorial({ image = IMAGES.teamHallway }: EditorialProps
               </p>
 
               <p className={styles.bodyText}>
-                Today he works alongside a team of seven: solicitors Zahra Amin,
+                Today he works alongside a team of eight: solicitors Zahra Amin,
                 Jack Clark and Mahima Sobti, and the support team who keep the door
                 open Monday to Friday.
               </p>
