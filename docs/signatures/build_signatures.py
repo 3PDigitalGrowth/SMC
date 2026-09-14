@@ -47,11 +47,17 @@ STAFF = [
     ("mahima-sobti", "Mahima Sobti", "Solicitor", "mahimas@stevenmclark.com.au", None),
     ("sophie-clark", "Sophie Clark", "Practice Manager / Paralegal", "sophiec@stevenmclark.com.au", None),
     ("abby-torkington", "Abby Torkington", "Legal Secretary", "abbyt@stevenmclark.com.au", None),
-    # Addresses below not yet confirmed by the firm. Placeholder text is
-    # deliberately loud so it cannot be installed by accident.
-    ("rachel-east", "Rachel East", "Administration", "EMAIL-TBC@stevenmclark.com.au", None),
-    ("emma-vandenham", "Emma Vandenham", "Reception", "EMAIL-TBC@stevenmclark.com.au", None),
+    # Emma's address confirmed by Mahima 4 Sep 2026.
+    ("emma-vandenham", "Emma Vandenham", "Reception", "reception@stevenmclark.com.au", None),
+    # Shared mailbox signature, requested by Mahima 4 and 11 Sep 2026.
+    ("accounts", "Accounts", "Steven M Clark Lawyers", "accounts@stevenmclark.com.au", None),
+    # Rachel East removed 15 Sep 2026: the firm asked for her to come off the
+    # website on 4 Sep, so no signature is issued for her.
 ]
+
+# Name of the zip the firm downloads from /signature/. Each entry inside is
+# "<Display name>.htm" so it drops straight into Outlook's Signatures folder.
+ZIP_NAME = "SMC_email_signatures.zip"
 
 
 def signature_html(name: str, title: str, email: str, return_to: str) -> str:
@@ -184,6 +190,17 @@ def build() -> list[Path]:
         encoding="utf-8",
         newline="\n",
     )
+    # Downloadable zip: one "<Display name>.htm" per confirmed person, same
+    # bytes as the hosted page, ready for %APPDATA%\Microsoft\Signatures.
+    import html as _html
+    import zipfile
+
+    with zipfile.ZipFile(PUBLIC / ZIP_NAME, "w", zipfile.ZIP_DEFLATED) as zf:
+        for slug, name, _title, email, _rt in STAFF:
+            if "TBC" in email:
+                continue
+            display = _html.unescape(name).replace(".", "")
+            zf.write(HERE / f"{slug}.html", arcname=f"{display}.htm")
     return out
 
 
