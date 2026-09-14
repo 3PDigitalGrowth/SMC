@@ -86,11 +86,6 @@ const team = [
     ],
   },
   {
-    name: 'Rachel East',
-    role: 'Administration',
-    bio: 'Files, accounts and the rhythm of the office. The other reason things land on time.',
-  },
-  {
     name: 'Emma Vandenham',
     role: 'Reception',
     bio: 'The voice on the other end of (08) 8522 6025. You will speak to a person, not a queue.',
@@ -119,7 +114,7 @@ export default function AboutPage() {
         eyebrow="The people"
         heading={
           <>
-            Eight of us, working on the same files, on the same street, every week.
+            Seven of us, working on the same files, on the same street, every week.
           </>
         }
         members={team}
