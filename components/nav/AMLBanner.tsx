@@ -43,10 +43,10 @@ export default function AMLBanner() {
     <div ref={ref} className={styles.banner} role="region" aria-label="Important notice">
       <div className={styles.inner}>
         <p className={styles.text}>
-          <strong className={styles.lead}>Important notice:</strong> From 1 July 2026, new
-          Anti-Money Laundering (AML) requirements may mean we need to verify your identity
-          and obtain additional information before providing legal services.{' '}
-          <Link href="/identity-checks" className={styles.link}>Learn more</Link>
+          <strong className={styles.lead}>Important notice:</strong> New Anti-Money Laundering
+          (AML) requirements may mean we need to verify your identity and obtain additional
+          information before providing some legal services.{' '}
+          <Link href="/identity-checks" className={styles.link}>See what identification you may need</Link>
         </p>
         <button type="button" className={styles.close} onClick={dismiss} aria-label="Dismiss notice">
           &times;
