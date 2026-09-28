@@ -1,6 +1,7 @@
 import Link from 'next/link'
 import Image from 'next/image'
 import { MDXRemote } from 'next-mdx-remote/rsc'
+import remarkGfm from 'remark-gfm'
 import { blogMdxComponents } from './mdx-components'
 import AuthorBio from './AuthorBio'
 import FAQ from './mdx/FAQ'
@@ -80,7 +81,7 @@ export default function BlogTemplate({ post, related }: BlogTemplateProps) {
             <MDXRemote
               source={content}
               components={blogMdxComponents}
-              options={{ mdxOptions: {}, parseFrontmatter: false, scope: {}, blockJS: false }}
+              options={{ mdxOptions: { remarkPlugins: [remarkGfm] }, parseFrontmatter: false, scope: {}, blockJS: false }}
             />
           </div>
 
