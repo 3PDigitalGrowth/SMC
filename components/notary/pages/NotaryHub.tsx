@@ -27,7 +27,7 @@ const subServices = [
   'Certificates of identity and of good standing',
   'Bills of exchange (noting and protesting)',
   'Ships protests',
-  'DFAT apostille and authentication, lodged for you',
+  'DFAT apostilles and authentications: the pack prepared for you',
 ]
 
 const callouts = [
@@ -56,11 +56,11 @@ export const HUB_FAQ = [
   },
   {
     q: 'Do you arrange apostilles?',
-    a: 'Yes. Countries that are party to the Hague Apostille Convention require a DFAT apostille on top of the notarisation; other countries require a DFAT authentication and sometimes legalisation at their embassy. We notarise the document and lodge it with DFAT on your behalf, or give you the completed pack to lodge yourself. DFAT currently charges A$105 per document.',
+    a: 'Yes. Countries that are party to the Hague Apostille Convention require a DFAT apostille on top of the notarisation; other countries require a DFAT authentication and sometimes legalisation at their embassy. We notarise the document and give you the pack to take to DFAT in Adelaide, which is usually the fastest route. If there is no rush we can lodge it for you instead, but that goes through DFAT in Sydney and takes three to four weeks. DFAT currently charges A$105 per document.',
   },
   {
     q: 'How long does it take?',
-    a: 'Most notarisations are done in one appointment of 15 to 30 minutes, and we can usually see you within a day or two. If DFAT is involved, allow a few business days for the apostille or authentication once lodged, plus courier time to the destination.',
+    a: 'Most notarisations are done in one appointment of 15 to 30 minutes, and we can usually see you within a day or two. If DFAT is involved, taking the pack to DFAT in Adelaide yourself is often done within a day; if we lodge it for you it goes through Sydney and takes three to four weeks. Then allow courier time to the destination.',
   },
   {
     q: 'How much does it cost?',
@@ -72,7 +72,7 @@ export const HUB_FAQ = [
   },
   {
     q: 'Do you serve areas outside Gawler?',
-    a: 'Yes. We are the only Public Notary between North Adelaide and the Riverland, so people come to us from Elizabeth, Salisbury, Munno Para, Angle Vale, Two Wells, Roseworthy, Kapunda and across the Barossa. Our office is at 1 Adelaide Road, Gawler South, with parking beside the office.',
+    a: 'Yes. We are the only Public Notary between North Adelaide and the Riverland, so people come to us from Elizabeth, Salisbury, Munno Para, Angle Vale, Two Wells, Roseworthy, Kapunda and across the Barossa. Our office is at 1 Adelaide Road, Gawler South.',
   },
   {
     q: 'Can you notarise a document written in another language?',
@@ -107,7 +107,7 @@ export default function NotaryHub({ base }: { base: string }) {
       <PageHero
         eyebrow="Notary Public · Gawler, South Australia"
         heading={<>Notary Public in Gawler for <em>overseas documents</em> and apostilles.</>}
-        lede="If an overseas authority has asked you to notarise a document, certify a copy or get an apostille, we handle the whole process from Gawler. Steven M Clark is a practising solicitor and Public Notary, the only one between North Adelaide and the Riverland. Most appointments take 15 to 30 minutes, and we confirm the fixed fee before you come in."
+        lede="If an overseas authority has asked you to notarise a document, certify a copy or get an apostille, we take you through the whole process from Gawler. Steven M Clark is a practising solicitor and Public Notary, the only one between North Adelaide and the Riverland. Most appointments take 15 to 30 minutes, and we confirm the fixed fee before you come in."
         image={IMAGES.notaryDetailHero}
       />
       <NotaryRoute />
@@ -116,8 +116,8 @@ export default function NotaryHub({ base }: { base: string }) {
         heading={<>A notarial certificate is the document the rest of the world trusts.</>}
         paragraphs={[
           'A Public Notary is a practising lawyer appointed by the Supreme Court of South Australia to hold a public office that other countries recognise. The role exists because a court in Italy or a land registry in India has no way of checking an Australian signature. The Notary checks it for them, records that check in a certificate, and puts a seal on it that DFAT and foreign authorities know.',
-          'In practice that means three things. We verify who you are and that you signed freely. We attest that a copy is a true copy of an original we have seen. And we administer oaths and declarations, certifying that you swore or declared the contents. Each one produces a notarial certificate that travels with your document.',
-          'We handle the full range: Powers of Attorney, Wills and estate documents, deeds and contracts, affidavits and statutory declarations, attested copies (exemplifications), bills of exchange and ships protests. Where the destination country needs a DFAT apostille or authentication on top, we coordinate that as part of the same job.',
+          'In practice that means three things. We verify who you are and that you signed freely. We attest that a copy is a true copy of an original we have seen. And we administer oaths, affirmations and declarations, certifying that you swore, affirmed or declared the contents. Not every job needs a separate notarial certificate: sometimes a copy certified as a true copy of the original is all the receiving authority wants. It depends on what they require, and we tell you which before you come in.',
+          'We handle the full range: Powers of Attorney, Wills and estate documents, deeds and contracts, affidavits and statutory declarations, attested copies (exemplifications), bills of exchange and ships protests. Where the destination country needs a DFAT apostille or authentication on top, we prepare the document for it and tell you exactly what to take to DFAT.',
         ]}
         asideTitle="Documents and matters we handle"
         asideItems={subServices}

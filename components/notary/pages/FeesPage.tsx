@@ -28,7 +28,7 @@ const aside = [
 const callouts = [
   {
     title: 'What moves the fee up.',
-    body: 'More documents. More people signing. Attested copies of several originals. A company signer needing an extract checked. DFAT paperwork prepared and lodged for you. A document in another language that needs an interpreter. Each is a known amount, not a surprise.',
+    body: 'More documents. More people signing. Attested copies of several originals. A company signer needing an extract checked. DFAT paperwork prepared, or lodged for you through Sydney. A document in another language that needs an interpreter. Each is a known amount, not a surprise.',
   },
   {
     title: 'What does not.',
@@ -59,7 +59,7 @@ const faq = [
   },
   {
     q: 'Can I pay on the day?',
-    a: 'Yes. The fee is confirmed in advance, so there is nothing to work out at the desk. We take card and bank transfer.',
+    a: 'Yes. The fee is confirmed in advance, so there is nothing to work out at the desk. Ask when you book how you would like to pay.',
   },
 ]
 

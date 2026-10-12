@@ -12,9 +12,9 @@ import { NOTARY_HUB_SLUG, hubLink, notaryHref, spokeLinks } from '@/components/n
 export const SLUG = 'apostille-and-authentication-south-australia'
 
 export const META = {
-  title: 'Apostille and DFAT authentication, South Australia. Lodged from Gawler.',
+  title: 'Apostille and DFAT authentication, South Australia. Notarised in Gawler.',
   description:
-    'What an apostille is, when DFAT issues an authentication instead, what it costs (A$105 per document) and how Steven M Clark notarises and lodges your documents from Gawler.',
+    'What an apostille is, when DFAT issues an authentication instead, what it costs (A$105 per document) and how Steven M Clark notarises your documents in Gawler ready for DFAT.',
 }
 
 const aside = [
@@ -22,8 +22,8 @@ const aside = [
   'Authentication: for countries outside the Convention',
   'Both are issued by DFAT, not by the Notary',
   'DFAT fee: A$105 per document (September 2026)',
-  'Turnaround: a few business days once lodged',
-  'We lodge for you, or prepare the pack for you to lodge',
+  'Turnaround: often within a day at DFAT in Adelaide',
+  'We can lodge for you via DFAT Sydney: three to four weeks',
 ]
 
 const callouts = [
@@ -52,7 +52,7 @@ const faq = [
   },
   {
     q: 'Can the Notary issue the apostille?',
-    a: 'No. Only DFAT issues apostilles and authentications in Australia. The Notary prepares and certifies the document; DFAT certifies the Notary. That is why the two steps go together and why we offer to lodge with DFAT for you.',
+    a: 'No. Only DFAT issues apostilles and authentications in Australia. The Notary prepares and certifies the document; DFAT certifies the Notary. That is why the two steps go together, and why we prepare the document with DFAT\'s requirements in mind.',
   },
   {
     q: 'How much does an apostille cost in Australia?',
@@ -60,11 +60,11 @@ const faq = [
   },
   {
     q: 'How long does DFAT take?',
-    a: 'Lodgement and processing usually take a few business days, longer around public holidays or if DFAT asks for something to be corrected. Because we check the document against DFAT\'s requirements before it goes in, corrections are rare.',
+    a: 'If you take the notarised document to DFAT in Adelaide yourself, it is often done within a day. If we lodge it for you, it goes through DFAT in Sydney and takes three to four weeks, longer around public holidays. Because we check the document against DFAT\'s requirements before it leaves our office, corrections are rare.',
   },
   {
-    q: 'Do I have to go to Adelaide myself?',
-    a: 'No. We can lodge the document with DFAT on your behalf as part of the notary job. If you would rather lodge it yourself, we give you the completed pack and DFAT\'s current form and tell you what to expect.',
+    q: 'Do I have to go to DFAT in Adelaide myself?',
+    a: 'It is usually the quickest way, and most of our clients do: we hand you the notarised pack and tell you what to expect at the counter. If there is no urgency, we can lodge it on your behalf instead, but it goes through DFAT in Sydney and takes three to four weeks.',
   },
 ]
 
@@ -76,16 +76,16 @@ export default function ApostillePage({ base }: { base: string }) {
       <PageHero
         eyebrow="Apostilles and authentication · South Australia"
         heading={<>The apostille is DFAT vouching for <em>the Notary</em>.</>}
-        lede="Most people are told they need an apostille without being told what one is. It is a government certificate that sits behind the notarial certificate, and it is the step that turns a document signed in Gawler into one a foreign court will accept. We notarise, we lodge, and we tell you the total before you start."
+        lede="Most people are told they need an apostille without being told what one is. It is a government certificate that sits behind the notarial certificate, and it is the step that turns a document signed in Gawler into one a foreign authority will accept. We notarise, we can lodge, and we tell you the total before you start."
       />
       <NotaryRoute />
       <ServiceBody
         eyebrow="How it works"
-        heading={<>Two certificates, one job, no trip to the city.</>}
+        heading={<>Two certificates, one job, one appointment in Gawler.</>}
         paragraphs={[
           'Australia is a party to the Hague Convention of 1961 that abolished the old chain of legalisations. Under it, a public document from one member country only needs a single certificate, the apostille, to be accepted in another. For a privately signed document such as a Power of Attorney or a statutory declaration, the Notary\'s certificate is what makes it a public document, and the apostille then certifies the Notary.',
           'For countries outside the Convention the principle is the same but the paperwork is longer. DFAT issues an authentication in place of the apostille, and the destination country\'s own embassy or consulate in Australia adds its stamp. We identify which route applies from the destination and the receiving authority\'s instructions, and build the appointment around it.',
-          'The practical difference for you is small. You come to one appointment in Gawler. We notarise the document, prepare DFAT\'s legalisation request, and either lodge it ourselves or hand you the pack. DFAT charges A$105 per document, payable to DFAT, and returns the document with the certificate attached within a few business days.',
+          'The practical difference for you is small. You come to one appointment in Gawler. We notarise the document and hand you the pack to take to DFAT in Adelaide, where it is often done within a day. If there is no rush we can lodge it for you instead: we prepare DFAT\'s request and send it to Sydney, which takes three to four weeks. Either way, DFAT checks the notary\'s seal against the sample it holds on file, charges A$105 per document, and attaches its certificate to your document.',
         ]}
         asideTitle="At a glance"
         asideItems={aside}

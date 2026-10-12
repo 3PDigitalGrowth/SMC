@@ -19,7 +19,7 @@ export const NOTARY_SPOKES: NotarySpoke[] = [
   {
     slug: 'apostille-and-authentication-south-australia',
     title: 'Apostilles and DFAT authentication',
-    blurb: 'What an apostille actually is, which countries want one, what DFAT charges, and how we lodge it for you from Gawler.',
+    blurb: 'What an apostille actually is, which countries want one, what DFAT charges, and the quickest way through DFAT from Gawler.',
   },
   {
     slug: 'notary-public-or-justice-of-the-peace',
@@ -44,7 +44,7 @@ export const NOTARY_SPOKES: NotarySpoke[] = [
   {
     slug: 'notary-public-northern-adelaide-barossa',
     title: 'Serving northern Adelaide and the Barossa',
-    blurb: 'Elizabeth, Salisbury, Munno Para, Roseworthy, Tanunda, Nuriootpa, Kapunda. Closer than the city, with parking beside the office.',
+    blurb: 'Elizabeth, Salisbury, Munno Para, Roseworthy, Tanunda, Nuriootpa, Kapunda. Closer than the city for most of the north.',
   },
 ]
 

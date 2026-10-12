@@ -68,7 +68,7 @@ const faq = [
   },
   {
     q: 'What about photographs, thumbprints and witnesses?',
-    a: 'Some destinations, India especially, want a photograph affixed and signed across, a thumbprint, or two additional witnesses. Bring what their instructions say. We have the materials on hand for photographs and prints, and can supply a second witness from the office.',
+    a: 'Some destinations, India especially, want a photograph affixed and signed across, a thumbprint, or two additional witnesses. Bring what their instructions say, including the photographs, and tell us when you book if extra witnesses are needed so we can plan the appointment.',
   },
   {
     q: 'How do I get the document to the other country?',

@@ -56,6 +56,12 @@ const SERVICE_BY_PATH: Record<string, string> = {
   '/gawler-industrial-relations-lawyer': 'Industrial relations',
   '/gawler-insolvency-lawyer': 'Insolvency',
   '/notary-public-gawler': 'Notary Public',
+  '/apostille-and-authentication-south-australia': 'Notary Public',
+  '/notary-public-or-justice-of-the-peace': 'Notary Public',
+  '/notary-appointment-checklist': 'Notary Public',
+  '/notary-fees-south-australia': 'Notary Public',
+  '/notarising-documents-for-use-overseas': 'Notary Public',
+  '/notary-public-northern-adelaide-barossa': 'Notary Public',
 }
 
 const SOURCE_LABELS: Record<string, string> = {

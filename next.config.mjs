@@ -15,6 +15,17 @@ const nextConfig = {
           'https://search.google.com/local/writereview?placeid=ChIJ1cB05tr_uWoRqs7WlmlmC-4',
         permanent: false,
       },
+      {
+        // Notary pages went live 13 Oct 2026; the review links sent to the firm still work.
+        source: '/preview/notary',
+        destination: '/notary-public-gawler',
+        permanent: true,
+      },
+      {
+        source: '/preview/notary/:slug',
+        destination: '/:slug',
+        permanent: true,
+      },
     ]
   },
   experimental: {

@@ -18,8 +18,8 @@ const STOPS: Stop[] = [
   {
     place: 'Department of Foreign Affairs and Trade',
     who: 'Australian Government, Adelaide office',
-    what: 'DFAT confirms the notary\'s signature and seal are genuine and issues an apostille (for Hague Convention countries) or an authentication (for the rest). We lodge it for you, or show you how.',
-    time: 'A few business days once lodged. DFAT charges A$105 per document.',
+    what: 'DFAT checks the notary\'s seal and signature against the sample it holds on file, then issues an apostille (for Hague Convention countries) or an authentication (for the rest). Most clients take the pack to DFAT in Adelaide themselves. We can lodge it for you instead, through DFAT in Sydney.',
+    time: 'Often within a day in Adelaide; three to four weeks if we lodge through Sydney. DFAT charges A$105 per document.',
   },
   {
     place: 'The authority that asked for it',

@@ -119,6 +119,8 @@ const panels: Record<string, PanelDef> = {
         heading: 'Also offered',
         links: [
           { label: 'Notarial services', href: '/notary-public-gawler' },
+          { label: 'Apostilles', href: '/apostille-and-authentication-south-australia' },
+          { label: 'Notary or JP?', href: '/notary-public-or-justice-of-the-peace' },
           { label: 'Criminal & traffic', href: '/criminal-defence-lawyer' },
         ],
       },
