@@ -22,7 +22,7 @@ const STATIC_ROUTES = [
   '/intervention-domestic-violence-lawyer',
   '/gawler-estate-lawyer',
   '/estate-planning',
-  '/gawler-estate-planning-lawyers',
+  '/advance-care-planning',
   '/gawler-trust-lawyer',
   '/power-of-attorney',
   '/gawler-property-lawyers',

@@ -35,7 +35,7 @@ const SERVICE_BY_PATH: Record<string, string> = {
   '/estates': 'Wills & estates',
   '/gawler-estate-lawyer': 'Wills & probate',
   '/estate-planning': 'Estate planning',
-  '/gawler-estate-planning-lawyers': 'Estate planning',
+  '/advance-care-planning': 'Advance care planning',
   '/power-of-attorney': 'Power of attorney',
   '/gawler-trust-lawyer': 'Trusts',
   // Property & business

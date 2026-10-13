@@ -26,6 +26,13 @@ const nextConfig = {
         destination: '/:slug',
         permanent: true,
       },
+      {
+        // The advance care page moved to /advance-care-planning in Oct 2026. This
+        // address reads as "estate planning lawyers", so it forwards to that page.
+        source: '/gawler-estate-planning-lawyers',
+        destination: '/estate-planning',
+        permanent: true,
+      },
     ]
   },
   experimental: {

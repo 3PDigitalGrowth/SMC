@@ -5,14 +5,15 @@ import ServiceFAQ from '@/components/page/ServiceFAQ'
 import RelatedServices from '@/components/page/RelatedServices'
 import Booking from '@/components/home/Booking'
 import BreadcrumbSchema from '@/components/seo/BreadcrumbSchema'
+import FAQSchema from '@/components/seo/FAQSchema'
 import { pageMetadata } from '@/lib/seo'
 import { IMAGES } from '@/lib/images'
 
 export const metadata = pageMetadata({
   path: '/gawler-estate-lawyer',
-  title: 'Gawler estate lawyer. Wills, probate, estate planning.',
+  title: 'Estate lawyer in Gawler. Wills, probate, executors.',
   description:
-    'A Gawler estate practice since 1985. Wills, probate, estate planning, power of attorney, advance care directives, and trusts.',
+    'A Gawler estate practice since 1985. Wills, probate and help for executors, with Power of Attorney and Advance Care Directives signed in the same visit.',
   image: IMAGES.estatesHero.src,
 })
 
@@ -36,7 +37,7 @@ const callouts = [
   },
   {
     title: 'Your Will is more than five years old.',
-    body: "A lot can change in five years — marriages, separations, children, business interests, super, a property bought or sold. We review and update existing Wills, often in a single visit.",
+    body: "A lot can change in five years: marriages, separations, children, business interests, super, a property bought or sold. We review and update existing Wills, often in a single visit.",
   },
   {
     title: 'Someone in your family has died.',
@@ -55,7 +56,7 @@ const faq = [
   },
   {
     q: "Can a Will be contested?",
-    a: 'Yes, under the Inheritance (Family Provision) Act, certain family members can claim against an estate even if the Will is otherwise valid. Good drafting reduces the chance of a successful claim significantly. We routinely write Wills with that protection in mind.',
+    a: 'Yes. Under South Australian law, certain family members can ask the court for further provision from an estate even if the Will is otherwise valid. Good drafting reduces the chance of a successful claim significantly. We routinely write Wills with that protection in mind.',
   },
   {
     q: 'Do I need a Power of Attorney?',
@@ -67,7 +68,7 @@ const faq = [
   },
   {
     q: 'Do you store the original Will?',
-    a: 'Yes — we offer secure document storage at no additional charge. Most clients prefer their original Will held with us, with a copy at home, so it is never lost.',
+    a: 'Yes. We offer secure document storage at no additional charge. Most clients prefer their original Will held with us, with a copy at home, so it is never lost.',
   },
 ]
 
@@ -78,9 +79,9 @@ const related = [
     href: '/gawler-trust-lawyer',
   },
   {
-    title: 'Advance care planning',
-    body: 'The medical and lifestyle side of planning ahead, alongside the legal side.',
-    href: '/gawler-estate-planning-lawyers',
+    title: 'Estate planning lawyers',
+    body: 'Succession, asset protection, farms and businesses: the bigger plan around your Will.',
+    href: '/estate-planning',
   },
   {
     title: 'Property law',
@@ -93,6 +94,7 @@ export default function EstateLawyerPage() {
   return (
     <>
       <BreadcrumbSchema crumbs={[{ name: 'Home', href: '/' }, { name: 'Estates', href: '/estates' }, { name: 'Estate lawyer', href: '/gawler-estate-lawyer' }]} />
+      <FAQSchema items={faq} />
       <PageHero
         eyebrow="Wills · Probate · Estate Planning"
         heading={
@@ -110,8 +112,8 @@ export default function EstateLawyerPage() {
         heading={<>The full estate picture, in plain words.</>}
         paragraphs={[
           "Planning for your family's future after you are gone is a really important legal task. A properly prepared Will reduces both the emotional and financial weight your family carries at the worst possible time.",
-          'For most clients, the right starting set is a Will, a Power of Attorney and an Advance Care Directive — signed together so that all three are in place. We prepare them, we explain them, and we hold the originals safely in our office.',
-          'For clients with more complex estates — a business, a farm, a blended family, significant superannuation, or assets in more than one state — we put a full plan in place. That can include a testamentary trust, executor advice, or guardianship arrangements for younger children. We will tell you honestly which of those your situation needs and which it does not.',
+          'For most clients, the right starting set is a Will, a Power of Attorney and an Advance Care Directive, signed together so that all three are in place. We prepare them, we explain them, and we hold the originals safely in our office.',
+          'For clients with more complex estates (a business, a farm, a blended family, significant superannuation, or assets in more than one state) we put a full plan in place. That can include a testamentary trust, executor advice, or guardianship arrangements for younger children. We will tell you honestly which of those your situation needs and which it does not.',
         ]}
         asideTitle="Specific matters we handle"
         asideItems={subServices}

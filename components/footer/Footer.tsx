@@ -18,7 +18,7 @@ const columns = [
       { label: 'Wills & probate', href: '/gawler-estate-lawyer' },
       { label: 'Estate planning', href: '/estate-planning' },
       { label: 'Power of attorney', href: '/power-of-attorney' },
-      { label: 'Advance care planning', href: '/gawler-estate-planning-lawyers' },
+      { label: 'Advance care planning', href: '/advance-care-planning' },
       { label: 'Trusts', href: '/gawler-trust-lawyer' },
     ],
   },

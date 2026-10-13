@@ -1,16 +1,19 @@
 import PageHero from '@/components/page/PageHero'
 import HubServices from '@/components/page/HubServices'
 import HubProof from '@/components/page/HubProof'
+import InlineCallback from '@/components/page/InlineCallback'
+import ServiceFAQ from '@/components/page/ServiceFAQ'
 import Booking from '@/components/home/Booking'
 import BreadcrumbSchema from '@/components/seo/BreadcrumbSchema'
+import FAQSchema from '@/components/seo/FAQSchema'
 import { pageMetadata } from '@/lib/seo'
 import { IMAGES } from '@/lib/images'
 
 export const metadata = pageMetadata({
   path: '/estates',
-  title: 'Wills, estates and probate, Gawler. Get it right once.',
+  title: 'Wills and probate lawyers in Gawler. Get it right once.',
   description:
-    'Wills, estate planning, probate, power of attorney, advance care directives, and trusts. Done properly the first time, by a Gawler practice since 1985.',
+    'Making a Will, or acting as executor after a death? Steven M Clark has guided Gawler families through Wills and probate since 1985. Free 15-minute call.',
   image: IMAGES.estatesHero.src,
 })
 
@@ -38,7 +41,7 @@ const services = [
   {
     title: 'Advance Care Directive',
     body: 'Your medical and lifestyle wishes if you cannot speak for yourself. Done alongside your Will so your family is never guessing.',
-    href: '/gawler-estate-planning-lawyers',
+    href: '/advance-care-planning',
   },
   {
     title: 'Family and testamentary trusts',
@@ -47,18 +50,38 @@ const services = [
   },
 ]
 
+const faq = [
+  {
+    q: 'Do I always need probate?',
+    a: 'Not always. It depends on what the person owned and who holds it. Banks, share registries and the Lands Titles Office often ask for a grant of probate before they release or transfer larger assets. In a free 15-minute call we can tell you whether it applies to your situation.',
+  },
+  {
+    q: 'What does an executor actually have to do?',
+    a: 'An executor collects and protects the assets, pays debts and taxes, applies for probate where it is needed, and distributes the estate to the beneficiaries named in the Will. We handle the application and the paperwork, and tell you the order to do things in.',
+  },
+  {
+    q: 'How long does probate take?',
+    a: 'For a straightforward estate, four to eight weeks from filing is typical. The estate above, with a farm, a business, two properties and several superannuation accounts, had probate granted in six weeks. Every estate is different, and we will give you a realistic timeframe on the first call.',
+  },
+  {
+    q: 'Can a Will be contested?',
+    a: 'Yes. In South Australia, eligible family members can ask the court for further provision from an estate. A properly drafted and properly witnessed Will, prepared with advice on your family and assets, reduces the chance of a successful claim.',
+  },
+]
+
 export default function EstatesPage() {
   return (
     <>
       <BreadcrumbSchema crumbs={[{ name: 'Home', href: '/' }, { name: 'Estates', href: '/estates' }]} />
+      <FAQSchema items={faq} />
       <PageHero
         eyebrow="Wills and Estates"
         heading={
           <>
-            Get it right <em>once</em>, then forget about it.
+            Wills and probate in Gawler. Get it right <em>once</em>.
           </>
         }
-        lede="A properly prepared Will, Power of Attorney and Advance Care Directive give your family certainty when they need it most. Most families need an hour with us, and a follow-up signing. That is the entire job."
+        lede="A properly prepared Will, Power of Attorney and Advance Care Directive give your family certainty when they need it most. Most families need an hour with us, and a follow-up signing. That is the entire job. And if you have lost someone and are now the executor, Steven has guided Gawler families through probate since 1985, telling you what to do and in what order."
         image={IMAGES.estatesHero}
         imageCaption="The quiet moment a Will is signed. Tuesday morning at the kitchen table."
       />
@@ -70,6 +93,12 @@ export default function EstatesPage() {
         items={services}
       />
 
+      <InlineCallback
+        text="Not sure which of these you need? Tell us what is happening and Steven will call you back the same business day."
+        buttonLabel="Request a free callback"
+        location="estates_inline"
+      />
+
       <HubProof
         eyebrow="In practice"
         quote="Dad died on a Sunday. By Wednesday, Steven had told us what to do, in order. Nothing felt like a fight."
@@ -79,6 +108,12 @@ export default function EstatesPage() {
           'We walked the eldest daughter, as executor, through probate, the asset transfers, the tax, and the sale of the farm machinery. Nothing was rushed. The family did not have to learn estate law on the worst week of their year.',
         ]}
         image={IMAGES.pathwayEstate}
+      />
+
+      <ServiceFAQ
+        eyebrow="Common questions"
+        heading={<>Wills and probate: what people ask first.</>}
+        items={faq}
       />
 
       <Booking />

@@ -5,14 +5,15 @@ import ServiceFAQ from '@/components/page/ServiceFAQ'
 import RelatedServices from '@/components/page/RelatedServices'
 import Booking from '@/components/home/Booking'
 import BreadcrumbSchema from '@/components/seo/BreadcrumbSchema'
+import FAQSchema from '@/components/seo/FAQSchema'
 import { pageMetadata } from '@/lib/seo'
 import { IMAGES } from '@/lib/images'
 
 export const metadata = pageMetadata({
   path: '/gawler-family-lawyers',
-  title: 'Gawler family lawyers. Separation, divorce, children.',
+  title: 'Family lawyers in Gawler. Separation, divorce, children.',
   description:
-    'A Gawler family law practice since 1985. Separation, divorce, parenting and property settlement, handled plainly and confidentially.',
+    'Separated, divorcing, or stuck on parenting or property? Gawler family lawyers since 1985. A free, confidential 15-minute call and a same-day callback.',
   image: IMAGES.familyHero.src,
 })
 
@@ -34,11 +35,11 @@ const subServices = [
 const callouts = [
   {
     title: 'You have just separated.',
-    body: "The first call is about working out what is actually in front of you, in order. We will explain what you are entitled to, what comes next, and what each step will cost, before you commit to anything.",
+    body: "The first call is about working out what is actually in front of you, in order. We will explain what you are entitled to, what comes next, and what each step will cost, before you commit to anything. Whether you need a separation lawyer to formalise arrangements or just advice on your first steps, we handle the whole process from that first conversation.",
   },
   {
     title: 'You are worried about the children.',
-    body: "Parenting arrangements come first. We help you reach an arrangement that works for the children's lives — school, sport, the week-on-week rhythm — and is enforceable if it ever needs to be.",
+    body: "Parenting arrangements come first. We help you reach an arrangement that works for the children's lives (school, sport, the week-on-week rhythm) and is enforceable if it ever needs to be.",
   },
   {
     title: 'There is a property to divide.',
@@ -49,7 +50,7 @@ const callouts = [
 const faq = [
   {
     q: 'Do I need a lawyer to get divorced?',
-    a: "Strictly, no — a divorce application can be filed without one. But almost everyone going through separation also has property, super, or children to sort out, and those are the parts that go wrong without proper advice. A 30-minute first call usually answers most of that.",
+    a: "Strictly, no. A divorce application can be filed without one. But almost everyone going through separation also has property, super, or children to sort out, and those are the parts that go wrong without proper advice. A 30-minute first call usually answers most of that.",
   },
   {
     q: 'How much does this cost?',
@@ -69,7 +70,7 @@ const faq = [
   },
   {
     q: 'Can you help with an intervention order?',
-    a: "Yes — both in applying for one if you are not safe, and in defending one if you believe it has been taken out wrongly. Both are urgent matters and we move quickly on them.",
+    a: "Yes, both in applying for one if you are not safe, and in defending one if you believe it has been taken out wrongly. Both are urgent matters and we move quickly on them.",
   },
 ]
 
@@ -85,9 +86,9 @@ const related = [
     href: '/gawler-estate-lawyer',
   },
   {
-    title: 'Property law',
-    body: 'If the matrimonial home is being sold or transferred, the conveyancing happens with us too.',
-    href: '/gawler-property-lawyers',
+    title: 'Criminal defence',
+    body: 'If an intervention order is linked to criminal charges, our criminal defence team can advise on both matters together.',
+    href: '/criminal-defence-lawyer',
   },
 ]
 
@@ -95,11 +96,12 @@ export default function FamilyLawyersPage() {
   return (
     <>
       <BreadcrumbSchema crumbs={[{ name: 'Home', href: '/' }, { name: 'Family', href: '/family' }, { name: 'Family lawyers', href: '/gawler-family-lawyers' }]} />
+      <FAQSchema items={faq} />
       <PageHero
         eyebrow="Family · Divorce · Separation"
         heading={
           <>
-            Family law, in the <em>plain words</em> you actually need.
+            Family lawyers in Gawler, in the <em>plain words</em> you need.
           </>
         }
         lede="Whatever has brought you here, the first call is confidential, unhurried, and costs nothing. By the end of it, you will know where you stand and what your real options are."

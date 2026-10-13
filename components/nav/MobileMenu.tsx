@@ -30,7 +30,7 @@ const sections = [
     links: [
       { label: 'Wills & probate', href: '/gawler-estate-lawyer' },
       { label: 'Estate planning', href: '/estate-planning' },
-      { label: 'Advance care planning', href: '/gawler-estate-planning-lawyers' },
+      { label: 'Advance care planning', href: '/advance-care-planning' },
       { label: 'Family & discretionary trusts', href: '/gawler-trust-lawyer' },
       { label: 'Power of attorney', href: '/power-of-attorney' },
     ],

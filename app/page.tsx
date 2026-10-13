@@ -12,7 +12,7 @@ import { pageMetadata } from '@/lib/seo'
 
 export const metadata = pageMetadata({
   path: '/',
-  title: 'Steven M Clark Lawyers, Gawler.',
+  title: 'Lawyers in Gawler. Steven M Clark Lawyers, since 1985.',
   description:
     "Gawler's general law practice since 1985. Family, estates, property, business and Public Notary services. Free 15-minute call.",
 })
