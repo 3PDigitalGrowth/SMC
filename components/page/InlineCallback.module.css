@@ -1,6 +1,13 @@
 .section {
   background: var(--paper);
   padding: 0 0 var(--space-6);
+  /* Sit inside the previous section's bottom padding rather than adding to it. */
+  margin-top: calc(var(--space-5) * -1);
+  position: relative;
+}
+
+.soft {
+  background: var(--paper-soft);
 }
 
 .inner {

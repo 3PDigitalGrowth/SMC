@@ -97,6 +97,7 @@ export default function EstatesPage() {
         text="Not sure which of these you need? Tell us what is happening and Steven will call you back the same business day."
         buttonLabel="Request a free callback"
         location="estates_inline"
+        tone="soft"
       />
 
       <HubProof

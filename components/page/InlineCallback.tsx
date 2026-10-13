@@ -6,13 +6,15 @@ interface InlineCallbackProps {
   text: string
   buttonLabel: string
   location: string
+  // Match the section above so the prompt reads as its closing line.
+  tone?: 'paper' | 'soft'
 }
 
 // A mid-page prompt that sends readers to the callback form (#book) before
 // they reach the bottom of a long service page.
-export default function InlineCallback({ text, buttonLabel, location }: InlineCallbackProps) {
+export default function InlineCallback({ text, buttonLabel, location, tone = 'paper' }: InlineCallbackProps) {
   return (
-    <section className={styles.section}>
+    <section className={`${styles.section} ${tone === 'soft' ? styles.soft : ''}`}>
       <div className={styles.inner}>
         <div className={styles.row}>
           <p className={styles.text}>{text}</p>

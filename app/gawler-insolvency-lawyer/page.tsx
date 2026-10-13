@@ -123,6 +123,14 @@ export default function InsolvencyLawyerPage() {
           'Personal bankruptcy generally lasts three years and one day. While it lasts it can limit overseas travel and some kinds of work, and it stays on your credit file for longer than the bankruptcy itself.',
           'If you are a director, a failing company can also create personal exposure through guarantees, unpaid super and tax, and insolvent trading. Before you decide anything, we explain the real alternatives, including a personal insolvency agreement, a debt agreement or a negotiated part-payment, and tell you which one fits your situation.',
         ]}
+        asideTitle="Alternatives we look at first"
+        asideItems={[
+          'Personal insolvency agreement',
+          'Debt agreement',
+          'Negotiated part-payment with creditors',
+          'ATO payment plan or penalty remission',
+          'Voluntary administration for a company',
+        ]}
       />
       <ServiceFAQ eyebrow="Common questions" heading={<>What people most often ask on the first call.</>} items={faq} />
       <RelatedServices eyebrow="Adjacent help" heading={<>Often connected to:</>} items={related} />
