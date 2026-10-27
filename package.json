@@ -8,6 +8,7 @@
     "start": "next start",
     "lint": "next lint",
     "sitemap:dates": "node scripts/route-dates.mjs",
+    "posts:check": "node scripts/check-posts.mjs",
     "images": "tsx scripts/generate-images.ts",
     "images:force": "tsx scripts/generate-images.ts --force"
   },
