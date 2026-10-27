@@ -47,7 +47,7 @@ export default function Nav() {
             {/* eslint-disable-next-line @next/next/no-img-element */}
             <img
               src="/images/smclogo-web.png"
-              alt="Steven M Clark — Barristers, Solicitors, Public Notary"
+              alt="Steven M Clark, Barristers, Solicitors, Public Notary"
               className={styles.logo}
             />
           </Link>

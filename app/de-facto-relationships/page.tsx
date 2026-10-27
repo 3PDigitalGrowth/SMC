@@ -32,7 +32,7 @@ const subServices = [
 const callouts = [
   {
     title: 'You are about to move in together.',
-    body: 'A Binding Financial Agreement before cohabitation lets both partners know where they stand if the relationship ends. It is the de facto equivalent of a prenup — quiet, sensible, often saved for second relationships where there are already assets.',
+    body: 'A Binding Financial Agreement before cohabitation lets both partners know where they stand if the relationship ends. It is the de facto equivalent of a prenup: quiet, sensible, often saved for second relationships where there are already assets.',
   },
   {
     title: 'You have just separated from a de facto partner.',
@@ -40,18 +40,18 @@ const callouts = [
   },
   {
     title: 'There is a dispute about whether you were de facto at all.',
-    body: 'The other side denies the relationship existed. We help establish the relationship using the statutory factors — duration, shared finances, public reputation, sexual relationship, care of children, ownership of property.',
+    body: 'The other side denies the relationship existed. We help establish the relationship using the statutory factors: duration, shared finances, public reputation, sexual relationship, care of children, ownership of property.',
   },
 ]
 
 const faq = [
   {
     q: 'What counts as a de facto relationship?',
-    a: "Under the Family Law Act, a de facto relationship exists if you've lived together on a genuine domestic basis. The Court looks at a list of factors — duration of the relationship (typically two years or more, but not always), nature of shared residence, financial interdependence, sexual relationship, public reputation, mutual commitment to a shared life, care of children, and ownership of property.",
+    a: "Under the Family Law Act, a de facto relationship exists if you've lived together on a genuine domestic basis. The Court looks at a list of factors: duration of the relationship (typically two years or more, but not always), nature of shared residence, financial interdependence, sexual relationship, public reputation, mutual commitment to a shared life, care of children, and ownership of property.",
   },
   {
     q: 'Do de facto partners get the same property rights as married couples?',
-    a: 'Largely yes. The Family Court applies the same four-step process — identify the asset pool, assess contributions, assess future needs, consider justice and equity. The main differences are the time limit (2 years from separation, not 1 year from divorce) and the threshold question of whether the relationship existed.',
+    a: 'Largely yes. The Family Court applies the same four-step process: identify the asset pool, assess contributions, assess future needs, consider justice and equity. The main differences are the time limit (2 years from separation, not 1 year from divorce) and the threshold question of whether the relationship existed.',
   },
   {
     q: 'Can de facto partners claim spousal maintenance?',
@@ -63,7 +63,7 @@ const faq = [
   },
   {
     q: 'Is a Binding Financial Agreement worth it?',
-    a: 'For couples bringing significant assets into a new relationship, often yes. A properly drafted BFA gives both partners certainty and avoids the asset-protection-by-litigation route if things end. It must be drafted by a lawyer for each party for it to be binding — we can act for either side.',
+    a: 'For couples bringing significant assets into a new relationship, often yes. A properly drafted BFA gives both partners certainty and avoids the asset-protection-by-litigation route if things end. It must be drafted by a lawyer for each party for it to be binding; we can act for either side.',
   },
 ]
 
@@ -92,17 +92,17 @@ export default function DeFactoPage() {
       <FAQSchema items={faq} />
       <PageHero
         eyebrow="Family · De Facto"
-        heading={<>De facto relationship lawyers in <em>Gawler</em>. Marriage protections, a shorter clock.</>}
-        lede="De facto separations have the same property and maintenance remedies as married couples — but the time limit to apply is 2 years from the date of separation, not 1 year from divorce. The earlier you have advice, the more options you have."
+        heading={<>De facto relationship lawyers in <em>Gawler</em>.</>}
+        lede="De facto separations have the same property and maintenance remedies as married couples, but the time limit to apply is 2 years from the date of separation, not 1 year from divorce. The earlier you have advice, the more options you have."
         image={IMAGES.familyHero}
       />
       <ServiceBody
         eyebrow="What we handle"
         heading={<>The full de facto relationship lifecycle, before and after.</>}
         paragraphs={[
-          "Since 2009, de facto couples in Australia have had access to the same property and spousal maintenance regime as married couples. The Family Court applies the same legal test and the same remedies — the threshold question is simply whether the relationship existed as a de facto one.",
+          "Since 2009, de facto couples in Australia have had access to the same property and spousal maintenance regime as married couples. The Family Court applies the same legal test and the same remedies; the threshold question is simply whether the relationship existed as a de facto one.",
           'On the front end of a relationship, we draft Binding Financial Agreements that set out how assets would be divided if the relationship ends. Increasingly common in second relationships where one or both partners are bringing significant assets, a business, or children from a previous relationship.',
-          'On the back end, we handle the same work as for a married couple — property settlement, parenting arrangements, maintenance, and any necessary Court applications. The major procedural difference is the time limit, which is shorter than for married couples. Move quickly.',
+          'On the back end, we handle the same work as for a married couple: property settlement, parenting arrangements, maintenance, and any necessary Court applications. The major procedural difference is the time limit, which is shorter than for married couples. Move quickly.',
         ]}
         asideTitle="Specific matters we handle"
         asideItems={subServices}

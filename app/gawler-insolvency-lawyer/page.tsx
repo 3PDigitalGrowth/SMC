@@ -94,7 +94,7 @@ export default function InsolvencyLawyerPage() {
       <FAQSchema items={faq} />
       <PageHero
         eyebrow="Bankruptcy · Insolvency"
-        heading={<>Bankruptcy and insolvency lawyers in <em>Gawler</em>. Ring early, keep your options.</>}
+        heading={<>Bankruptcy and insolvency lawyers in <em>Gawler</em>.</>}
         lede="Insolvency is rarely a single decision. It is a sequence of decisions, and the order matters. Talk to us before the bank, the ATO or the creditor's solicitor forces the order for you."
         image={IMAGES.insolvencyHero}
       />

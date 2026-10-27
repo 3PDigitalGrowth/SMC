@@ -100,7 +100,7 @@ export default function EstateLawyerPage() {
         eyebrow="Wills · Probate · Estate Planning"
         heading={
           <>
-            Wills and estate lawyers in <em>Gawler</em>, done properly the first time.
+            Wills and estate lawyers in <em>Gawler</em>.
           </>
         }
         lede="Planning for what happens after you are gone is a small, important legal job. Most clients are in and out in two visits, with a Will, a Power of Attorney and an Advance Care Directive that will not need to be touched for years."

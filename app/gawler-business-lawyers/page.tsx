@@ -45,14 +45,14 @@ const callouts = [
   },
   {
     title: 'You are starting something new.',
-    body: 'The right structure at day one saves tax, paperwork and arguments later. Company, trust, partnership or sole trader — we sit with you and your accountant, and we make the call together.',
+    body: 'The right structure at day one saves tax, paperwork and arguments later. Company, trust, partnership or sole trader: we sit with you and your accountant, and we make the call together.',
   },
 ]
 
 const faq = [
   {
     q: 'When in a business sale or purchase should I bring you in?',
-    a: 'As early as possible — ideally before any offer is made. Most of the value of having a lawyer is at the structuring and contract stages, not at settlement. By the time the contract is signed, your room to manoeuvre is mostly gone.',
+    a: 'As early as possible, ideally before any offer is made. Most of the value of having a lawyer is at the structuring and contract stages, not at settlement. By the time the contract is signed, your room to manoeuvre is mostly gone.',
   },
   {
     q: 'How much does this cost?',
@@ -60,11 +60,11 @@ const faq = [
   },
   {
     q: 'Do I need both a lawyer and an accountant?',
-    a: 'Almost always, yes — and they should talk to each other. We routinely work with our clients\' accountants on structure and tax decisions. For most deals, the accountant runs the numbers and we run the documents.',
+    a: 'Almost always, yes, and they should talk to each other. We routinely work with our clients\' accountants on structure and tax decisions. For most deals, the accountant runs the numbers and we run the documents.',
   },
   {
     q: 'What is due diligence and do I need it?',
-    a: "For any business purchase above token amounts, yes. Due diligence is the checking phase — title to assets, lease status, licences, employment liabilities, customer contracts, tax position. We coordinate it and tell you what we find before the cooling-off period closes.",
+    a: "For any business purchase above token amounts, yes. Due diligence is the checking phase: title to assets, lease status, licences, employment liabilities, customer contracts, tax position. We coordinate it and tell you what we find before the cooling-off period closes.",
   },
   {
     q: 'Can you handle franchising agreements?',
@@ -103,7 +103,7 @@ export default function BusinessLawyersPage() {
         eyebrow="Business · Sale · Purchase · Commercial"
         heading={
           <>
-            Gawler business lawyers, for people who actually <em>run a business</em>.
+            Business lawyers in Gawler, for people who <em>run one</em>.
           </>
         }
         lede="We have run our own business on Adelaide Road since 1985. Most of what stresses you about running yours has stressed us too. We give you the advice we wish we had got."

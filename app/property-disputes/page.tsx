@@ -38,11 +38,11 @@ const callouts = [
   },
   {
     title: "There's a fence you cannot agree on.",
-    body: 'The Fences Act 1975 (SA) gives both neighbours equal say and equal responsibility. We follow the statutory process — notice, response, conciliation, Magistrates Court if needed. Most matters resolve at notice stage.',
+    body: 'The Fences Act 1975 (SA) gives both neighbours equal say and equal responsibility. We follow the statutory process: notice, response, conciliation, Magistrates Court if needed. Most matters resolve at notice stage.',
   },
   {
     title: "A caveat has appeared on your title.",
-    body: 'A caveat is a stop on your title that prevents dealings until the underlying claim is resolved. We act both ways — placing caveats to protect your interest, and applying to remove them when they have been improperly registered.',
+    body: 'A caveat is a stop on your title that prevents dealings until the underlying claim is resolved. We act both ways: placing caveats to protect your interest, and applying to remove them when they have been improperly registered.',
   },
 ]
 
@@ -61,7 +61,7 @@ const faq = [
   },
   {
     q: 'What is an easement, and what can I do about one?',
-    a: "An easement is a right one party has over another party's land — typically for access, drainage, or services. Easements are registered on title and run with the land. Disputes usually involve the scope of the easement (what is permitted), maintenance obligations, or extinguishment. We handle all three.",
+    a: "An easement is a right one party has over another party's land, typically for access, drainage, or services. Easements are registered on title and run with the land. Disputes usually involve the scope of the easement (what is permitted), maintenance obligations, or extinguishment. We handle all three.",
   },
   {
     q: 'How long do these matters take?',
@@ -94,7 +94,7 @@ export default function PropertyDisputesPage() {
       <FAQSchema items={faq} />
       <PageHero
         eyebrow="Property · Disputes"
-        heading={<>Property dispute lawyers in <em>Gawler</em>. Most resolve with a single letter.</>}
+        heading={<>Property dispute lawyers in <em>Gawler</em>.</>}
         lede="Boundary lines, fences, easements, encroachments, and neighbours who will not see reason. We try to resolve before court. If court is needed, we are ready."
         image={IMAGES.disputeResolutionHero}
       />
@@ -102,7 +102,7 @@ export default function PropertyDisputesPage() {
         eyebrow="What we handle"
         heading={<>The full range of property disputes, from fences to caveats.</>}
         paragraphs={[
-          "Almost every property dispute we see starts as a small misunderstanding and becomes expensive only when one side digs in. Our first instinct is always a properly worded letter — clear about the law, clear about what we propose, and economic enough that the matter resolves without litigation.",
+          "Almost every property dispute we see starts as a small misunderstanding and becomes expensive only when one side digs in. Our first instinct is always a properly worded letter, clear about the law, clear about what we propose, and economic enough that the matter resolves without litigation.",
           "On the more formal side, we handle Fences Act notices, easement disputes, caveats (placing and removing), adverse possession claims, encroachment claims, and the title rectifications that follow. We appear in the Magistrates Court Civil Division and in higher courts when necessary.",
           "Where the dispute is with a neighbour you will continue to live next to, the strategy matters as much as the legal argument. We work to resolutions that solve the legal issue without poisoning the relationship beyond repair.",
         ]}

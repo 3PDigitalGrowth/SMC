@@ -52,7 +52,7 @@ const faq = [
   },
   {
     q: 'Can we be separated and still living together?',
-    a: 'Yes. You can be separated under one roof if you can show the relationship has ended in substance — separate finances, separate sleeping arrangements, separate social lives. We help you document this with a separation-under-one-roof affidavit.',
+    a: 'Yes. You can be separated under one roof if you can show the relationship has ended in substance: separate finances, separate sleeping arrangements, separate social lives. We help you document this with a separation-under-one-roof affidavit.',
   },
   {
     q: 'Do I need to attend Court for the divorce?',
@@ -81,7 +81,7 @@ const related = [
   },
   {
     title: 'Family law overview',
-    body: 'The broader picture — mediation, intervention orders, de facto matters.',
+    body: 'The broader picture: mediation, intervention orders, de facto matters.',
     href: '/gawler-family-lawyers',
   },
 ]
@@ -93,7 +93,7 @@ export default function DivorceSeparationPage() {
       <FAQSchema items={faq} />
       <PageHero
         eyebrow="Family · Divorce · Separation"
-        heading={<>Divorce and separation lawyers in <em>Gawler</em>, for the legal end of a marriage.</>}
+        heading={<>Divorce and separation lawyers in <em>Gawler</em>.</>}
         lede="Most clients separating after a long relationship are not after a fight. They want a fair, quick, dignified resolution. We have done this work since 1985."
         image={IMAGES.divorceHero}
       />
@@ -101,9 +101,9 @@ export default function DivorceSeparationPage() {
         eyebrow="What we handle"
         heading={<>Divorce, legal separation and the financial agreements either side may need.</>}
         paragraphs={[
-          'A divorce application in Australia is a relatively simple legal process. The complications usually live around it — separation under one roof, blended families, an uncooperative spouse, or financial agreements that need to be signed before or after the divorce is final.',
+          'A divorce application in Australia is a relatively simple legal process. The complications usually live around it: separation under one roof, blended families, an uncooperative spouse, or financial agreements that need to be signed before or after the divorce is final.',
           'We prepare and file your divorce application, serve documents if needed, attend any Court hearing on your behalf, and coordinate with the parallel work on parenting and property. Most matters resolve without the Family Court ever seeing the parties.',
-          "For couples who want certainty in advance — pre-marriage, during a separation, or after — we draft Binding Financial Agreements that hold up if challenged. Drafting is the work that matters; many BFAs prepared elsewhere fail because they were drafted hastily.",
+          "For couples who want certainty in advance (pre-marriage, during a separation, or after) we draft Binding Financial Agreements that hold up if challenged. Drafting is the work that matters; many BFAs prepared elsewhere fail because they were drafted hastily.",
         ]}
         asideTitle="Specific matters we handle"
         asideItems={subServices}

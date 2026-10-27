@@ -43,7 +43,7 @@ const subServices = [
 const callouts = [
   {
     title: 'You are setting up a new business.',
-    body: 'The right structure at day one — company, partnership, trust, sole trader — saves tax, paperwork and arguments later. We sit with you and your accountant and make the decision together.',
+    body: 'The right structure at day one (company, partnership, trust, sole trader) saves tax, paperwork and arguments later. We sit with you and your accountant and make the decision together.',
   },
   {
     title: 'You need a contract reviewed or drafted.',
@@ -62,7 +62,7 @@ const faq = [
   },
   {
     q: 'Do you handle employment matters for businesses?',
-    a: 'Yes — contracts, performance issues, disciplinary action, redundancy, unfair dismissal defence, and confidentiality and non-compete arrangements. We help you do it right the first time so it does not end up at the Fair Work Commission.',
+    a: 'Yes: contracts, performance issues, disciplinary action, redundancy, unfair dismissal defence, and confidentiality and non-compete arrangements. We help you do it right the first time so it does not end up at the Fair Work Commission.',
   },
   {
     q: 'I want to bring in a business partner. What do I need?',
@@ -70,7 +70,7 @@ const faq = [
   },
   {
     q: 'Can you help with intellectual property?',
-    a: "Yes — registration of trade marks, copyright matters, confidentiality and licence agreements, and IP disputes. For complex patent matters we refer to a specialist patent attorney we trust.",
+    a: "Yes: registration of trade marks, copyright matters, confidentiality and licence agreements, and IP disputes. For complex patent matters we refer to a specialist patent attorney we trust.",
   },
   {
     q: 'Do you advise not-for-profits and charities?',
@@ -81,7 +81,7 @@ const faq = [
 const related = [
   {
     title: 'Business sale and purchase',
-    body: 'Buying or selling a business — contract, due diligence, settlement.',
+    body: 'Buying or selling a business: contract, due diligence, settlement.',
     href: '/gawler-business-lawyers',
   },
   {
@@ -103,7 +103,7 @@ export default function CommercialLawyersPage() {
       <FAQSchema items={faq} />
       <PageHero
         eyebrow="Business · Commercial · Corporate"
-        heading={<>Commercial lawyers in <em>Gawler</em>. The boring documents, done properly.</>}
+        heading={<>Commercial lawyers in <em>Gawler</em>, documents done properly.</>}
         lede="Most of what stops a business is something not written down. We draft, review and maintain the contracts and structures that make the rest of your week predictable."
         image={IMAGES.commercialHero}
       />
@@ -111,7 +111,7 @@ export default function CommercialLawyersPage() {
         eyebrow="What we handle"
         heading={<>The full range of commercial and corporate work.</>}
         paragraphs={[
-          "Steven M Clark Lawyers commercial and corporate lawyers can provide advice and assistance on the full range of commercial and corporate legal matters. We work with sole traders, family companies, partnerships, trust structures, joint ventures, not-for-profits and charities — across the Gawler region and across South Australia.",
+          "Steven M Clark Lawyers commercial and corporate lawyers can provide advice and assistance on the full range of commercial and corporate legal matters. We work with sole traders, family companies, partnerships, trust structures, joint ventures, not-for-profits and charities, across the Gawler region and across South Australia.",
           'On the structure side we advise on business setup, business name registration, partnership and joint venture agreements, business acquisitions and sales, lease arrangements, and the related tax and succession planning. Day-to-day, we draft and review contracts of all kinds, advise on employment matters, handle copyright and IP issues, and provide ongoing governance advice.',
           'For larger matters, we handle mergers, acquisitions and joint ventures, lending and securities advice, and employee share option schemes. Where commercial disputes need to be litigated, we appear in the Magistrates, District and Supreme Courts of South Australia.',
         ]}

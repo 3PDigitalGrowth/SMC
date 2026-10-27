@@ -56,7 +56,7 @@ export default function FamilyPage() {
         eyebrow="Family Law"
         heading={
           <>
-            Family law in <em>Gawler</em>. When a marriage ends, the law should make it simpler.
+            Family law in <em>Gawler</em>, made simpler when a marriage ends.
           </>
         }
         lede="Most families that walk through our door are not after a fight. They want a fair, quick, dignified resolution so their children can get on with their lives. That is what we are good at."
@@ -76,7 +76,7 @@ export default function FamilyPage() {
         quote="The kids could keep their school, their friends, their week. That was the point. The legal part stopped being the loud thing in the house."
         attribution="Family client, Gawler · Settled out of court"
         body={[
-          'A Gawler couple separating after twelve years came in expecting a long, ugly process. Both wanted the same thing — for their two children to keep their school and their routines.',
+          'A Gawler couple separating after twelve years came in expecting a long, ugly process. Both wanted the same thing: for their two children to keep their school and their routines.',
           'We agreed early on a parenting plan, sorted property settlement in three meetings rather than three months, and stayed out of the Family Court entirely. The legal work finished. The family moved on. That is a good outcome.',
         ]}
         image={IMAGES.pathwaySeparation}

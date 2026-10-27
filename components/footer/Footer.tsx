@@ -103,7 +103,7 @@ export default function Footer() {
             </div>
             <address className={styles.address}>
               <div>1 Adelaide Rd, Gawler South SA 5118</div>
-              <div>Mon–Fri · 9:00am – 5:00pm</div>
+              <div>Mon to Fri · 9:00am to 5:00pm</div>
               <div><PhoneLink location="footer">(08) 8522 6025</PhoneLink></div>
               <div><a href="mailto:law@stevenmclark.com.au">law@stevenmclark.com.au</a></div>
               <div>

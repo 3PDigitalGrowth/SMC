@@ -91,7 +91,7 @@ export default function AdvanceCarePlanningPage() {
       <FAQSchema items={faq} />
       <PageHero
         eyebrow="Estate · Advance Care Planning"
-        heading={<>Advance care planning in <em>Gawler</em>, so your family is never guessing.</>}
+        heading={<>Advance care planning in <em>Gawler</em>, so no one is guessing.</>}
         lede="A Power of Attorney and an Advance Care Directive are quiet documents. Most people sign them in fifteen minutes and never think about them again, until the day they make everything easier."
         image={IMAGES.advanceCareHero}
       />

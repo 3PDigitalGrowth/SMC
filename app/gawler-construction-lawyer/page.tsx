@@ -37,7 +37,7 @@ const callouts = [
   },
   {
     title: 'The work is not what was agreed.',
-    body: 'Defective work, missing variations, dragging timelines. We help homeowners and developers get the work finished, the defects rectified, or the loss compensated — usually without going near court.',
+    body: 'Defective work, missing variations, dragging timelines. We help homeowners and developers get the work finished, the defects rectified, or the loss compensated, usually without going near court.',
   },
   {
     title: 'A payment claim has been served on you.',
@@ -56,11 +56,11 @@ const faq = [
   },
   {
     q: 'I am a builder who has not been paid. How do I recover?',
-    a: 'For most amounts, a properly served payment claim under the Building and Construction Industry Security of Payment Act is the fastest route — it has tight deadlines that favour the unpaid party. For larger claims, we move directly to court. We will tell you which path is appropriate.',
+    a: 'For most amounts, a properly served payment claim under the Building and Construction Industry Security of Payment Act is the fastest route; it has tight deadlines that favour the unpaid party. For larger claims, we move directly to court. We will tell you which path is appropriate.',
   },
   {
     q: 'Do you handle defective work claims?',
-    a: 'Yes — for both homeowners and builders. We assess the defect, the contract, and the statutory warranties under the Building Work Contractors Act, and we work out the best route to rectification or compensation.',
+    a: 'Yes, for both homeowners and builders. We assess the defect, the contract, and the statutory warranties under the Building Work Contractors Act, and we work out the best route to rectification or compensation.',
   },
   {
     q: 'Do you act in body corporate disputes?',
@@ -93,15 +93,15 @@ export default function ConstructionLawyerPage() {
       <FAQSchema items={faq} />
       <PageHero
         eyebrow="Building · Construction"
-        heading={<>Building and construction lawyers in <em>Gawler</em>, who have read the contract before.</>}
-        lede="Commercial, industrial, rural and domestic building disputes — we have handled them all since 1985. The same firm advises before the contract is signed and acts when something goes wrong."
+        heading={<>Building and construction lawyers in <em>Gawler</em>.</>}
+        lede="Commercial, industrial, rural and domestic building disputes; we have handled them all since 1985. The same firm advises before the contract is signed and acts when something goes wrong."
         image={IMAGES.constructionHero}
       />
       <ServiceBody
         eyebrow="What we handle"
         heading={<>The whole arc of a build, from pre-contract to defects.</>}
         paragraphs={[
-          "Steven M Clark Lawyers have years of experience handling commercial, industrial, rural and domestic building disputes. We act for builders, property developers, project managers, independent contractors, sub-contractors, building owners, property consultants, surveyors, architects and engineers — sometimes for one against the other, sometimes for everyone on the same side.",
+          "Steven M Clark Lawyers have years of experience handling commercial, industrial, rural and domestic building disputes. We act for builders, property developers, project managers, independent contractors, sub-contractors, building owners, property consultants, surveyors, architects and engineers, sometimes for one against the other, sometimes for everyone on the same side.",
           'Our experienced building and construction lawyers assist with the legal requirements for the entire building and construction process. That includes pre-contractual drafting and review, payment claims and debt recovery, dispute resolution and court representation including litigation, body corporate advice, joint venture negotiation, professional liability and insurance claims, and risk management.',
           "Most matters resolve before they become court matters. Where they do not, we have appeared on construction disputes in the Magistrates, District and Supreme Courts of South Australia.",
         ]}

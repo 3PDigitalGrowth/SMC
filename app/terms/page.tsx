@@ -35,13 +35,13 @@ const sections = [
   {
     heading: 'Accuracy',
     paragraphs: [
-      "We make a genuine effort to keep the content of this site accurate and up to date. Laws change, however, and content written months or years ago may no longer reflect the current position. If you are relying on information for an actual decision, ring us — that is what we are here for.",
+      "We make a genuine effort to keep the content of this site accurate and up to date. Laws change, however, and content written months or years ago may no longer reflect the current position. If you are relying on information for an actual decision, ring us; that is what we are here for.",
     ],
   },
   {
     heading: 'External links',
     paragraphs: [
-      "This site may link to other websites — government departments, professional bodies, our Google profile, and so on. We do not control those sites and we are not responsible for their content, accuracy, or privacy practices. A link is not an endorsement of every word on the linked site.",
+      "This site may link to other websites, government departments, professional bodies, our Google profile, and so on. We do not control those sites and we are not responsible for their content, accuracy, or privacy practices. A link is not an endorsement of every word on the linked site.",
     ],
   },
   {
@@ -81,7 +81,7 @@ export default function TermsPage() {
             Terms of use, <em>kept brief</em>.
           </>
         }
-        lede="The legal terms covering the use of this website. The short version: read the content, share it, get in touch — but treat the articles as general information, not advice."
+        lede="The legal terms covering the use of this website. The short version: read the content, share it, get in touch, but treat the articles as general information, not advice."
       />
       <LegalDocument lastUpdated="24 June 2026" sections={sections} />
       <Booking />

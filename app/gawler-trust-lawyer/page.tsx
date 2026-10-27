@@ -49,7 +49,7 @@ const callouts = [
 const faq = [
   {
     q: 'What does a trust actually do?',
-    a: 'A trust separates the legal ownership of an asset from the benefit of it. A trustee holds the asset, on terms set out in a Trust Deed, for the benefit of named beneficiaries. That separation creates tax, succession and asset-protection opportunities — and a fair amount of paperwork.',
+    a: 'A trust separates the legal ownership of an asset from the benefit of it. A trustee holds the asset, on terms set out in a Trust Deed, for the benefit of named beneficiaries. That separation creates tax, succession and asset-protection opportunities, and a fair amount of paperwork.',
   },
   {
     q: 'When does a trust genuinely help?',
@@ -61,7 +61,7 @@ const faq = [
   },
   {
     q: 'How long does it take to set one up?',
-    a: 'A standard discretionary trust can be drafted and settled within a week. More complex structures — multiple beneficiaries, custom distribution rules, corporate trustees with bespoke shareholdings — take longer because we work them through with your accountant first.',
+    a: 'A standard discretionary trust can be drafted and settled within a week. More complex structures (multiple beneficiaries, custom distribution rules, corporate trustees with bespoke shareholdings) take longer because we work them through with your accountant first.',
   },
   {
     q: 'What if my existing Trust Deed is out of date?',
@@ -94,7 +94,7 @@ export default function TrustLawyerPage() {
       <FAQSchema items={faq} />
       <PageHero
         eyebrow="Trusts · Estate Planning"
-        heading={<>Trust lawyers in <em>Gawler</em>, who will tell you whether a trust helps.</>}
+        heading={<>Family and discretionary trust lawyers in <em>Gawler</em>.</>}
         lede="Trusts are often sold as a one-size-fits-all answer. They are not. We work with you and your accountant, decide whether a trust actually adds value, and if it does, we draft it properly."
         image={IMAGES.trustsHero}
       />
@@ -103,7 +103,7 @@ export default function TrustLawyerPage() {
         heading={<>Family, discretionary and unit trusts, drafted and maintained.</>}
         paragraphs={[
           "Steven M Clark Lawyers can assist you with structuring your business or investments through discretionary and family trusts. The right trust, in the right circumstances, can be a legitimate tax minimisation strategy, a means of sharing income across family members, a way to protect assets from creditor claims, and a method of placing valuable assets out of the direct control of individuals at risk of poor decisions.",
-          'In a family discretionary trust, a trustee — frequently one of the family members, or a company controlled by them — is appointed to hold the assets of the trust in their name for the benefit of a group of beneficiaries. Both individuals and companies can serve as trustees. We typically recommend a corporate trustee because it avoids the difficulty of dealing with the death or bankruptcy of an individual trustee.',
+          'In a family discretionary trust, a trustee, frequently one of the family members, or a company controlled by them, is appointed to hold the assets of the trust in their name for the benefit of a group of beneficiaries. Both individuals and companies can serve as trustees. We typically recommend a corporate trustee because it avoids the difficulty of dealing with the death or bankruptcy of an individual trustee.',
           'We draft original Trust Deeds, prepare Deeds of Variation to existing trusts, review Trust Deeds for compliance with current law, liaise with your accountant on the practical operation, and advise on structuring trusts to minimise family-law and debt-recovery exposure.',
         ]}
         asideTitle="Specific matters we handle"

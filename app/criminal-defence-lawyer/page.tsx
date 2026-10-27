@@ -56,7 +56,7 @@ const callouts = [
 const faq = [
   {
     q: 'I have been charged. Should I plead guilty straight away?',
-    a: 'Not yet. The plea has lasting consequences and should never be entered without legal advice — even where the charge seems obvious. We assess the evidence, work out what the prosecution actually has, and tell you whether a defence is realistic. If it is not, we focus on minimising the penalty.',
+    a: 'Not yet. The plea has lasting consequences and should never be entered without legal advice, even where the charge seems obvious. We assess the evidence, work out what the prosecution actually has, and tell you whether a defence is realistic. If it is not, we focus on minimising the penalty.',
   },
   {
     q: 'What happens at the first court date?',
@@ -68,11 +68,11 @@ const faq = [
   },
   {
     q: 'What if I have been charged with drug driving?',
-    a: 'Drug driving is a strict-liability offence — presence is enough; impairment is not required. That said, the test results themselves can sometimes be challenged, and the penalties depend heavily on prior history. Ring us before pleading.',
+    a: 'Drug driving is a strict-liability offence: presence is enough; impairment is not required. That said, the test results themselves can sometimes be challenged, and the penalties depend heavily on prior history. Ring us before pleading.',
   },
   {
     q: 'Do you appear in the District Court?',
-    a: 'Yes — for more serious indictable matters. We also handle committals from the Magistrates Court for matters that progress to the District or Supreme Court.',
+    a: 'Yes, for more serious indictable matters. We also handle committals from the Magistrates Court for matters that progress to the District or Supreme Court.',
   },
 ]
 
@@ -101,7 +101,7 @@ export default function CriminalDefencePage() {
       <FAQSchema items={faq} />
       <PageHero
         eyebrow="Criminal · Traffic"
-        heading={<>Criminal and traffic lawyers in <em>Gawler</em>, for when you have been charged.</>}
+        heading={<>Criminal and traffic lawyers in <em>Gawler</em>.</>}
         lede="The outcome of a criminal or traffic charge can be life-changing. The earlier you have proper advice, the more you can do about it. Confidential and same-day."
         image={IMAGES.criminalDefenceHero}
       />
@@ -111,7 +111,7 @@ export default function CriminalDefencePage() {
         paragraphs={[
           'If you have been charged with a criminal or traffic offence you do not have to face it alone. The outcome of your court case might be life-changing, so give yourself the best possible chance with experienced criminal and traffic defence lawyers.',
           'We advise you on your rights, prepare you for court, explain the procedure, and defend you in the courtroom. We appear in the Magistrates and District Courts of South Australia, and on related disciplinary matters.',
-          'On the traffic side, we handle drink driving (exceeding the prescribed concentration of alcohol in blood), driving whilst disqualified or suspended, driving without a licence, speeding, and dangerous driving. On the criminal side, we cover the full range — assault, theft, drug offences, public order, fraud, property damage, prohibited weapons, threatening behaviour, sexual offences, robbery and extortion, homicide, and justice procedure offences.',
+          'On the traffic side, we handle drink driving (exceeding the prescribed concentration of alcohol in blood), driving whilst disqualified or suspended, driving without a licence, speeding, and dangerous driving. On the criminal side, we cover the full range: assault, theft, drug offences, public order, fraud, property damage, prohibited weapons, threatening behaviour, sexual offences, robbery and extortion, homicide, and justice procedure offences.',
         ]}
         asideTitle="Specific matters we handle"
         asideItems={subServices}

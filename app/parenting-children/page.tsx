@@ -43,14 +43,14 @@ const callouts = [
   },
   {
     title: 'Child support is not being paid.',
-    body: 'Services Australia can assess and collect child support. Where they cannot — overseas non-payers, complex income arrangements, or enforcement of private agreements — we step in.',
+    body: 'Services Australia can assess and collect child support. Where they cannot (overseas non-payers, complex income arrangements, or enforcement of private agreements) we step in.',
   },
 ]
 
 const faq = [
   {
     q: "What's the difference between a Parenting Plan and Consent Orders?",
-    a: 'A Parenting Plan is a written agreement signed by both parents. It is not legally enforceable but is taken seriously by Courts and is a common, low-cost first step. Consent Orders are filed with the Family Court and have the force of a Court order — enforceable, but requires Court approval. We help you choose.',
+    a: 'A Parenting Plan is a written agreement signed by both parents. It is not legally enforceable but is taken seriously by Courts and is a common, low-cost first step. Consent Orders are filed with the Family Court and have the force of a Court order: enforceable, but requires Court approval. We help you choose.',
   },
   {
     q: 'How does the Court decide what is in a child\'s best interests?',
@@ -73,7 +73,7 @@ const faq = [
 const related = [
   {
     title: 'Divorce and separation',
-    body: 'Often run in parallel — divorce is the legal process, parenting is the practical reality.',
+    body: 'Often run in parallel: divorce is the legal process, parenting is the practical reality.',
     href: '/divorce-separation',
   },
   {
@@ -95,7 +95,7 @@ export default function ParentingChildrenPage() {
       <FAQSchema items={faq} />
       <PageHero
         eyebrow="Family · Parenting · Children"
-        heading={<>Parenting and children's lawyers in <em>Gawler</em>, for arrangements that work for the children.</>}
+        heading={<>Parenting and children's lawyers in <em>Gawler</em>.</>}
         lede="A parenting matter is really about the school week. Where the kids sleep on a Tuesday. Who picks them up from sport. The legal documents should make those answers easier, not harder."
         image={IMAGES.familyHero}
       />

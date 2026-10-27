@@ -32,7 +32,7 @@ const subServices = [
 const callouts = [
   {
     title: 'You are about to sign a lease.',
-    body: "Send it to us before you sign. The clauses that matter most — rent reviews, options, exit, make-good, outgoings — are negotiable, but only before you have signed. After that, you live with what is there for the next five years.",
+    body: "Send it to us before you sign. The clauses that matter most (rent reviews, options, exit, make-good, outgoings) are negotiable, but only before you have signed. After that, you live with what is there for the next five years.",
   },
   {
     title: 'You are buying a business with an existing lease.',
@@ -55,7 +55,7 @@ const faq = [
   },
   {
     q: 'What is make-good?',
-    a: "Make-good is the obligation at the end of the lease to return the premises to a specified condition — often original condition. It can be the largest hidden cost in a lease. We negotiate it down to something realistic before you sign.",
+    a: "Make-good is the obligation at the end of the lease to return the premises to a specified condition, often original condition. It can be the largest hidden cost in a lease. We negotiate it down to something realistic before you sign.",
   },
   {
     q: 'Can I sublet?',
@@ -63,7 +63,7 @@ const faq = [
   },
   {
     q: 'My landlord is increasing rent in a way that does not feel right.',
-    a: "Rent reviews must follow the mechanism in the lease — CPI, market review, or a fixed percentage. If the review does not follow the mechanism, it can be challenged. We will look at the review notice and tell you within a day whether you have a basis to dispute.",
+    a: "Rent reviews must follow the mechanism in the lease: CPI, market review, or a fixed percentage. If the review does not follow the mechanism, it can be challenged. We will look at the review notice and tell you within a day whether you have a basis to dispute.",
   },
 ]
 
@@ -92,7 +92,7 @@ export default function LeaseLawyerPage() {
       <FAQSchema items={faq} />
       <PageHero
         eyebrow="Property · Commercial Leases"
-        heading={<>Commercial and retail lease lawyers in <em>Gawler</em>, before you sign for five years.</>}
+        heading={<>Commercial and retail lease lawyers in <em>Gawler</em>.</>}
         lede="A retail or commercial lease is one of the most consequential documents a business signs. We make sure it works for you, before you commit, and we sort it out if it does not."
         image={IMAGES.leaseHero}
       />
@@ -102,7 +102,7 @@ export default function LeaseLawyerPage() {
         paragraphs={[
           "Steven M Clark Lawyers can provide assistance with retail and commercial leases, and assignments of them, in a number of capacities. We strongly recommend taking legal advice before entering any lease, because a lease has the potential to become a negative impact on your business cash flow at any later stage.",
           "We draft leases for landlords, review and negotiate leases for tenants, prepare Deeds of Assignment for incoming tenants in a business sale, arrange compliant lease plans, prepare underlease documents for subletting, and resolve lease disputes when they arise.",
-          'Most of what makes a lease good or bad is in the negotiation phase — rent reviews, option rights, exit rights, make-good, outgoings, permitted use. We work through every clause that matters and push back where the standard wording does not serve you.',
+          'Most of what makes a lease good or bad is in the negotiation phase: rent reviews, option rights, exit rights, make-good, outgoings, permitted use. We work through every clause that matters and push back where the standard wording does not serve you.',
         ]}
         asideTitle="Specific matters we handle"
         asideItems={subServices}

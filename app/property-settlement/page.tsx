@@ -34,7 +34,7 @@ const subServices = [
 const callouts = [
   {
     title: 'You have just separated.',
-    body: "Do not divide anything formally yet — but do start documenting. Bank statements, super statements, property valuations. The earlier you have a clear picture, the easier the eventual settlement.",
+    body: "Do not divide anything formally yet, but do start documenting. Bank statements, super statements, property valuations. The earlier you have a clear picture, the easier the eventual settlement.",
   },
   {
     title: 'You have agreed in principle.',
@@ -42,7 +42,7 @@ const callouts = [
   },
   {
     title: 'You cannot agree.',
-    body: "Where one side will not engage or the gap is too wide, we apply to the Family Court. We work the matter to mediation first, settlement conferences second, trial only as a last resort. Court is expensive — but sometimes necessary.",
+    body: "Where one side will not engage or the gap is too wide, we apply to the Family Court. We work the matter to mediation first, settlement conferences second, trial only as a last resort. Court is expensive, but sometimes necessary.",
   },
 ]
 
@@ -61,7 +61,7 @@ const faq = [
   },
   {
     q: 'How long do I have to apply?',
-    a: 'For married couples, 12 months from the date of divorce becoming final. For de facto couples, 2 years from the date of separation. Out-of-time applications need leave of the Court — possible but not guaranteed.',
+    a: 'For married couples, 12 months from the date of divorce becoming final. For de facto couples, 2 years from the date of separation. Out-of-time applications need leave of the Court, possible but not guaranteed.',
   },
   {
     q: 'Do trusts protect assets from family law?',
@@ -94,7 +94,7 @@ export default function PropertySettlementPage() {
       <FAQSchema items={faq} />
       <PageHero
         eyebrow="Family · Property Settlement"
-        heading={<>Property settlement lawyers in <em>Gawler</em>, done properly the first time.</>}
+        heading={<>Property settlement lawyers in <em>Gawler</em>.</>}
         lede="A property settlement is a one-time legal job. Done well, it puts the financial chapter behind you. Done badly, it surfaces again years later. We work hard to make it the former."
         image={IMAGES.familyHero}
       />
@@ -102,8 +102,8 @@ export default function PropertySettlementPage() {
         eyebrow="What we handle"
         heading={<>The full property settlement, from valuations to enforceable orders.</>}
         paragraphs={[
-          'A property settlement after separation looks straightforward on the surface and almost never is. Couples typically own a mix of assets — the family home, superannuation across several accounts, possibly a business or farm, sometimes a trust, sometimes debts. The job is to identify the pool, value it fairly, work out a just split, and document it in a form the Court will recognise.',
-          "We work primarily on negotiated settlements. Most matters resolve through correspondence between solicitors or at a single mediation. Where they don't, we run them through the Family Court — but we will always tell you honestly whether litigation is economic in your particular case.",
+          'A property settlement after separation looks straightforward on the surface and almost never is. Couples typically own a mix of assets: the family home, superannuation across several accounts, possibly a business or farm, sometimes a trust, sometimes debts. The job is to identify the pool, value it fairly, work out a just split, and document it in a form the Court will recognise.',
+          "We work primarily on negotiated settlements. Most matters resolve through correspondence between solicitors or at a single mediation. Where they don't, we run them through the Family Court, but we will always tell you honestly whether litigation is economic in your particular case.",
           "On the documentation side, we prepare Consent Orders (the Court-enforceable option) or Binding Financial Agreements (the contractual option). Both have their place. We will choose with you based on your situation.",
         ]}
         asideTitle="Specific matters we handle"

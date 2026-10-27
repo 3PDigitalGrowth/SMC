@@ -19,7 +19,7 @@ export default function References({ items }: ReferencesProps) {
               <a href={ref.url} target="_blank" rel="noopener noreferrer" className={styles.link}>
                 {ref.title}
               </a>
-              {ref.note && <span className={styles.note}> — {ref.note}</span>}
+              {ref.note && <span className={styles.note}> · {ref.note}</span>}
             </span>
           </li>
         ))}

@@ -97,7 +97,7 @@ export default function PowerOfAttorneyPage() {
       <FAQSchema items={faq} />
       <PageHero
         eyebrow="Estates · Power of Attorney"
-        heading={<>Power of attorney lawyers in <em>Gawler</em>, for when someone needs to act for you.</>}
+        heading={<>Power of attorney lawyers in <em>Gawler</em>.</>}
         lede="A Power of Attorney is quiet, brief, and indispensable. It signs in fifteen minutes alongside your Will, and most clients never think about it again, until the day it makes everything easier."
         image={IMAGES.advanceCareHero}
       />

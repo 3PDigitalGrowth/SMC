@@ -38,7 +38,7 @@ const callouts = [
   },
   {
     title: 'The insurer has offered a settlement.',
-    body: "Insurers offer to settle early because it is cheaper for them. Before you sign, let us look at the offer. The right number depends on the future medical, the future earning loss, and the pain and suffering — not just the bills already on the table.",
+    body: "Insurers offer to settle early because it is cheaper for them. Before you sign, let us look at the offer. The right number depends on the future medical, the future earning loss, and the pain and suffering, not just the bills already on the table.",
   },
   {
     title: 'You are a cyclist or pedestrian.',
@@ -72,7 +72,7 @@ const faq = [
 const related = [
   {
     title: 'Personal injury',
-    body: 'The broader category — workplace, public liability, medical negligence and TPD.',
+    body: 'The broader category: workplace, public liability, medical negligence and TPD.',
     href: '/gawler-personal-injury-lawyers',
   },
   {
@@ -94,7 +94,7 @@ export default function CompensationLawyersPage() {
       <FAQSchema items={faq} />
       <PageHero
         eyebrow="Personal Injury · Motor Vehicle"
-        heading={<>Car accident and CTP claim lawyers in <em>Gawler</em>, so the claim is the easy part.</>}
+        heading={<>CTP and car accident lawyers in <em>Gawler</em>.</>}
         lede="Our compensation lawyers handle motor vehicle, motorcycle, bicycle and pedestrian accident claims for clients across the Gawler region. We collect the evidence, work the insurer, and negotiate or litigate the right outcome."
         image={IMAGES.gawlerStreet}
       />

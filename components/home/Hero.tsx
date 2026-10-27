@@ -192,7 +192,7 @@ export default function Hero({ variant = 'default' }: { variant?: HeroVariant })
           </span>
 
           <h1 className={styles.heading}>
-            Lawyers in Gawler, for when something <em>serious</em> has happened.
+            Lawyers in Gawler, for when something <em>serious</em> happens.
           </h1>
 
           <p className={styles.lede}>

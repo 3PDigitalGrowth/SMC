@@ -42,7 +42,7 @@ const callouts = [
   },
   {
     title: 'A claim has already been filed.',
-    body: 'Whether you are responding to an unfair dismissal application or pursuing one, the deadlines are short. Ring us today — both sides have 21 days from the dismissal to lodge.',
+    body: 'Whether you are responding to an unfair dismissal application or pursuing one, the deadlines are short. Ring us today. Both sides have 21 days from the dismissal to lodge.',
   },
 ]
 
@@ -65,7 +65,7 @@ const faq = [
   },
   {
     q: 'Do you appear at the Fair Work Commission?',
-    a: 'Yes — for both applicants and respondents. We handle conciliations, hearings, and any appeals.',
+    a: 'Yes, for both applicants and respondents. We handle conciliations, hearings, and any appeals.',
   },
 ]
 
@@ -94,7 +94,7 @@ export default function IndustrialRelationsLawyerPage() {
       <FAQSchema items={faq} />
       <PageHero
         eyebrow="Business · Industrial Relations"
-        heading={<>Employment and industrial relations lawyers in <em>Gawler</em>, from both sides of the desk.</>}
+        heading={<>Employment lawyers in <em>Gawler</em>, from both sides of the desk.</>}
         lede="We act for employers and for employees, and that means we know how each side actually plays the situation. The advice you get is grounded in how the matter will really unfold, not the textbook version."
         image={IMAGES.industrialRelationsHero}
       />

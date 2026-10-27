@@ -33,7 +33,7 @@ const subServices = [
 const callouts = [
   {
     title: 'You have been injured and someone else is responsible.',
-    body: 'Personal injury law has strict time limits — and they start running from the date of the injury, not the date you decide to act. Ring us as soon as you can. A first consultation costs you nothing.',
+    body: 'Personal injury law has strict time limits, and they start running from the date of the injury, not the date you decide to act. Ring us as soon as you can. A first consultation costs you nothing.',
   },
   {
     title: 'You have been hurt at work.',
@@ -48,7 +48,7 @@ const callouts = [
 const faq = [
   {
     q: 'How long do I have to make a claim?',
-    a: "The limitation period varies by claim type — motor vehicle three years, workplace generally six months for notification and three years for civil action, public liability three years. Some claims are shorter. The safest answer is: ring us as soon as the injury occurs.",
+    a: "The limitation period varies by claim type: motor vehicle three years, workplace generally six months for notification and three years for civil action, public liability three years. Some claims are shorter. The safest answer is: ring us as soon as the injury occurs.",
   },
   {
     q: 'How much will it cost me to bring a claim?',
@@ -60,7 +60,7 @@ const faq = [
   },
   {
     q: 'What if my injury was partly my fault?',
-    a: "Contributory negligence does not bar a claim — it reduces it. Even where you bear some responsibility, you can usually still recover compensation. We assess the contributory percentage realistically and factor it into the claim.",
+    a: "Contributory negligence does not bar a claim; it reduces it. Even where you bear some responsibility, you can usually still recover compensation. We assess the contributory percentage realistically and factor it into the claim.",
   },
   {
     q: 'I cannot easily get to your office. Can you come to me?',
@@ -71,7 +71,7 @@ const faq = [
 const related = [
   {
     title: 'Motor vehicle accidents',
-    body: 'The largest category of personal injury claim — separate, specific advice.',
+    body: 'The largest category of personal injury claim: separate, specific advice.',
     href: '/gawler-compensation-lawyers',
   },
   {
@@ -93,7 +93,7 @@ export default function PersonalInjuryLawyersPage() {
       <FAQSchema items={faq} />
       <PageHero
         eyebrow="Personal Injury"
-        heading={<>Personal injury lawyers in <em>Gawler</em>, so the legal part is the easy part.</>}
+        heading={<>Personal injury lawyers in <em>Gawler</em>.</>}
         lede="Personal injury is rarely just the legal claim. It is the medical care, the income, the family. We coordinate the legal side so you can focus on the rest. We also visit you at home if you cannot easily get to us."
         image={IMAGES.personalInjuryHero}
       />
@@ -102,7 +102,7 @@ export default function PersonalInjuryLawyersPage() {
         heading={<>Compensation claims for all major categories of personal injury.</>}
         paragraphs={[
           'Steven M Clark Lawyers can assist you with legal advice and representation through all stages of your personal injury claim. We act for people injured in motor vehicle accidents, at work, by medical negligence, on public or private property, and for grieving family members making victims-of-crime claims.',
-          'We assist with assessing the amount of personal injury compensation you are entitled to, the lodgement of the claim, and the careful, compassionate work of guiding you through the process to a fair settlement on the best possible terms. We make a particular point of pursuing lump-sum TPD entitlements from superannuation funds — many of our clients do not realise they are covered.',
+          'We assist with assessing the amount of personal injury compensation you are entitled to, the lodgement of the claim, and the careful, compassionate work of guiding you through the process to a fair settlement on the best possible terms. We make a particular point of pursuing lump-sum TPD entitlements from superannuation funds; many of our clients do not realise they are covered.',
           'To make things a little easier where it matters most, we will visit those with mobility issues in the comfort of their own home. Due to the complicated laws and strict time limits on lodging personal injury claims, contact us right away to organise a consultation.',
         ]}
         asideTitle="Specific matters we handle"

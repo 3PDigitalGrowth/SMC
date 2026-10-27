@@ -33,7 +33,7 @@ const subServices = [
 const callouts = [
   {
     title: 'A customer has stopped paying.',
-    body: 'A letter of demand from a lawyer resolves the great majority of overdue debts without further steps. The letter alone is often enough — and it is fast, fixed-fee and stops you having to write awkward emails yourself.',
+    body: 'A letter of demand from a lawyer resolves the great majority of overdue debts without further steps. The letter alone is often enough, and it is fast, fixed-fee and stops you having to write awkward emails yourself.',
   },
   {
     title: 'The debtor is ignoring you.',
@@ -48,7 +48,7 @@ const callouts = [
 const faq = [
   {
     q: 'How big does a debt need to be before it is worth recovering?',
-    a: "There is no rule, but as a guide, debts under about $2,000 are usually only worth recovering through a letter of demand — the court costs and time can exceed the recovery. Above that, formal action becomes economic. We will tell you on the first call whether your debt is worth chasing.",
+    a: "There is no rule, but as a guide, debts under about $2,000 are usually only worth recovering through a letter of demand; the court costs and time can exceed the recovery. Above that, formal action becomes economic. We will tell you on the first call whether your debt is worth chasing.",
   },
   {
     q: 'How long does the process take?',
@@ -56,7 +56,7 @@ const faq = [
   },
   {
     q: 'Can I recover my legal costs?',
-    a: 'In certain situations, yes — particularly where the matter goes to court and you obtain judgement. The Court can order the debtor to pay your costs in addition to the debt and interest. We tell you upfront what is realistically recoverable.',
+    a: 'In certain situations, yes, particularly where the matter goes to court and you obtain judgement. The Court can order the debtor to pay your costs in addition to the debt and interest. We tell you upfront what is realistically recoverable.',
   },
   {
     q: 'What is a garnishee order?',
@@ -93,8 +93,8 @@ export default function DebtRecoveryPage() {
       <FAQSchema items={faq} />
       <PageHero
         eyebrow="Business · Debt Recovery"
-        heading={<>Debt recovery lawyers in <em>Gawler</em>. A letter is often all it takes.</>}
-        lede="A clear, properly written demand letter resolves the great majority of debts. When it does not, we have the full set of court tools to enforce — and we will tell you straight if a debt is not worth chasing."
+        heading={<>Debt recovery in <em>Gawler</em>. Often, one letter does it.</>}
+        lede="A clear, properly written demand letter resolves the great majority of debts. When it does not, we have the full set of court tools to enforce, and we will tell you straight if a debt is not worth chasing."
         image={IMAGES.debtRecoveryHero}
       />
       <ServiceBody

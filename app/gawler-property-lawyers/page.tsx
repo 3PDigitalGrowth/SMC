@@ -52,7 +52,7 @@ const callouts = [
 const faq = [
   {
     q: 'Why use a property lawyer instead of just a conveyancer?',
-    a: 'A conveyancer can handle a standard contract, but every contract becomes non-standard the moment something goes wrong — late settlement, undisclosed defects, finance falling through, a caveat appearing on title. A property lawyer can handle all of those without referring you on.',
+    a: 'A conveyancer can handle a standard contract, but every contract becomes non-standard the moment something goes wrong: late settlement, undisclosed defects, finance falling through, a caveat appearing on title. A property lawyer can handle all of those without referring you on.',
   },
   {
     q: 'When should I send you the contract?',
@@ -64,7 +64,7 @@ const faq = [
   },
   {
     q: 'What happens at settlement?',
-    a: 'We coordinate with the bank, the other side\'s lawyer or conveyancer, and the Lands Titles Office. You sign the transfer documents in our office a few days before. On the settlement day itself, you do not need to do anything — you just get the call to confirm it has settled.',
+    a: 'We coordinate with the bank, the other side\'s lawyer or conveyancer, and the Lands Titles Office. You sign the transfer documents in our office a few days before. On the settlement day itself, you do not need to do anything; you just get the call to confirm it has settled.',
   },
   {
     q: 'Can you help with off-the-plan purchases?',
@@ -103,7 +103,7 @@ export default function PropertyLawyersPage() {
         eyebrow="Property · Conveyancing · Leases"
         heading={
           <>
-            Property lawyers in <em>Gawler</em>, who have read more local contracts than most agents have drafted.
+            Property and conveyancing lawyers in <em>Gawler</em>.
           </>
         }
         lede="A property transaction is the biggest financial decision most families ever make. The legal work behind it should be the smallest worry. That is what we are for."
@@ -115,9 +115,9 @@ export default function PropertyLawyersPage() {
         eyebrow="What we handle"
         heading={<>Every kind of property work, from the standard to the awkward.</>}
         paragraphs={[
-          'Property transactions are a big decision and a significant matter for most people. We have been doing them in the Gawler region since 1985 — residential, rural, commercial, off-the-plan, the lot.',
+          'Property transactions are a big decision and a significant matter for most people. We have been doing them in the Gawler region since 1985: residential, rural, commercial, off-the-plan, the lot.',
           "On the buying and selling side, we handle the Contract for Sale, the cooling-off period, stamp duty calculations, lender requirements, title searches, settlement and exchange. On the development side, we handle subdivisions, building contracts, and the council approvals that always take longer than anyone expects.",
-          "When property goes sideways — a building dispute, a boundary disagreement, a defective fence, a neighbour with a different view of the easement — we work the matter the same way: write the right letter first, escalate only when we need to, and stop the moment it stops being economic to fight.",
+          "When property goes sideways: a building dispute, a boundary disagreement, a defective fence, a neighbour with a different view of the easement, we work the matter the same way: write the right letter first, escalate only when we need to, and stop the moment it stops being economic to fight.",
         ]}
         asideTitle="Specific matters we handle"
         asideItems={subServices}

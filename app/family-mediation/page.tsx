@@ -47,15 +47,15 @@ const callouts = [
 const faq = [
   {
     q: 'Is mediation the same as the Court process?',
-    a: 'No. Mediation is a structured negotiation facilitated by a neutral third party — a Family Dispute Resolution practitioner. It is voluntary in substance, even where attempting it is procedurally required. The mediator does not decide; the parties do.',
+    a: 'No. Mediation is a structured negotiation facilitated by a neutral third party, a Family Dispute Resolution practitioner. It is voluntary in substance, even where attempting it is procedurally required. The mediator does not decide; the parties do.',
   },
   {
     q: 'Do I need a lawyer at mediation?',
-    a: 'You can attend without one, and many people do. The trade-off is that proposals made in mediation are easier to evaluate with legal advice in your ear. We can attend with you, or be on the phone, or simply prepare you in advance — whichever you prefer.',
+    a: 'You can attend without one, and many people do. The trade-off is that proposals made in mediation are easier to evaluate with legal advice in your ear. We can attend with you, or be on the phone, or simply prepare you in advance, whichever you prefer.',
   },
   {
     q: 'What if mediation fails?',
-    a: 'The FDR practitioner issues a Section 60I certificate, which is the procedural ticket to the Court. We then file the application and run the matter as litigation. Failed mediation does not mean lost time — the work done in preparation usually streamlines what comes next.',
+    a: 'The FDR practitioner issues a Section 60I certificate, which is the procedural ticket to the Court. We then file the application and run the matter as litigation. Failed mediation does not mean lost time; the work done in preparation usually streamlines what comes next.',
   },
   {
     q: 'Can a mediation agreement be enforced?',
@@ -92,7 +92,7 @@ export default function FamilyMediationPage() {
       <FAQSchema items={faq} />
       <PageHero
         eyebrow="Family · Mediation"
-        heading={<>Family mediation in <em>Gawler</em>. Where it can be settled out of Court, we settle it.</>}
+        heading={<>Family mediation lawyers in <em>Gawler</em>.</>}
         lede="Family Dispute Resolution is faster, cheaper and easier on the children than Court. It is also a procedural requirement before filing most parenting applications. We help you make it count."
         image={IMAGES.disputeResolutionHero}
       />
@@ -101,7 +101,7 @@ export default function FamilyMediationPage() {
         heading={<>Mediation preparation, attendance, and the documents that follow.</>}
         paragraphs={[
           "Family Dispute Resolution (FDR) is a form of mediation conducted by an accredited practitioner, designed to help separating couples reach agreements about children and property without going to Court. Since 2007, FDR has been a procedural requirement before most parenting applications can be filed.",
-          'Our role is to prepare you for the mediation, advise on the realistic range of outcomes, and where requested, attend with you. We also draft the documents that turn a mediated agreement into an enforceable arrangement — a Parenting Plan, Consent Orders, or a Binding Financial Agreement.',
+          'Our role is to prepare you for the mediation, advise on the realistic range of outcomes, and where requested, attend with you. We also draft the documents that turn a mediated agreement into an enforceable arrangement: a Parenting Plan, Consent Orders, or a Binding Financial Agreement.',
           'For cases involving family violence or where direct contact is unsafe, shuttle mediation is available. The parties never see each other; the mediator carries proposals between them. We coordinate with FDR providers experienced in this format.',
         ]}
         asideTitle="Specific matters we handle"

@@ -55,7 +55,7 @@ const faq = [
   },
   {
     q: 'Can we be separated while still living under the same roof?',
-    a: 'Yes. You need to be able to demonstrate to the Court that the marriage has ended in substance — separate finances, separate sleeping arrangements, sometimes a corroborating affidavit from a friend or family member. We will tell you what is needed in your situation.',
+    a: 'Yes. You need to be able to demonstrate to the Court that the marriage has ended in substance: separate finances, separate sleeping arrangements, sometimes a corroborating affidavit from a friend or family member. We will tell you what is needed in your situation.',
   },
   {
     q: 'What documents do I need?',
@@ -63,7 +63,7 @@ const faq = [
   },
   {
     q: 'What about the children?',
-    a: 'The Court needs to be satisfied that arrangements are in place for any children under 18, but does not require a formal parenting agreement. If parenting needs to be resolved, we handle that as a separate matter — it does not delay the divorce.',
+    a: 'The Court needs to be satisfied that arrangements are in place for any children under 18, but does not require a formal parenting agreement. If parenting needs to be resolved, we handle that as a separate matter; it does not delay the divorce.',
   },
   {
     q: 'What about property?',
@@ -74,7 +74,7 @@ const faq = [
 const related = [
   {
     title: 'Family law',
-    body: 'The bigger picture — separation, children, settlement, mediation.',
+    body: 'The bigger picture: separation, children, settlement, mediation.',
     href: '/gawler-family-lawyers',
   },
   {
@@ -96,7 +96,7 @@ export default function DivorceAustraliaPage() {
       <FAQSchema items={faq} />
       <PageHero
         eyebrow="Read first · Divorce"
-        heading={<>Divorce in Australia, in <em>plain English</em>, from a Gawler family lawyer.</>}
+        heading={<>Divorce in Australia, in <em>plain English</em>.</>}
         lede="A short guide written by a Gawler family lawyer practising since 1985. The 12-month rule, the timeline, the parts that catch people out, and what you can actually do right now."
         image={IMAGES.divorceHero}
       />
@@ -105,7 +105,7 @@ export default function DivorceAustraliaPage() {
         heading={<>How divorce in Australia actually works.</>}
         paragraphs={[
           "In Australia, there is no need to provide any reasons for divorce other than that the relationship has broken down irretrievably. The 12-month separation requirement serves as evidence of that irretrievable breakdown.",
-          "It is possible to be separated and still living together — you do not have to physically move out for the clock to start. Once you can demonstrate that 12 months of separation has passed, you can apply for divorce. The Court is not asked to take sides.",
+          "It is possible to be separated and still living together; you do not have to physically move out for the clock to start. Once you can demonstrate that 12 months of separation has passed, you can apply for divorce. The Court is not asked to take sides.",
           "Children, property and finances can be sorted at the same time, before, or after the divorce. Most people sort children and property before the divorce becomes final, but that is a strategic choice, not a legal one. We walk you through which order makes sense in your circumstances.",
         ]}
         asideTitle="Key concepts on this page"

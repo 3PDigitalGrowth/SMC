@@ -39,7 +39,7 @@ const callouts = [
   },
   {
     title: 'The order is interfering with your children.',
-    body: "Intervention Orders and Family Court parenting orders can conflict. We handle both, so the strategy works as one piece — not two firms tripping over each other.",
+    body: "Intervention Orders and Family Court parenting orders can conflict. We handle both, so the strategy works as one piece, not two firms tripping over each other.",
   },
 ]
 
@@ -62,7 +62,7 @@ const faq = [
   },
   {
     q: 'Does an Intervention Order affect my parenting rights?',
-    a: 'It can — particularly during the interim period. Intervention Order conditions and Family Court parenting orders sometimes conflict, and we sort out the interaction so you do not end up in breach of one while complying with the other.',
+    a: 'It can, particularly during the interim period. Intervention Order conditions and Family Court parenting orders sometimes conflict, and we sort out the interaction so you do not end up in breach of one while complying with the other.',
   },
 ]
 
@@ -91,7 +91,7 @@ export default function InterventionOrderPage() {
       <FAQSchema items={faq} />
       <PageHero
         eyebrow="Family · Intervention Orders"
-        heading={<>Intervention order lawyers in <em>Gawler</em>. An order can be in place by the end of the day.</>}
+        heading={<>Intervention order lawyers in <em>Gawler</em>, urgent and confidential.</>}
         lede="If you or your children are not safe, ring us today. If an order has been wrongly taken out in your name, ring us today. Both are urgent. Both are confidential."
         image={IMAGES.interventionHero}
       />
@@ -101,7 +101,7 @@ export default function InterventionOrderPage() {
         paragraphs={[
           "An Intervention Order is an order made by the Court that prohibits the defendant from certain behaviour such as harassment, stalking, intimidation, violence, or the threat of violence. The order is intended to protect against future harm, typically by restricting a person's actions and their proximity to the complainant's residence, workplace, or children.",
           'A magistrate can issue an Intervention Order with the defendant\'s consent, or on evidence demonstrating reasonable grounds for fear of violence or harassment. If the order is contested, an interim order is in place until trial.',
-          'We act on both sides — for applicants who need urgent protection, and for defendants who believe the order has been wrongly taken out. We move quickly on either, because in this area the calendar matters as much as the legal argument.',
+          'We act on both sides: for applicants who need urgent protection, and for defendants who believe the order has been wrongly taken out. We move quickly on either, because in this area the calendar matters as much as the legal argument.',
         ]}
         asideTitle="Specific matters we handle"
         asideItems={subServices}
