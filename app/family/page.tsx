@@ -1,4 +1,5 @@
 import PageHero from '@/components/page/PageHero'
+import RelatedGuides from '@/components/page/RelatedGuides'
 import HubServices from '@/components/page/HubServices'
 import HubProof from '@/components/page/HubProof'
 import Booking from '@/components/home/Booking'
@@ -55,7 +56,7 @@ export default function FamilyPage() {
         eyebrow="Family Law"
         heading={
           <>
-            When a marriage ends, the law should make it <em>simpler</em>, not harder.
+            Family law in <em>Gawler</em>. When a marriage ends, the law should make it simpler.
           </>
         }
         lede="Most families that walk through our door are not after a fight. They want a fair, quick, dignified resolution so their children can get on with their lives. That is what we are good at."
@@ -80,6 +81,8 @@ export default function FamilyPage() {
         ]}
         image={IMAGES.pathwaySeparation}
       />
+
+      <RelatedGuides slugs={['when-do-you-need-a-family-lawyer', 'family-law-legal-aid-australia', 'pets-after-separation-australian-family-law']} />
 
       <Booking />
     </>

@@ -5,6 +5,7 @@ import ServiceFAQ from '@/components/page/ServiceFAQ'
 import RelatedServices from '@/components/page/RelatedServices'
 import Booking from '@/components/home/Booking'
 import BreadcrumbSchema from '@/components/seo/BreadcrumbSchema'
+import FAQSchema from '@/components/seo/FAQSchema'
 import { pageMetadata } from '@/lib/seo'
 import { IMAGES } from '@/lib/images'
 
@@ -90,9 +91,10 @@ export default function IndustrialRelationsLawyerPage() {
   return (
     <>
       <BreadcrumbSchema crumbs={[{ name: 'Home', href: '/' }, { name: 'Business', href: '/business' }, { name: 'Industrial relations', href: '/gawler-industrial-relations-lawyer' }]} />
+      <FAQSchema items={faq} />
       <PageHero
         eyebrow="Business · Industrial Relations"
-        heading={<>Employment law, from both sides of the <em>same desk</em>.</>}
+        heading={<>Employment and industrial relations lawyers in <em>Gawler</em>, from both sides of the desk.</>}
         lede="We act for employers and for employees, and that means we know how each side actually plays the situation. The advice you get is grounded in how the matter will really unfold, not the textbook version."
         image={IMAGES.industrialRelationsHero}
       />

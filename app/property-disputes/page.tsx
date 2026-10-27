@@ -1,10 +1,12 @@
 import PageHero from '@/components/page/PageHero'
+import RelatedGuides from '@/components/page/RelatedGuides'
 import ServiceBody from '@/components/page/ServiceBody'
 import ServiceCallout from '@/components/page/ServiceCallout'
 import ServiceFAQ from '@/components/page/ServiceFAQ'
 import RelatedServices from '@/components/page/RelatedServices'
 import Booking from '@/components/home/Booking'
 import BreadcrumbSchema from '@/components/seo/BreadcrumbSchema'
+import FAQSchema from '@/components/seo/FAQSchema'
 import { pageMetadata } from '@/lib/seo'
 import { IMAGES } from '@/lib/images'
 
@@ -89,9 +91,10 @@ export default function PropertyDisputesPage() {
   return (
     <>
       <BreadcrumbSchema crumbs={[{ name: 'Home', href: '/' }, { name: 'Property', href: '/property' }, { name: 'Property disputes', href: '/property-disputes' }]} />
+      <FAQSchema items={faq} />
       <PageHero
         eyebrow="Property · Disputes"
-        heading={<>Most property disputes resolve with a <em>single letter</em>.</>}
+        heading={<>Property dispute lawyers in <em>Gawler</em>. Most resolve with a single letter.</>}
         lede="Boundary lines, fences, easements, encroachments, and neighbours who will not see reason. We try to resolve before court. If court is needed, we are ready."
         image={IMAGES.disputeResolutionHero}
       />
@@ -108,6 +111,7 @@ export default function PropertyDisputesPage() {
       />
       <ServiceCallout eyebrow="If you are here because…" heading={<>Three places property disputes typically start.</>} items={callouts} />
       <ServiceFAQ eyebrow="Common questions" heading={<>What people most often ask on the first call.</>} items={faq} />
+      <RelatedGuides slugs={['dispute-resolution-south-australia']} />
       <RelatedServices eyebrow="Adjacent help" heading={<>Often connected to:</>} items={related} />
       <Booking />
     </>

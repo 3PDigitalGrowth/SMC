@@ -1,10 +1,12 @@
 import PageHero from '@/components/page/PageHero'
+import RelatedGuides from '@/components/page/RelatedGuides'
 import ServiceBody from '@/components/page/ServiceBody'
 import ServiceCallout from '@/components/page/ServiceCallout'
 import ServiceFAQ from '@/components/page/ServiceFAQ'
 import RelatedServices from '@/components/page/RelatedServices'
 import Booking from '@/components/home/Booking'
 import BreadcrumbSchema from '@/components/seo/BreadcrumbSchema'
+import FAQSchema from '@/components/seo/FAQSchema'
 import { pageMetadata } from '@/lib/seo'
 import { IMAGES } from '@/lib/images'
 
@@ -92,9 +94,10 @@ export default function PowerOfAttorneyPage() {
   return (
     <>
       <BreadcrumbSchema crumbs={[{ name: 'Home', href: '/' }, { name: 'Estates', href: '/estates' }, { name: 'Power of attorney', href: '/power-of-attorney' }]} />
+      <FAQSchema items={faq} />
       <PageHero
         eyebrow="Estates · Power of Attorney"
-        heading={<>The document that lets someone <em>act for you</em>, if you cannot.</>}
+        heading={<>Power of attorney lawyers in <em>Gawler</em>, for when someone needs to act for you.</>}
         lede="A Power of Attorney is quiet, brief, and indispensable. It signs in fifteen minutes alongside your Will, and most clients never think about it again, until the day it makes everything easier."
         image={IMAGES.advanceCareHero}
       />
@@ -111,6 +114,7 @@ export default function PowerOfAttorneyPage() {
       />
       <ServiceCallout eyebrow="If you are here because…" heading={<>Three reasons people put this in place.</>} items={callouts} />
       <ServiceFAQ eyebrow="Common questions" heading={<>What people most often ask on the first call.</>} items={faq} />
+      <RelatedGuides slugs={['estate-planning-documents-south-australia', 'wills-lawyers-south-australia']} />
       <RelatedServices eyebrow="Adjacent help" heading={<>Often done in the same visit:</>} items={related} />
       <Booking />
     </>

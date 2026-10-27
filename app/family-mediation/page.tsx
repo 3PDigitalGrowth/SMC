@@ -1,10 +1,12 @@
 import PageHero from '@/components/page/PageHero'
+import RelatedGuides from '@/components/page/RelatedGuides'
 import ServiceBody from '@/components/page/ServiceBody'
 import ServiceCallout from '@/components/page/ServiceCallout'
 import ServiceFAQ from '@/components/page/ServiceFAQ'
 import RelatedServices from '@/components/page/RelatedServices'
 import Booking from '@/components/home/Booking'
 import BreadcrumbSchema from '@/components/seo/BreadcrumbSchema'
+import FAQSchema from '@/components/seo/FAQSchema'
 import { pageMetadata } from '@/lib/seo'
 import { IMAGES } from '@/lib/images'
 
@@ -87,9 +89,10 @@ export default function FamilyMediationPage() {
   return (
     <>
       <BreadcrumbSchema crumbs={[{ name: 'Home', href: '/' }, { name: 'Family', href: '/family' }, { name: 'Family mediation', href: '/family-mediation' }]} />
+      <FAQSchema items={faq} />
       <PageHero
         eyebrow="Family · Mediation"
-        heading={<>Where it can be settled <em>out of Court</em>, we settle it.</>}
+        heading={<>Family mediation in <em>Gawler</em>. Where it can be settled out of Court, we settle it.</>}
         lede="Family Dispute Resolution is faster, cheaper and easier on the children than Court. It is also a procedural requirement before filing most parenting applications. We help you make it count."
         image={IMAGES.disputeResolutionHero}
       />
@@ -106,6 +109,7 @@ export default function FamilyMediationPage() {
       />
       <ServiceCallout eyebrow="If you are here because…" heading={<>Three places mediation files most often start.</>} items={callouts} />
       <ServiceFAQ eyebrow="Common questions" heading={<>What people most often ask on the first call.</>} items={faq} />
+      <RelatedGuides slugs={['family-law-legal-aid-australia', 'understanding-consent-orders-australia', 'understanding-child-support-australia']} />
       <RelatedServices eyebrow="Adjacent help" heading={<>Often connected to:</>} items={related} />
       <Booking />
     </>

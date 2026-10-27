@@ -5,6 +5,7 @@ import ServiceFAQ from '@/components/page/ServiceFAQ'
 import RelatedServices from '@/components/page/RelatedServices'
 import Booking from '@/components/home/Booking'
 import BreadcrumbSchema from '@/components/seo/BreadcrumbSchema'
+import FAQSchema from '@/components/seo/FAQSchema'
 import { pageMetadata } from '@/lib/seo'
 import { IMAGES } from '@/lib/images'
 
@@ -88,9 +89,10 @@ export default function LeaseLawyerPage() {
   return (
     <>
       <BreadcrumbSchema crumbs={[{ name: 'Home', href: '/' }, { name: 'Property', href: '/property' }, { name: 'Commercial leases', href: '/gawler-lease-lawyer' }]} />
+      <FAQSchema items={faq} />
       <PageHero
         eyebrow="Property · Commercial Leases"
-        heading={<>Five years of your business decisions live <em>inside the lease</em>.</>}
+        heading={<>Commercial and retail lease lawyers in <em>Gawler</em>, before you sign for five years.</>}
         lede="A retail or commercial lease is one of the most consequential documents a business signs. We make sure it works for you, before you commit, and we sort it out if it does not."
         image={IMAGES.leaseHero}
       />

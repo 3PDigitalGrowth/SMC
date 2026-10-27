@@ -45,7 +45,7 @@ export default function LeadMagnet() {
             Not ready to call yet? <em>Have a read.</em>
           </h2>
           <p className={styles.body}>
-            Our short, plainly-written Separation &amp; Estate Planning guides answer the
+            Our short, plain-English Separation &amp; Estate Planning guides answer the
             questions people ask us in the first conversation. Free, no follow-up calls.
           </p>
         </div>

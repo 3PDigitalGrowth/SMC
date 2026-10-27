@@ -55,7 +55,7 @@ export default function PropertyPage() {
         eyebrow="Property Law"
         heading={
           <>
-            The biggest cheque most people sign. Worth getting <em>properly</em> advised on.
+            Property law and conveyancing in <em>Gawler</em>. The biggest cheque most people sign.
           </>
         }
         lede="Property decisions are usually the largest financial decisions a Gawler family makes. We have been advising on them since 1985, and we have read more contracts in this region than most agents have ever drafted."

@@ -1,10 +1,12 @@
 import PageHero from '@/components/page/PageHero'
+import RelatedGuides from '@/components/page/RelatedGuides'
 import ServiceBody from '@/components/page/ServiceBody'
 import ServiceCallout from '@/components/page/ServiceCallout'
 import ServiceFAQ from '@/components/page/ServiceFAQ'
 import RelatedServices from '@/components/page/RelatedServices'
 import Booking from '@/components/home/Booking'
 import BreadcrumbSchema from '@/components/seo/BreadcrumbSchema'
+import FAQSchema from '@/components/seo/FAQSchema'
 import { pageMetadata } from '@/lib/seo'
 import { IMAGES } from '@/lib/images'
 
@@ -89,9 +91,10 @@ export default function PropertySettlementPage() {
   return (
     <>
       <BreadcrumbSchema crumbs={[{ name: 'Home', href: '/' }, { name: 'Family', href: '/family' }, { name: 'Property settlement', href: '/property-settlement' }]} />
+      <FAQSchema items={faq} />
       <PageHero
         eyebrow="Family · Property Settlement"
-        heading={<>Dividing assets after separation, done <em>properly</em> the first time.</>}
+        heading={<>Property settlement lawyers in <em>Gawler</em>, done properly the first time.</>}
         lede="A property settlement is a one-time legal job. Done well, it puts the financial chapter behind you. Done badly, it surfaces again years later. We work hard to make it the former."
         image={IMAGES.familyHero}
       />
@@ -108,6 +111,7 @@ export default function PropertySettlementPage() {
       />
       <ServiceCallout eyebrow="If you are here because…" heading={<>Three places property settlements typically start.</>} items={callouts} />
       <ServiceFAQ eyebrow="Common questions" heading={<>What people most often ask on the first call.</>} items={faq} />
+      <RelatedGuides slugs={['understanding-consent-orders-australia', 'binding-financial-agreements-australia', 'pets-after-separation-australian-family-law']} />
       <RelatedServices eyebrow="Adjacent help" heading={<>Often connected to:</>} items={related} />
       <Booking />
     </>

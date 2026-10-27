@@ -1,10 +1,12 @@
 import PageHero from '@/components/page/PageHero'
+import RelatedGuides from '@/components/page/RelatedGuides'
 import ServiceBody from '@/components/page/ServiceBody'
 import ServiceCallout from '@/components/page/ServiceCallout'
 import ServiceFAQ from '@/components/page/ServiceFAQ'
 import RelatedServices from '@/components/page/RelatedServices'
 import Booking from '@/components/home/Booking'
 import BreadcrumbSchema from '@/components/seo/BreadcrumbSchema'
+import FAQSchema from '@/components/seo/FAQSchema'
 import { pageMetadata } from '@/lib/seo'
 import { IMAGES } from '@/lib/images'
 
@@ -88,9 +90,10 @@ export default function PersonalInjuryLawyersPage() {
   return (
     <>
       <BreadcrumbSchema crumbs={[{ name: 'Home', href: '/' }, { name: 'Personal injury', href: '/gawler-personal-injury-lawyers' }]} />
+      <FAQSchema items={faq} />
       <PageHero
         eyebrow="Personal Injury"
-        heading={<>If you have been injured, the legal part should be the <em>easy part</em>.</>}
+        heading={<>Personal injury lawyers in <em>Gawler</em>, so the legal part is the easy part.</>}
         lede="Personal injury is rarely just the legal claim. It is the medical care, the income, the family. We coordinate the legal side so you can focus on the rest. We also visit you at home if you cannot easily get to us."
         image={IMAGES.personalInjuryHero}
       />
@@ -107,6 +110,7 @@ export default function PersonalInjuryLawyersPage() {
       />
       <ServiceCallout eyebrow="If you are here because…" heading={<>Three places personal injury files most often start.</>} items={callouts} />
       <ServiceFAQ eyebrow="Common questions" heading={<>What people most often ask on the first call.</>} items={faq} />
+      <RelatedGuides slugs={['ctp-claims-south-australia']} />
       <RelatedServices eyebrow="Adjacent help" heading={<>Often connected to:</>} items={related} />
       <Booking />
     </>

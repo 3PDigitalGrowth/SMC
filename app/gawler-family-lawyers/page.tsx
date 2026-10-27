@@ -1,4 +1,5 @@
 import PageHero from '@/components/page/PageHero'
+import RelatedGuides from '@/components/page/RelatedGuides'
 import ServiceBody from '@/components/page/ServiceBody'
 import ServiceCallout from '@/components/page/ServiceCallout'
 import ServiceFAQ from '@/components/page/ServiceFAQ'
@@ -132,6 +133,8 @@ export default function FamilyLawyersPage() {
         heading={<>The questions almost every first caller asks.</>}
         items={faq}
       />
+
+      <RelatedGuides slugs={['when-do-you-need-a-family-lawyer', 'family-law-legal-aid-australia', 'understanding-consent-orders-australia']} />
 
       <RelatedServices
         eyebrow="Adjacent help"

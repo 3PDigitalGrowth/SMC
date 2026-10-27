@@ -45,7 +45,7 @@ export default function Process() {
           </h2>
           <p className={styles.lede}>
             The most common reason people put off making the call is not knowing what
-            will happen if they do. Here it is, plainly.
+            will happen if they do. Here it is, in plain terms.
           </p>
         </div>
 

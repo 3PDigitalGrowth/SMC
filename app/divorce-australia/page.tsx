@@ -1,16 +1,18 @@
 import PageHero from '@/components/page/PageHero'
+import RelatedGuides from '@/components/page/RelatedGuides'
 import ServiceBody from '@/components/page/ServiceBody'
 import ServiceCallout from '@/components/page/ServiceCallout'
 import ServiceFAQ from '@/components/page/ServiceFAQ'
 import RelatedServices from '@/components/page/RelatedServices'
 import Booking from '@/components/home/Booking'
 import BreadcrumbSchema from '@/components/seo/BreadcrumbSchema'
+import FAQSchema from '@/components/seo/FAQSchema'
 import { pageMetadata } from '@/lib/seo'
 import { IMAGES } from '@/lib/images'
 
 export const metadata = pageMetadata({
   path: '/divorce-australia',
-  title: 'Divorce in Australia, plainly. By a Gawler family lawyer.',
+  title: 'Divorce in Australia, in plain English. By a Gawler family lawyer.',
   description:
     'How divorce in Australia actually works. The 12-month rule, the paperwork, the timeline, children, property and the parts that catch people out.',
   image: IMAGES.divorceHero.src,
@@ -91,9 +93,10 @@ export default function DivorceAustraliaPage() {
   return (
     <>
       <BreadcrumbSchema crumbs={[{ name: 'Home', href: '/' }, { name: 'Family', href: '/family' }, { name: 'Divorce in Australia', href: '/divorce-australia' }]} />
+      <FAQSchema items={faq} />
       <PageHero
         eyebrow="Read first · Divorce"
-        heading={<>Divorce in Australia, in <em>plain English</em>.</>}
+        heading={<>Divorce in Australia, in <em>plain English</em>, from a Gawler family lawyer.</>}
         lede="A short guide written by a Gawler family lawyer practising since 1985. The 12-month rule, the timeline, the parts that catch people out, and what you can actually do right now."
         image={IMAGES.divorceHero}
       />
@@ -110,6 +113,7 @@ export default function DivorceAustraliaPage() {
       />
       <ServiceCallout eyebrow="If you are here because…" heading={<>Three reasons people read this page first.</>} items={callouts} />
       <ServiceFAQ eyebrow="Common questions" heading={<>The most-asked questions on the first call.</>} items={faq} />
+      <RelatedGuides slugs={['family-law-legal-aid-australia', 'understanding-consent-orders-australia', 'when-do-you-need-a-family-lawyer']} />
       <RelatedServices eyebrow="Where to next" heading={<>Other things people read on the same visit.</>} items={related} />
       <Booking />
     </>

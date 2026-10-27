@@ -55,7 +55,7 @@ export default function BusinessPage() {
         eyebrow="Business Law"
         heading={
           <>
-            Straight legal advice for businesses, from a firm that <em>runs one</em>.
+            Business lawyers in <em>Gawler</em>, from a firm that runs one.
           </>
         }
         lede="We have run our own business on Adelaide Road since 1985. Most of what stresses you about running yours has stressed us too. We give you the advice we wish we had got."

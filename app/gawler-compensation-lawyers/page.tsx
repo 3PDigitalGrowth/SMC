@@ -1,10 +1,12 @@
 import PageHero from '@/components/page/PageHero'
+import RelatedGuides from '@/components/page/RelatedGuides'
 import ServiceBody from '@/components/page/ServiceBody'
 import ServiceCallout from '@/components/page/ServiceCallout'
 import ServiceFAQ from '@/components/page/ServiceFAQ'
 import RelatedServices from '@/components/page/RelatedServices'
 import Booking from '@/components/home/Booking'
 import BreadcrumbSchema from '@/components/seo/BreadcrumbSchema'
+import FAQSchema from '@/components/seo/FAQSchema'
 import { pageMetadata } from '@/lib/seo'
 import { IMAGES } from '@/lib/images'
 
@@ -89,9 +91,10 @@ export default function CompensationLawyersPage() {
   return (
     <>
       <BreadcrumbSchema crumbs={[{ name: 'Home', href: '/' }, { name: 'Motor vehicle accidents', href: '/gawler-compensation-lawyers' }]} />
+      <FAQSchema items={faq} />
       <PageHero
         eyebrow="Personal Injury · Motor Vehicle"
-        heading={<>Car-accident injuries can be very <em>serious</em>. The claim does not have to be.</>}
+        heading={<>Car accident and CTP claim lawyers in <em>Gawler</em>, so the claim is the easy part.</>}
         lede="Our compensation lawyers handle motor vehicle, motorcycle, bicycle and pedestrian accident claims for clients across the Gawler region. We collect the evidence, work the insurer, and negotiate or litigate the right outcome."
         image={IMAGES.gawlerStreet}
       />
@@ -108,6 +111,7 @@ export default function CompensationLawyersPage() {
       />
       <ServiceCallout eyebrow="If you are here because…" heading={<>Three places motor vehicle files most often start.</>} items={callouts} />
       <ServiceFAQ eyebrow="Common questions" heading={<>What people most often ask on the first call.</>} items={faq} />
+      <RelatedGuides slugs={['ctp-claims-south-australia']} />
       <RelatedServices eyebrow="Adjacent help" heading={<>Often connected to:</>} items={related} />
       <Booking />
     </>

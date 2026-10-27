@@ -1,4 +1,5 @@
 import PageHero from '@/components/page/PageHero'
+import RelatedGuides from '@/components/page/RelatedGuides'
 import ServiceBody from '@/components/page/ServiceBody'
 import ServiceCallout from '@/components/page/ServiceCallout'
 import ServiceFAQ from '@/components/page/ServiceFAQ'
@@ -93,7 +94,7 @@ export default function InsolvencyLawyerPage() {
       <FAQSchema items={faq} />
       <PageHero
         eyebrow="Bankruptcy · Insolvency"
-        heading={<>Bankruptcy and insolvency. Ring early, keep your <em>options</em>.</>}
+        heading={<>Bankruptcy and insolvency lawyers in <em>Gawler</em>. Ring early, keep your options.</>}
         lede="Insolvency is rarely a single decision. It is a sequence of decisions, and the order matters. Talk to us before the bank, the ATO or the creditor's solicitor forces the order for you."
         image={IMAGES.insolvencyHero}
       />
@@ -133,6 +134,7 @@ export default function InsolvencyLawyerPage() {
         ]}
       />
       <ServiceFAQ eyebrow="Common questions" heading={<>What people most often ask on the first call.</>} items={faq} />
+      <RelatedGuides slugs={['debt-recovery-south-australia']} />
       <RelatedServices eyebrow="Adjacent help" heading={<>Often connected to:</>} items={related} />
       <Booking />
     </>

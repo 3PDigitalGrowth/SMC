@@ -1,10 +1,12 @@
 import PageHero from '@/components/page/PageHero'
+import RelatedGuides from '@/components/page/RelatedGuides'
 import ServiceBody from '@/components/page/ServiceBody'
 import ServiceCallout from '@/components/page/ServiceCallout'
 import ServiceFAQ from '@/components/page/ServiceFAQ'
 import RelatedServices from '@/components/page/RelatedServices'
 import Booking from '@/components/home/Booking'
 import BreadcrumbSchema from '@/components/seo/BreadcrumbSchema'
+import FAQSchema from '@/components/seo/FAQSchema'
 import { pageMetadata } from '@/lib/seo'
 import { IMAGES } from '@/lib/images'
 
@@ -86,9 +88,10 @@ export default function InterventionOrderPage() {
   return (
     <>
       <BreadcrumbSchema crumbs={[{ name: 'Home', href: '/' }, { name: 'Family', href: '/family' }, { name: 'Intervention orders', href: '/intervention-domestic-violence-lawyer' }]} />
+      <FAQSchema items={faq} />
       <PageHero
         eyebrow="Family · Intervention Orders"
-        heading={<>An Intervention Order can be in place by the <em>end of the day</em>.</>}
+        heading={<>Intervention order lawyers in <em>Gawler</em>. An order can be in place by the end of the day.</>}
         lede="If you or your children are not safe, ring us today. If an order has been wrongly taken out in your name, ring us today. Both are urgent. Both are confidential."
         image={IMAGES.interventionHero}
       />
@@ -105,6 +108,7 @@ export default function InterventionOrderPage() {
       />
       <ServiceCallout eyebrow="If you are here because…" heading={<>Three reasons most callers need us today, not next week.</>} items={callouts} />
       <ServiceFAQ eyebrow="Common questions" heading={<>What people most often ask on the first call.</>} items={faq} />
+      <RelatedGuides slugs={['family-law-legal-aid-australia', 'when-do-you-need-a-family-lawyer']} />
       <RelatedServices eyebrow="Adjacent help" heading={<>Often connected to:</>} items={related} />
       <Booking />
     </>

@@ -44,7 +44,7 @@ const panels: Record<string, PanelDef> = {
       {
         heading: 'Read first',
         links: [
-          { label: 'Divorce in Australia, plainly', href: '/divorce-australia' },
+          { label: 'Divorce in Australia, explained', href: '/divorce-australia' },
           { label: 'The Separation Checklist (free)', href: '#lead-magnet' },
         ],
       },

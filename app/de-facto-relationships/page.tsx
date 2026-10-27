@@ -1,10 +1,12 @@
 import PageHero from '@/components/page/PageHero'
+import RelatedGuides from '@/components/page/RelatedGuides'
 import ServiceBody from '@/components/page/ServiceBody'
 import ServiceCallout from '@/components/page/ServiceCallout'
 import ServiceFAQ from '@/components/page/ServiceFAQ'
 import RelatedServices from '@/components/page/RelatedServices'
 import Booking from '@/components/home/Booking'
 import BreadcrumbSchema from '@/components/seo/BreadcrumbSchema'
+import FAQSchema from '@/components/seo/FAQSchema'
 import { pageMetadata } from '@/lib/seo'
 import { IMAGES } from '@/lib/images'
 
@@ -87,9 +89,10 @@ export default function DeFactoPage() {
   return (
     <>
       <BreadcrumbSchema crumbs={[{ name: 'Home', href: '/' }, { name: 'Family', href: '/family' }, { name: 'De facto relationships', href: '/de-facto-relationships' }]} />
+      <FAQSchema items={faq} />
       <PageHero
         eyebrow="Family · De Facto"
-        heading={<>The same protections as marriage, with a <em>shorter clock</em>.</>}
+        heading={<>De facto relationship lawyers in <em>Gawler</em>. Marriage protections, a shorter clock.</>}
         lede="De facto separations have the same property and maintenance remedies as married couples — but the time limit to apply is 2 years from the date of separation, not 1 year from divorce. The earlier you have advice, the more options you have."
         image={IMAGES.familyHero}
       />
@@ -106,6 +109,7 @@ export default function DeFactoPage() {
       />
       <ServiceCallout eyebrow="If you are here because…" heading={<>Three places de facto matters typically start.</>} items={callouts} />
       <ServiceFAQ eyebrow="Common questions" heading={<>What people most often ask on the first call.</>} items={faq} />
+      <RelatedGuides slugs={['understanding-consent-orders-australia', 'binding-financial-agreements-australia', 'pets-after-separation-australian-family-law']} />
       <RelatedServices eyebrow="Adjacent help" heading={<>Often connected to:</>} items={related} />
       <Booking />
     </>

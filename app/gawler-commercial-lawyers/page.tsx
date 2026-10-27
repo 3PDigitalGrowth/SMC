@@ -1,10 +1,12 @@
 import PageHero from '@/components/page/PageHero'
+import RelatedGuides from '@/components/page/RelatedGuides'
 import ServiceBody from '@/components/page/ServiceBody'
 import ServiceCallout from '@/components/page/ServiceCallout'
 import ServiceFAQ from '@/components/page/ServiceFAQ'
 import RelatedServices from '@/components/page/RelatedServices'
 import Booking from '@/components/home/Booking'
 import BreadcrumbSchema from '@/components/seo/BreadcrumbSchema'
+import FAQSchema from '@/components/seo/FAQSchema'
 import { pageMetadata } from '@/lib/seo'
 import { IMAGES } from '@/lib/images'
 
@@ -98,9 +100,10 @@ export default function CommercialLawyersPage() {
   return (
     <>
       <BreadcrumbSchema crumbs={[{ name: 'Home', href: '/' }, { name: 'Business', href: '/business' }, { name: 'Commercial and corporate', href: '/gawler-commercial-lawyers' }]} />
+      <FAQSchema items={faq} />
       <PageHero
         eyebrow="Business · Commercial · Corporate"
-        heading={<>The boring documents, done <em>properly</em>, so the interesting work can happen.</>}
+        heading={<>Commercial lawyers in <em>Gawler</em>. The boring documents, done properly.</>}
         lede="Most of what stops a business is something not written down. We draft, review and maintain the contracts and structures that make the rest of your week predictable."
         image={IMAGES.commercialHero}
       />
@@ -117,6 +120,7 @@ export default function CommercialLawyersPage() {
       />
       <ServiceCallout eyebrow="If you are here because…" heading={<>Three reasons commercial files most often start.</>} items={callouts} />
       <ServiceFAQ eyebrow="Common questions" heading={<>What people most often ask on the first call.</>} items={faq} />
+      <RelatedGuides slugs={['debt-recovery-south-australia', 'dispute-resolution-south-australia']} />
       <RelatedServices eyebrow="Adjacent help" heading={<>Often connected to:</>} items={related} />
       <Booking />
     </>

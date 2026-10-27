@@ -5,6 +5,7 @@ import ServiceFAQ from '@/components/page/ServiceFAQ'
 import RelatedServices from '@/components/page/RelatedServices'
 import Booking from '@/components/home/Booking'
 import BreadcrumbSchema from '@/components/seo/BreadcrumbSchema'
+import FAQSchema from '@/components/seo/FAQSchema'
 import { pageMetadata } from '@/lib/seo'
 import { IMAGES } from '@/lib/images'
 
@@ -97,11 +98,12 @@ export default function BusinessLawyersPage() {
   return (
     <>
       <BreadcrumbSchema crumbs={[{ name: 'Home', href: '/' }, { name: 'Business', href: '/business' }, { name: 'Business lawyers', href: '/gawler-business-lawyers' }]} />
+      <FAQSchema items={faq} />
       <PageHero
         eyebrow="Business · Sale · Purchase · Commercial"
         heading={
           <>
-            Business law for people who actually <em>run a business</em>.
+            Gawler business lawyers, for people who actually <em>run a business</em>.
           </>
         }
         lede="We have run our own business on Adelaide Road since 1985. Most of what stresses you about running yours has stressed us too. We give you the advice we wish we had got."

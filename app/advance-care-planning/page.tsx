@@ -1,4 +1,5 @@
 import PageHero from '@/components/page/PageHero'
+import RelatedGuides from '@/components/page/RelatedGuides'
 import ServiceBody from '@/components/page/ServiceBody'
 import ServiceCallout from '@/components/page/ServiceCallout'
 import ServiceFAQ from '@/components/page/ServiceFAQ'
@@ -90,7 +91,7 @@ export default function AdvanceCarePlanningPage() {
       <FAQSchema items={faq} />
       <PageHero
         eyebrow="Estate · Advance Care Planning"
-        heading={<>Make sure your family is <em>never guessing</em>.</>}
+        heading={<>Advance care planning in <em>Gawler</em>, so your family is never guessing.</>}
         lede="A Power of Attorney and an Advance Care Directive are quiet documents. Most people sign them in fifteen minutes and never think about them again, until the day they make everything easier."
         image={IMAGES.advanceCareHero}
       />
@@ -107,6 +108,7 @@ export default function AdvanceCarePlanningPage() {
       />
       <ServiceCallout eyebrow="If you are here because…" heading={<>Three reasons people put this in place.</>} items={callouts} />
       <ServiceFAQ eyebrow="Common questions" heading={<>What people most often ask on the first call.</>} items={faq} />
+      <RelatedGuides slugs={['estate-planning-documents-south-australia', 'wills-lawyers-south-australia']} />
       <RelatedServices eyebrow="Adjacent help" heading={<>Often done in the same visit:</>} items={related} />
       <Booking />
     </>

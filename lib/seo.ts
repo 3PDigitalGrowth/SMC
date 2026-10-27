@@ -110,7 +110,7 @@ export const LEGAL_SERVICE_JSON_LD = JSON.stringify({
       closes: '17:00',
     },
   ],
-  sameAs: ['https://maps.app.goo.gl/zKVSLimjnENP8s5Z9'],
+  sameAs: ['https://maps.app.goo.gl/zKVSLimjnENP8s5Z9', 'https://www.facebook.com/stevenmclarklawyer/'],
   image: `${SITE_URL}/images/hero-portrait.jpg`,
   priceRange: '$$',
   founder: {

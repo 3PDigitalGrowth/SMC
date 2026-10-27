@@ -1,10 +1,12 @@
 import PageHero from '@/components/page/PageHero'
+import RelatedGuides from '@/components/page/RelatedGuides'
 import ServiceBody from '@/components/page/ServiceBody'
 import ServiceCallout from '@/components/page/ServiceCallout'
 import ServiceFAQ from '@/components/page/ServiceFAQ'
 import RelatedServices from '@/components/page/RelatedServices'
 import Booking from '@/components/home/Booking'
 import BreadcrumbSchema from '@/components/seo/BreadcrumbSchema'
+import FAQSchema from '@/components/seo/FAQSchema'
 import { pageMetadata } from '@/lib/seo'
 import { IMAGES } from '@/lib/images'
 
@@ -89,9 +91,10 @@ export default function TrustLawyerPage() {
   return (
     <>
       <BreadcrumbSchema crumbs={[{ name: 'Home', href: '/' }, { name: 'Estates', href: '/estates' }, { name: 'Trusts', href: '/gawler-trust-lawyer' }]} />
+      <FAQSchema items={faq} />
       <PageHero
         eyebrow="Trusts · Estate Planning"
-        heading={<>A trust either helps you, or it does not. We will tell you <em>which</em>.</>}
+        heading={<>Trust lawyers in <em>Gawler</em>, who will tell you whether a trust helps.</>}
         lede="Trusts are often sold as a one-size-fits-all answer. They are not. We work with you and your accountant, decide whether a trust actually adds value, and if it does, we draft it properly."
         image={IMAGES.trustsHero}
       />
@@ -108,6 +111,7 @@ export default function TrustLawyerPage() {
       />
       <ServiceCallout eyebrow="If you are here because…" heading={<>Three reasons people sit down with us about trusts.</>} items={callouts} />
       <ServiceFAQ eyebrow="Common questions" heading={<>What people most often ask on the first call.</>} items={faq} />
+      <RelatedGuides slugs={['testamentary-trusts-australia-guide', 'estate-planning-documents-south-australia', 'wills-lawyers-south-australia']} />
       <RelatedServices eyebrow="Adjacent help" heading={<>Often connected to:</>} items={related} />
       <Booking />
     </>

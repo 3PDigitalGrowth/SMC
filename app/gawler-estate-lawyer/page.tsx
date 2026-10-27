@@ -1,4 +1,5 @@
 import PageHero from '@/components/page/PageHero'
+import RelatedGuides from '@/components/page/RelatedGuides'
 import ServiceBody from '@/components/page/ServiceBody'
 import ServiceCallout from '@/components/page/ServiceCallout'
 import ServiceFAQ from '@/components/page/ServiceFAQ'
@@ -99,7 +100,7 @@ export default function EstateLawyerPage() {
         eyebrow="Wills · Probate · Estate Planning"
         heading={
           <>
-            Wills and estates. Done <em>properly</em>, the first time.
+            Wills and estate lawyers in <em>Gawler</em>, done properly the first time.
           </>
         }
         lede="Planning for what happens after you are gone is a small, important legal job. Most clients are in and out in two visits, with a Will, a Power of Attorney and an Advance Care Directive that will not need to be touched for years."
@@ -130,6 +131,8 @@ export default function EstateLawyerPage() {
         heading={<>The questions almost every first caller asks.</>}
         items={faq}
       />
+
+      <RelatedGuides slugs={['probate-and-letters-of-administration', 'executor-duties-estate-administration-australia', 'wills-lawyers-south-australia', 'estate-planning-documents-south-australia']} />
 
       <RelatedServices
         eyebrow="Adjacent help"

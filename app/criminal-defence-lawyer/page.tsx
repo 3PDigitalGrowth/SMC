@@ -5,6 +5,7 @@ import ServiceFAQ from '@/components/page/ServiceFAQ'
 import RelatedServices from '@/components/page/RelatedServices'
 import Booking from '@/components/home/Booking'
 import BreadcrumbSchema from '@/components/seo/BreadcrumbSchema'
+import FAQSchema from '@/components/seo/FAQSchema'
 import { pageMetadata } from '@/lib/seo'
 import { IMAGES } from '@/lib/images'
 
@@ -97,9 +98,10 @@ export default function CriminalDefencePage() {
   return (
     <>
       <BreadcrumbSchema crumbs={[{ name: 'Home', href: '/' }, { name: 'Criminal defence', href: '/criminal-defence-lawyer' }]} />
+      <FAQSchema items={faq} />
       <PageHero
         eyebrow="Criminal · Traffic"
-        heading={<>If you have been charged, give yourself the <em>best chance</em>.</>}
+        heading={<>Criminal and traffic lawyers in <em>Gawler</em>, for when you have been charged.</>}
         lede="The outcome of a criminal or traffic charge can be life-changing. The earlier you have proper advice, the more you can do about it. Confidential and same-day."
         image={IMAGES.criminalDefenceHero}
       />

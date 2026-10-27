@@ -1,4 +1,5 @@
 import PageHero from '@/components/page/PageHero'
+import RelatedGuides from '@/components/page/RelatedGuides'
 import ServiceBody from '@/components/page/ServiceBody'
 import ServiceCallout from '@/components/page/ServiceCallout'
 import ServiceFAQ from '@/components/page/ServiceFAQ'
@@ -130,6 +131,7 @@ export default function EstatePlanningPage() {
       <ServiceCallout eyebrow="If you are here because…" heading={<>Three of the most common reasons people start planning.</>} items={callouts} />
       <ServiceFAQ eyebrow="Common questions" heading={<>What people most often ask on the first call.</>} items={faq} />
       <ServiceCallout eyebrow="Getting started" heading={<>How a first meeting works.</>} items={firstMeeting} />
+      <RelatedGuides slugs={['estate-planning-documents-south-australia', 'estate-planning-costs-and-process-australia', 'wills-lawyers-south-australia', 'testamentary-trusts-australia-guide', 'updating-or-revoking-a-will-australia']} />
       <RelatedServices eyebrow="Adjacent help" heading={<>Other things we often look at on the same visit.</>} items={related} />
       <Booking />
     </>

@@ -5,6 +5,7 @@ import ServiceFAQ from '@/components/page/ServiceFAQ'
 import RelatedServices from '@/components/page/RelatedServices'
 import Booking from '@/components/home/Booking'
 import BreadcrumbSchema from '@/components/seo/BreadcrumbSchema'
+import FAQSchema from '@/components/seo/FAQSchema'
 import { pageMetadata } from '@/lib/seo'
 import { IMAGES } from '@/lib/images'
 
@@ -89,9 +90,10 @@ export default function ConstructionLawyerPage() {
   return (
     <>
       <BreadcrumbSchema crumbs={[{ name: 'Home', href: '/' }, { name: 'Property', href: '/property' }, { name: 'Building and construction', href: '/gawler-construction-lawyer' }]} />
+      <FAQSchema items={faq} />
       <PageHero
         eyebrow="Building · Construction"
-        heading={<>The legal work behind the build, by lawyers who have <em>read the contract before</em>.</>}
+        heading={<>Building and construction lawyers in <em>Gawler</em>, who have read the contract before.</>}
         lede="Commercial, industrial, rural and domestic building disputes — we have handled them all since 1985. The same firm advises before the contract is signed and acts when something goes wrong."
         image={IMAGES.constructionHero}
       />

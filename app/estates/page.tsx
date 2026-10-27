@@ -1,4 +1,5 @@
 import PageHero from '@/components/page/PageHero'
+import RelatedGuides from '@/components/page/RelatedGuides'
 import HubServices from '@/components/page/HubServices'
 import HubProof from '@/components/page/HubProof'
 import InlineCallback from '@/components/page/InlineCallback'
@@ -78,7 +79,7 @@ export default function EstatesPage() {
         eyebrow="Wills and Estates"
         heading={
           <>
-            Wills and probate in Gawler. Get it right <em>once</em>.
+            Wills and probate lawyers in Gawler. Get it right <em>once</em>.
           </>
         }
         lede="A properly prepared Will, Power of Attorney and Advance Care Directive give your family certainty when they need it most. Most families need an hour with us, and a follow-up signing. That is the entire job. And if you have lost someone and are now the executor, Steven has guided Gawler families through probate since 1985, telling you what to do and in what order."
@@ -116,6 +117,8 @@ export default function EstatesPage() {
         heading={<>Wills and probate: what people ask first.</>}
         items={faq}
       />
+
+      <RelatedGuides slugs={['wills-lawyers-south-australia', 'estate-planning-documents-south-australia', 'probate-and-letters-of-administration']} />
 
       <Booking />
     </>

@@ -1,10 +1,12 @@
 import PageHero from '@/components/page/PageHero'
+import RelatedGuides from '@/components/page/RelatedGuides'
 import ServiceBody from '@/components/page/ServiceBody'
 import ServiceCallout from '@/components/page/ServiceCallout'
 import ServiceFAQ from '@/components/page/ServiceFAQ'
 import RelatedServices from '@/components/page/RelatedServices'
 import Booking from '@/components/home/Booking'
 import BreadcrumbSchema from '@/components/seo/BreadcrumbSchema'
+import FAQSchema from '@/components/seo/FAQSchema'
 import { pageMetadata } from '@/lib/seo'
 import { IMAGES } from '@/lib/images'
 
@@ -91,9 +93,10 @@ export default function DisputeResolutionPage() {
   return (
     <>
       <BreadcrumbSchema crumbs={[{ name: 'Home', href: '/' }, { name: 'Dispute resolution', href: '/gawler-dispute-resolution-lawyers' }]} />
+      <FAQSchema items={faq} />
       <PageHero
         eyebrow="Litigation · Dispute Resolution"
-        heading={<>Court is a tool, not the <em>default</em>.</>}
+        heading={<>Dispute resolution lawyers in <em>Gawler</em>. Court is a tool, not the default.</>}
         lede="Most disputes never need to be litigated. We treat court as a last resort because of the cost and the risk — but when it is the right call, we run the case properly."
         image={IMAGES.disputeResolutionHero}
       />
@@ -110,6 +113,7 @@ export default function DisputeResolutionPage() {
       />
       <ServiceCallout eyebrow="If you are here because…" heading={<>Three places dispute files most often start.</>} items={callouts} />
       <ServiceFAQ eyebrow="Common questions" heading={<>What people most often ask on the first call.</>} items={faq} />
+      <RelatedGuides slugs={['dispute-resolution-south-australia', 'debt-recovery-south-australia']} />
       <RelatedServices eyebrow="Adjacent help" heading={<>Often connected to:</>} items={related} />
       <Booking />
     </>

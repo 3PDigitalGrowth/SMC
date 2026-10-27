@@ -5,6 +5,7 @@ import ServiceFAQ from '@/components/page/ServiceFAQ'
 import RelatedServices from '@/components/page/RelatedServices'
 import Booking from '@/components/home/Booking'
 import BreadcrumbSchema from '@/components/seo/BreadcrumbSchema'
+import FAQSchema from '@/components/seo/FAQSchema'
 import { pageMetadata } from '@/lib/seo'
 import { IMAGES } from '@/lib/images'
 
@@ -97,11 +98,12 @@ export default function PropertyLawyersPage() {
   return (
     <>
       <BreadcrumbSchema crumbs={[{ name: 'Home', href: '/' }, { name: 'Property', href: '/property' }, { name: 'Property lawyers', href: '/gawler-property-lawyers' }]} />
+      <FAQSchema items={faq} />
       <PageHero
         eyebrow="Property · Conveyancing · Leases"
         heading={
           <>
-            Property law, by lawyers who have read more <em>Gawler contracts</em> than most agents have drafted.
+            Property lawyers in <em>Gawler</em>, who have read more local contracts than most agents have drafted.
           </>
         }
         lede="A property transaction is the biggest financial decision most families ever make. The legal work behind it should be the smallest worry. That is what we are for."

@@ -44,6 +44,8 @@ const columns = [
       { label: 'Industrial relations', href: '/gawler-industrial-relations-lawyer' },
       { label: 'Insolvency', href: '/gawler-insolvency-lawyer' },
       { label: 'Notary Public', href: '/notary-public-gawler' },
+      { label: 'Apostilles', href: '/apostille-and-authentication-south-australia' },
+      { label: 'Notary fees', href: '/notary-fees-south-australia' },
     ],
   },
   {

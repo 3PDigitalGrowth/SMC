@@ -300,7 +300,7 @@ export function leadConfirmationEmail(data: EnquiryPayload): { subject: string; 
     <tr>
       <td style="padding:22px 20px;">
         <div style="font-family:${SANS}; font-size:11px; letter-spacing:0.18em; text-transform:uppercase; color:${C.leaf}; margin-bottom:12px;">Your reading</div>
-        <div style="font-family:${SANS}; font-size:15px; line-height:1.6; color:${C.inkSoft}; margin-bottom:16px;">Our plainly-written guides answer the questions people ask us in the first conversation. No follow-up calls, read them in your own time.</div>
+        <div style="font-family:${SANS}; font-size:15px; line-height:1.6; color:${C.inkSoft}; margin-bottom:16px;">Our plain-English guides answer the questions people ask us in the first conversation. No follow-up calls, read them in your own time.</div>
         <a href="${SITE}/insights" style="display:inline-block; background:${C.leaf}; color:${C.paperSoft}; font-family:${SANS}; font-size:15px; font-weight:600; text-decoration:none; padding:13px 24px; border-radius:8px;">Read the guides &rarr;</a>
       </td>
     </tr>

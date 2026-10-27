@@ -84,7 +84,7 @@ export default function FeesPage({ base }: { base: string }) {
         asideTitle="In short"
         asideItems={aside}
       />
-      <ServiceCallout eyebrow="What changes the number" heading={<>The variables, plainly.</>} items={callouts} />
+      <ServiceCallout eyebrow="What changes the number" heading={<>The variables, in plain terms.</>} items={callouts} />
       <ServiceFAQ eyebrow="Common questions" heading={<>About the cost.</>} items={faq} />
       <RelatedServices eyebrow="Keep reading" heading={<>Related guides.</>} items={[hubLink(base), ...spokeLinks(base, SLUG).slice(0, 2)]} />
       <Booking />

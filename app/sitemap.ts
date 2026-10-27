@@ -1,5 +1,6 @@
 ﻿import type { MetadataRoute } from 'next'
 import { getAllPosts } from '@/lib/blog'
+import ROUTE_DATES from '@/lib/route-dates.json'
 
 const BASE_URL = 'https://www.stevenmclark.com.au'
 
@@ -51,7 +52,8 @@ const STATIC_ROUTES = [
 export default function sitemap(): MetadataRoute.Sitemap {
   const staticEntries: MetadataRoute.Sitemap = STATIC_ROUTES.map((route) => ({
     url: `${BASE_URL}${route}`,
-    lastModified: new Date(),
+    // Real last-change date per page (npm run sitemap:dates), not the build time
+    lastModified: new Date((ROUTE_DATES as Record<string, string>)[route] ?? '2026-06-30'),
     changeFrequency: 'monthly',
     priority: route === '' ? 1 : 0.7,
   }))

@@ -1,10 +1,12 @@
 import PageHero from '@/components/page/PageHero'
+import RelatedGuides from '@/components/page/RelatedGuides'
 import ServiceBody from '@/components/page/ServiceBody'
 import ServiceCallout from '@/components/page/ServiceCallout'
 import ServiceFAQ from '@/components/page/ServiceFAQ'
 import RelatedServices from '@/components/page/RelatedServices'
 import Booking from '@/components/home/Booking'
 import BreadcrumbSchema from '@/components/seo/BreadcrumbSchema'
+import FAQSchema from '@/components/seo/FAQSchema'
 import { pageMetadata } from '@/lib/seo'
 import { IMAGES } from '@/lib/images'
 
@@ -88,9 +90,10 @@ export default function DebtRecoveryPage() {
   return (
     <>
       <BreadcrumbSchema crumbs={[{ name: 'Home', href: '/' }, { name: 'Business', href: '/business' }, { name: 'Debt recovery', href: '/gawler-debt-recovery' }]} />
+      <FAQSchema items={faq} />
       <PageHero
         eyebrow="Business · Debt Recovery"
-        heading={<>A letter from a lawyer is often <em>all it takes</em>.</>}
+        heading={<>Debt recovery lawyers in <em>Gawler</em>. A letter is often all it takes.</>}
         lede="A clear, properly written demand letter resolves the great majority of debts. When it does not, we have the full set of court tools to enforce — and we will tell you straight if a debt is not worth chasing."
         image={IMAGES.debtRecoveryHero}
       />
@@ -107,6 +110,7 @@ export default function DebtRecoveryPage() {
       />
       <ServiceCallout eyebrow="If you are here because…" heading={<>Three places debt-recovery files usually start.</>} items={callouts} />
       <ServiceFAQ eyebrow="Common questions" heading={<>What people most often ask on the first call.</>} items={faq} />
+      <RelatedGuides slugs={['debt-recovery-south-australia', 'dispute-resolution-south-australia']} />
       <RelatedServices eyebrow="Adjacent help" heading={<>Often connected to:</>} items={related} />
       <Booking />
     </>

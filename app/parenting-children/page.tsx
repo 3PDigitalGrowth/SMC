@@ -1,10 +1,12 @@
 import PageHero from '@/components/page/PageHero'
+import RelatedGuides from '@/components/page/RelatedGuides'
 import ServiceBody from '@/components/page/ServiceBody'
 import ServiceCallout from '@/components/page/ServiceCallout'
 import ServiceFAQ from '@/components/page/ServiceFAQ'
 import RelatedServices from '@/components/page/RelatedServices'
 import Booking from '@/components/home/Booking'
 import BreadcrumbSchema from '@/components/seo/BreadcrumbSchema'
+import FAQSchema from '@/components/seo/FAQSchema'
 import { pageMetadata } from '@/lib/seo'
 import { IMAGES } from '@/lib/images'
 
@@ -90,9 +92,10 @@ export default function ParentingChildrenPage() {
   return (
     <>
       <BreadcrumbSchema crumbs={[{ name: 'Home', href: '/' }, { name: 'Family', href: '/family' }, { name: 'Parenting and children', href: '/parenting-children' }]} />
+      <FAQSchema items={faq} />
       <PageHero
         eyebrow="Family · Parenting · Children"
-        heading={<>Arrangements that work for the <em>children's lives</em>, not just the legal file.</>}
+        heading={<>Parenting and children's lawyers in <em>Gawler</em>, for arrangements that work for the children.</>}
         lede="A parenting matter is really about the school week. Where the kids sleep on a Tuesday. Who picks them up from sport. The legal documents should make those answers easier, not harder."
         image={IMAGES.familyHero}
       />
@@ -109,6 +112,7 @@ export default function ParentingChildrenPage() {
       />
       <ServiceCallout eyebrow="If you are here because…" heading={<>Three places parenting matters usually start.</>} items={callouts} />
       <ServiceFAQ eyebrow="Common questions" heading={<>What people most often ask on the first call.</>} items={faq} />
+      <RelatedGuides slugs={['understanding-child-support-australia', 'understanding-consent-orders-australia', 'family-law-legal-aid-australia']} />
       <RelatedServices eyebrow="Adjacent help" heading={<>Often connected to:</>} items={related} />
       <Booking />
     </>
