@@ -7,12 +7,22 @@ interface RouteParams {
   params: { slug: string }
 }
 
+// Drafts render (noindex) on previews and locally, never on the live site.
+const hideDrafts = process.env.VERCEL_ENV === 'production'
+
+function findPost(slug: string) {
+  const post = getPostBySlug(slug)
+  return post && !(hideDrafts && post.frontmatter.draft) ? post : null
+}
+
 export function generateStaticParams() {
-  return getAllSlugs().map((slug) => ({ slug }))
+  return getAllSlugs()
+    .filter((slug) => findPost(slug))
+    .map((slug) => ({ slug }))
 }
 
 export function generateMetadata({ params }: RouteParams): Metadata {
-  const post = getPostBySlug(params.slug)
+  const post = findPost(params.slug)
   if (!post) return { title: 'Not found' }
   const { frontmatter } = post
   const canonical = `https://www.stevenmclark.com.au/insights/${frontmatter.slug}`
@@ -42,7 +52,7 @@ export function generateMetadata({ params }: RouteParams): Metadata {
 }
 
 export default function InsightPage({ params }: RouteParams) {
-  const post = getPostBySlug(params.slug)
+  const post = findPost(params.slug)
   if (!post) notFound()
 
   const related = getRelatedPosts(post)
