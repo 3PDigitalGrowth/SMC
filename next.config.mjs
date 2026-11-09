@@ -33,6 +33,12 @@ const nextConfig = {
         destination: '/estate-planning',
         permanent: true,
       },
+      // Addresses from the previous site that still get visitors (GA4, Aug to Nov
+      // 2026). They were showing a 404.
+      { source: '/contact-us', destination: '/contact', permanent: true },
+      { source: '/contact-steven-m-clark', destination: '/contact', permanent: true },
+      { source: '/our-team', destination: '/about', permanent: true },
+      { source: '/gawler-insurance-lawyers', destination: '/gawler-compensation-lawyers', permanent: true },
     ]
   },
   experimental: {
