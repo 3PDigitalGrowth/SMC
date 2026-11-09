@@ -16,9 +16,9 @@ export const metadata = pageMetadata({
 
 const services = [
   {
-    title: 'Property law and conveyancing',
-    body: 'Buying or selling a house, unit, rural property or off-the-plan. We handle the contract, the cooling-off period, the title checks, the settlement, and the awkward late changes.',
-    href: '/gawler-property-lawyers',
+    title: 'Conveyancing',
+    body: 'Buying or selling a house, unit, rural property, house-and-land or off-the-plan. We handle the contract, the cooling-off period, the title checks, the settlement, and the awkward late changes.',
+    href: '/gawler-conveyancing',
   },
   {
     title: 'Commercial and retail leases',
@@ -41,9 +41,9 @@ const services = [
     href: '/property-disputes',
   },
   {
-    title: 'Title searches and enquiries',
-    body: "A title is rarely as simple as it looks. We check what is actually on the register, what the lender expects, and what the council might surprise you with.",
-    href: '/gawler-property-lawyers',
+    title: 'Family loans and independent advice',
+    body: 'Parents lending towards a home, a house sold within the family, or a lender asking for an independent legal advice certificate. We put it in writing properly.',
+    href: '/family-loan-agreements',
   },
 ]
 

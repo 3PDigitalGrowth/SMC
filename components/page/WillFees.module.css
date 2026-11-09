@@ -1,0 +1,91 @@
+.section {
+  background: var(--paper-deep);
+  padding: var(--space-6) 0;
+}
+
+.inner {
+  max-width: var(--max-width);
+  margin: 0 auto;
+  padding: 0 var(--gutter);
+}
+
+.head {
+  margin-bottom: var(--space-4);
+}
+
+.head > :first-child {
+  margin-bottom: var(--space-3);
+}
+
+.heading {
+  font-size: var(--t-h2);
+  line-height: 1.05;
+  letter-spacing: -0.02em;
+  text-wrap: balance;
+  max-width: 18ch;
+}
+
+/* A ledger, not cards: hairline rules between rows, the figure set large on the right */
+.list {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  border-top: 1px solid var(--ink);
+  max-width: 980px;
+}
+
+.row {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) auto;
+  gap: var(--space-3);
+  align-items: baseline;
+  padding: var(--space-3) 0;
+  border-bottom: 1px solid var(--rule);
+}
+
+.label {
+  font-family: var(--font-display), Georgia, serif;
+  font-size: var(--t-h4);
+  line-height: 1.25;
+  color: var(--ink);
+  margin-bottom: 6px;
+}
+
+.includes {
+  font-size: var(--t-body);
+  line-height: 1.6;
+  color: var(--ink-soft);
+  max-width: 56ch;
+}
+
+.price {
+  font-family: var(--font-display), Georgia, serif;
+  font-size: clamp(28px, 3.2vw, 40px);
+  line-height: 1;
+  color: var(--leaf-deep);
+  white-space: nowrap;
+  font-variant-numeric: lining-nums tabular-nums;
+}
+
+.pending {
+  font-size: var(--t-body-s);
+  font-family: var(--font-body), sans-serif;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--ember);
+}
+
+.note {
+  margin-top: var(--space-3);
+  font-size: var(--t-body-s);
+  line-height: 1.6;
+  color: var(--ink-muted);
+  max-width: 70ch;
+}
+
+@media (max-width: 639px) {
+  .row {
+    grid-template-columns: 1fr;
+    gap: var(--space-1);
+  }
+}

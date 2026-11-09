@@ -1,3 +1,4 @@
+import Link from 'next/link'
 import PageHero from '@/components/page/PageHero'
 import ServiceBody from '@/components/page/ServiceBody'
 import ServiceCallout from '@/components/page/ServiceCallout'
@@ -11,7 +12,7 @@ import { IMAGES } from '@/lib/images'
 
 export const metadata = pageMetadata({
   path: '/gawler-property-lawyers',
-  title: 'Gawler property lawyers. Conveyancing, leases, disputes.',
+  title: 'Property lawyers in Gawler. Contracts, land, leases, disputes.',
   description:
     'Property law and conveyancing in the Gawler region since 1985. Buying, selling, leases, subdivisions, building disputes.',
   image: IMAGES.propertyDetailHero.src,
@@ -88,9 +89,9 @@ const related = [
     href: '/gawler-lease-lawyer',
   },
   {
-    title: 'Estate planning',
-    body: 'Updating your Will after a property purchase is the unromantic but right move.',
-    href: '/gawler-estate-lawyer',
+    title: 'Conveyancing',
+    body: 'Buying or selling a home, house-and-land and off-the-plan, from contract to settlement.',
+    href: '/gawler-conveyancing',
   },
 ]
 
@@ -103,7 +104,7 @@ export default function PropertyLawyersPage() {
         eyebrow="Property · Conveyancing · Leases"
         heading={
           <>
-            Property and conveyancing lawyers in <em>Gawler</em>.
+            Property lawyers in <em>Gawler</em>.
           </>
         }
         lede="A property transaction is the biggest financial decision most families ever make. The legal work behind it should be the smallest worry. That is what we are for."
@@ -116,7 +117,10 @@ export default function PropertyLawyersPage() {
         heading={<>Every kind of property work, from the standard to the awkward.</>}
         paragraphs={[
           'Property transactions are a big decision and a significant matter for most people. We have been doing them in the Gawler region since 1985: residential, rural, commercial, off-the-plan, the lot.',
-          "On the buying and selling side, we handle the Contract for Sale, the cooling-off period, stamp duty calculations, lender requirements, title searches, settlement and exchange. On the development side, we handle subdivisions, building contracts, and the council approvals that always take longer than anyone expects.",
+          <>
+            On the buying and selling side, we handle the Contract for Sale, the cooling-off period, stamp duty calculations, lender requirements, title searches, settlement and exchange: our{' '}
+            <Link href="/gawler-conveyancing">conveyancing page</Link> covers that in detail. On the development side, we handle subdivisions, building contracts, and the council approvals that always take longer than anyone expects.
+          </>,
           "When property goes sideways: a building dispute, a boundary disagreement, a defective fence, a neighbour with a different view of the easement, we work the matter the same way: write the right letter first, escalate only when we need to, and stop the moment it stops being economic to fight.",
         ]}
         asideTitle="Specific matters we handle"

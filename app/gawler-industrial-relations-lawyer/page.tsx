@@ -1,3 +1,4 @@
+import Link from 'next/link'
 import PageHero from '@/components/page/PageHero'
 import ServiceBody from '@/components/page/ServiceBody'
 import ServiceCallout from '@/components/page/ServiceCallout'
@@ -11,9 +12,9 @@ import { IMAGES } from '@/lib/images'
 
 export const metadata = pageMetadata({
   path: '/gawler-industrial-relations-lawyer',
-  title: 'Industrial relations and employment lawyer, Gawler.',
+  title: 'Industrial relations lawyer for employers, Gawler.',
   description:
-    'Employment law for employers and employees across the Gawler region. Contracts, unfair dismissal, awards, redundancy, Fair Work representation.',
+    'Industrial relations advice for employers across the Gawler region. Employment contracts, terminations, restructures, awards, and unfair dismissal claims at the Fair Work Commission.',
   image: IMAGES.industrialRelationsHero.src,
 })
 
@@ -37,8 +38,8 @@ const callouts = [
     body: 'Performance issues, suspected misconduct, a difficult termination, an unfair dismissal claim, or a restructure. We help you do it right the first time so it does not end up in the Commission.',
   },
   {
-    title: 'You are an employee being squeezed.',
-    body: "An unfair contract, a redundancy that does not feel right, working conditions that have shifted under you, or a termination you believe is unfair. We will tell you straight what your position is and what is realistically recoverable.",
+    title: 'You are an employee, not the employer.',
+    body: "A dismissal, a redundancy that does not feel right, an investigation, or pay that has not arrived. We act for employees too, and our employment law page for employees sets out how we help and what the time limits are.",
   },
   {
     title: 'A claim has already been filed.',
@@ -71,6 +72,11 @@ const faq = [
 
 const related = [
   {
+    title: 'Employment law for employees',
+    body: 'Dismissed, made redundant, investigated or underpaid. Advice from the employee side.',
+    href: '/gawler-employment-lawyer',
+  },
+  {
     title: 'Commercial and corporate',
     body: 'Employment law sits inside wider commercial structuring.',
     href: '/gawler-commercial-lawyers',
@@ -79,11 +85,6 @@ const related = [
     title: 'Business law',
     body: 'If you are running a business, employment is one of several connected files.',
     href: '/gawler-business-lawyers',
-  },
-  {
-    title: 'Dispute resolution',
-    body: "When formal proceedings need a mediated path.",
-    href: '/gawler-dispute-resolution-lawyers',
   },
 ]
 
@@ -94,17 +95,20 @@ export default function IndustrialRelationsLawyerPage() {
       <FAQSchema items={faq} />
       <PageHero
         eyebrow="Business · Industrial Relations"
-        heading={<>Employment lawyers in <em>Gawler</em>, from both sides of the desk.</>}
-        lede="We act for employers and for employees, and that means we know how each side actually plays the situation. The advice you get is grounded in how the matter will really unfold, not the textbook version."
+        heading={<>Industrial relations lawyers in <em>Gawler</em>, for employers.</>}
+        lede="We act for employers and for employees, so we know how each side actually plays a dispute. The advice you get as an employer is grounded in how the matter will really unfold, not the textbook version."
         image={IMAGES.industrialRelationsHero}
       />
       <ServiceBody
         eyebrow="What we handle"
-        heading={<>Industrial relations work for employers and employees.</>}
+        heading={<>Industrial relations work for employers.</>}
         paragraphs={[
-          "When handling industrial relations and employment matters, Steven M Clark Lawyers have experience assisting both employers and employees. The acts and laws involved include the Fair Work Act, the Employment Protection Act, the Industrial Relations Act, the Occupational Health and Safety Act, the Workplace Relations Act and the Privacy Laws.",
+          "Steven M Clark Lawyers advise employers and employees on industrial relations and employment matters. The laws involved include the Fair Work Act 2009 (Cth), which covers most South Australian workplaces, the Fair Work Act 1994 (SA) for employers in the state system, the Work Health and Safety Act 2012 (SA), and privacy law.",
           "For employers, we draft employment agreements, enforce them where necessary, and advise on restructuring the company correctly. We routinely represent employers at the Fair Work Commission and in any related legal proceedings.",
-          'For employees, we review employment agreements to ensure they are fair and reasonable, challenge or set aside unfair contracts, review working conditions, advise on unfair dismissal and breaches of employment agreements, review redundancies for proper entitlements, and provide award advice (both State and Federal).',
+          <>
+            If you are an employee, our{' '}
+            <Link href="/gawler-employment-lawyer">employment lawyers for employees</Link> page covers dismissal, redundancy, workplace investigations and underpayment, and the 21-day time limit that applies to most dismissal claims.
+          </>,
         ]}
         asideTitle="Specific matters we handle"
         asideItems={subServices}

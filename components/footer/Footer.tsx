@@ -25,7 +25,8 @@ const columns = [
   {
     title: 'Property & Business',
     links: [
-      { label: 'Property law & conveyancing', href: '/gawler-property-lawyers' },
+      { label: 'Conveyancing', href: '/gawler-conveyancing' },
+      { label: 'Property law', href: '/gawler-property-lawyers' },
       { label: 'Property disputes', href: '/property-disputes' },
       { label: 'Commercial leases', href: '/gawler-lease-lawyer' },
       { label: 'Business sale & purchase', href: '/gawler-business-lawyers' },
@@ -37,7 +38,9 @@ const columns = [
   {
     title: 'More',
     links: [
-      { label: 'Criminal & traffic', href: '/criminal-defence-lawyer' },
+      { label: 'Criminal defence', href: '/criminal-defence-lawyer' },
+      { label: 'Traffic & licence', href: '/gawler-traffic-lawyer' },
+      { label: 'Employment law', href: '/gawler-employment-lawyer' },
       { label: 'Personal injury', href: '/gawler-personal-injury-lawyers' },
       { label: 'Motor vehicle accidents', href: '/gawler-compensation-lawyers' },
       { label: 'Dispute resolution', href: '/gawler-dispute-resolution-lawyers' },

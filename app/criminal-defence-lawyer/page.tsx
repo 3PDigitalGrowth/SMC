@@ -1,3 +1,4 @@
+import Link from 'next/link'
 import PageHero from '@/components/page/PageHero'
 import ServiceBody from '@/components/page/ServiceBody'
 import ServiceCallout from '@/components/page/ServiceCallout'
@@ -11,9 +12,9 @@ import { IMAGES } from '@/lib/images'
 
 export const metadata = pageMetadata({
   path: '/criminal-defence-lawyer',
-  title: 'Criminal defence and traffic lawyer, Gawler.',
+  title: 'Criminal lawyer in Gawler. Criminal and traffic defence.',
   description:
-    'Criminal and traffic defence across South Australia. Drink driving, driving suspended, theft, assault, drug offences. Magistrates and District Court.',
+    'Criminal lawyers in Gawler for assault, theft, drug, bail and intervention order matters, and traffic charges. Magistrates and District Courts. Talk to us before you plead or give a statement.',
   image: IMAGES.criminalDefenceHero.src,
 })
 
@@ -48,8 +49,8 @@ const callouts = [
     body: "First mention dates are not just procedural. The plea and the early submissions can determine the whole course of the matter. Bring the summons or charge sheet in and we will go through it on the first call.",
   },
   {
-    title: 'You are facing licence loss.',
-    body: 'Drink-driving, drug-driving, demerit-point and dangerous-driving cases all carry licence consequences. Some have available defences. Most have at least some submissions that can be made. Talk to us before you plead.',
+    title: 'Police want to talk to you.',
+    body: 'Beyond giving your personal details, you generally have the right to stay silent, and anything you say can be used later. If police ask for an interview or a DNA sample, ask whether it is voluntary or required, then call us before you go any further.',
   },
 ]
 
@@ -88,9 +89,9 @@ const related = [
     href: '/gawler-personal-injury-lawyers',
   },
   {
-    title: 'Dispute resolution',
-    body: 'For related civil matters arising from the same events.',
-    href: '/gawler-dispute-resolution-lawyers',
+    title: 'Traffic and licence',
+    body: 'Expiation notices, licence disqualification, drink and drug driving, and driving charges.',
+    href: '/gawler-traffic-lawyer',
   },
 ]
 
@@ -101,7 +102,7 @@ export default function CriminalDefencePage() {
       <FAQSchema items={faq} />
       <PageHero
         eyebrow="Criminal · Traffic"
-        heading={<>Criminal and traffic lawyers in <em>Gawler</em>.</>}
+        heading={<>Criminal lawyers in <em>Gawler</em>.</>}
         lede="The outcome of a criminal or traffic charge can be life-changing. The earlier you have proper advice, the more you can do about it. Confidential and same-day."
         image={IMAGES.criminalDefenceHero}
       />
@@ -111,7 +112,10 @@ export default function CriminalDefencePage() {
         paragraphs={[
           'If you have been charged with a criminal or traffic offence you do not have to face it alone. The outcome of your court case might be life-changing, so give yourself the best possible chance with experienced criminal and traffic defence lawyers.',
           'We advise you on your rights, prepare you for court, explain the procedure, and defend you in the courtroom. We appear in the Magistrates and District Courts of South Australia, and on related disciplinary matters.',
-          'On the traffic side, we handle drink driving (exceeding the prescribed concentration of alcohol in blood), driving whilst disqualified or suspended, driving without a licence, speeding, and dangerous driving. On the criminal side, we cover the full range: assault, theft, drug offences, public order, fraud, property damage, prohibited weapons, threatening behaviour, sexual offences, robbery and extortion, homicide, and justice procedure offences.',
+          <>
+            On the criminal side, we cover the full range: assault, theft, drug offences, public order, fraud, property damage, prohibited weapons, threatening behaviour, sexual offences, robbery and extortion, homicide, and justice procedure offences such as breach of bail. On the traffic side, we handle drink and drug driving, driving disqualified or unlicensed, speeding and dangerous driving, and our{' '}
+            <Link href="/gawler-traffic-lawyer">traffic lawyers page</Link> covers expiation notices and licence loss in more detail.
+          </>,
         ]}
         asideTitle="Specific matters we handle"
         asideItems={subServices}

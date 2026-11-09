@@ -44,8 +44,13 @@ export default function Pathways() {
             </h2>
             <p className={styles.lede}>
               We are a general practice, so if your situation is not one of these three,
-              we almost certainly still handle it. Start anywhere; we&apos;ll put you in
-              front of the right person.
+              we almost certainly still handle it, from a{' '}
+              <Link href="/criminal-defence-lawyer">criminal</Link> or{' '}
+              <Link href="/gawler-traffic-lawyer">traffic charge</Link> to{' '}
+              <Link href="/gawler-conveyancing">conveyancing</Link>, an{' '}
+              <Link href="/gawler-employment-lawyer">employment dispute</Link> or a document
+              that needs a <Link href="/notary-public-gawler">Notary</Link>. Start anywhere;
+              we&apos;ll put you in front of the right person.
             </p>
           </div>
         </div>

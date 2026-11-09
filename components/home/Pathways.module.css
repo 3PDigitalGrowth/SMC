@@ -43,6 +43,19 @@
   padding-bottom: 6px;
 }
 
+.lede a {
+  color: var(--ink);
+  text-decoration: underline;
+  text-underline-offset: 3px;
+  text-decoration-color: var(--rule);
+  transition: text-decoration-color 0.2s ease;
+}
+
+.lede a:hover,
+.lede a:focus-visible {
+  text-decoration-color: currentColor;
+}
+
 .grid {
   display: grid;
   grid-template-columns: repeat(3, 1fr);

@@ -4,6 +4,7 @@ import ServiceBody from '@/components/page/ServiceBody'
 import ServiceCallout from '@/components/page/ServiceCallout'
 import ServiceFAQ from '@/components/page/ServiceFAQ'
 import RelatedServices from '@/components/page/RelatedServices'
+import WillFees from '@/components/page/WillFees'
 import Booking from '@/components/home/Booking'
 import BreadcrumbSchema from '@/components/seo/BreadcrumbSchema'
 import FAQSchema from '@/components/seo/FAQSchema'
@@ -119,6 +120,8 @@ export default function EstateLawyerPage() {
         asideTitle="Specific matters we handle"
         asideItems={subServices}
       />
+
+      <WillFees />
 
       <ServiceCallout
         eyebrow="If you are here because…"
