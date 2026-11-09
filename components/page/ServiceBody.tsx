@@ -5,7 +5,8 @@ import styles from './ServiceBody.module.css'
 interface ServiceBodyProps {
   eyebrow: string
   heading: React.ReactNode
-  paragraphs: string[]
+  /** Plain strings, or fragments when a paragraph carries an inline link. */
+  paragraphs: React.ReactNode[]
   asideTitle?: string
   asideItems?: string[]
 }

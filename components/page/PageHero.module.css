@@ -91,3 +91,11 @@
     aspect-ratio: 4 / 3;
   }
 }
+
+/* Phones: the fixed nav is ~100px tall here, more than the 88px the rule above
+   leaves, so the eyebrow sat under the nav on every page. Clear it. */
+@media (max-width: 640px) {
+  .hero {
+    padding-top: calc(var(--space-6) + 64px);
+  }
+}

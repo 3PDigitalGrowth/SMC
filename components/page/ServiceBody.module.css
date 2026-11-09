@@ -45,6 +45,19 @@
   max-width: 58ch;
 }
 
+.body a {
+  color: var(--leaf-deep);
+  text-decoration: underline;
+  text-underline-offset: 3px;
+  text-decoration-color: var(--rule);
+  transition: text-decoration-color 0.2s ease;
+}
+
+.body a:hover,
+.body a:focus-visible {
+  text-decoration-color: currentColor;
+}
+
 .lede {
   font-size: 21px !important;
   line-height: 1.5 !important;

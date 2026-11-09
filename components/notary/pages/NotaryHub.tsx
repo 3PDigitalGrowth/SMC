@@ -10,6 +10,7 @@ import FAQSchema from '@/components/seo/FAQSchema'
 import NotaryRoute from '@/components/notary/NotaryRoute'
 import NotaryChecklist from '@/components/notary/NotaryChecklist'
 import { IMAGES } from '@/lib/images'
+import Link from 'next/link'
 import { NOTARY_HUB_SLUG, notaryHref, spokeLinks } from '@/components/notary/registry'
 
 export const HUB_META = {
@@ -116,8 +117,21 @@ export default function NotaryHub({ base }: { base: string }) {
         heading={<>A notarial certificate is the document the rest of the world trusts.</>}
         paragraphs={[
           'A Public Notary is a practising lawyer appointed by the Supreme Court of South Australia to hold a public office that other countries recognise. The role exists because a court in Italy or a land registry in India has no way of checking an Australian signature. The Notary checks it for them, records that check in a certificate, and puts a seal on it that DFAT and foreign authorities know.',
-          'In practice that means three things. We verify who you are and that you signed freely. We attest that a copy is a true copy of an original we have seen. And we administer oaths, affirmations and declarations, certifying that you swore, affirmed or declared the contents. Not every job needs a separate notarial certificate: sometimes a copy certified as a true copy of the original is all the receiving authority wants. It depends on what they require, and we tell you which before you come in.',
-          'We handle the full range: Powers of Attorney, Wills and estate documents, deeds and contracts, affidavits and statutory declarations, attested copies (exemplifications), bills of exchange and ships protests. Where the destination country needs a DFAT apostille or authentication on top, we prepare the document for it and tell you exactly what to take to DFAT.',
+          <>
+            In practice that means three things. We verify who you are and that you signed freely. We attest that a copy is a true copy of an original we have seen. And we administer oaths, affirmations and declarations, certifying that you swore, affirmed or declared the contents. Not every job needs a separate notarial certificate: sometimes a copy certified as a true copy of the original is all the receiving authority wants. It depends on what they require, and we tell you which before you come in. If you are not sure whether a JP would do, our guide to{' '}
+            <Link href={notaryHref(base, 'notary-public-or-justice-of-the-peace')}>choosing a Notary, JP or Commissioner for Oaths</Link> sets out the difference.
+          </>,
+          <>
+            We handle the full range: Powers of Attorney, Wills and estate documents, deeds and contracts, affidavits and statutory declarations, attested copies (exemplifications), bills of exchange and ships protests. Where the destination country needs a{' '}
+            <Link href={notaryHref(base, 'apostille-and-authentication-south-australia')}>DFAT apostille or authentication</Link> on top, we prepare the document for it and tell you exactly what to take to DFAT. Requirements differ by country, and our guide to{' '}
+            <Link href={notaryHref(base, 'notarising-documents-for-use-overseas')}>documents for India, Italy, the UK and elsewhere</Link> covers the common ones.
+          </>,
+          <>
+            People come to us from Gawler and from across{' '}
+            <Link href={notaryHref(base, 'notary-public-northern-adelaide-barossa')}>northern Adelaide and the Barossa</Link>. Before you book, the{' '}
+            <Link href={notaryHref(base, 'notary-appointment-checklist')}>list of what to bring</Link> saves a second trip, and{' '}
+            <Link href={notaryHref(base, 'notary-fees-south-australia')}>what a Notary costs</Link> explains how the fixed fee is worked out.
+          </>,
         ]}
         asideTitle="Documents and matters we handle"
         asideItems={subServices}
