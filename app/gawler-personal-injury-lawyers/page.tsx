@@ -110,7 +110,7 @@ export default function PersonalInjuryLawyersPage() {
       />
       <ServiceCallout eyebrow="If you are here because…" heading={<>Three places personal injury files most often start.</>} items={callouts} />
       <ServiceFAQ eyebrow="Common questions" heading={<>What people most often ask on the first call.</>} items={faq} />
-      <RelatedGuides slugs={['ctp-claims-south-australia']} />
+      <RelatedGuides slugs={['ctp-claims-south-australia', 'do-i-need-a-lawyer-for-a-ctp-claim-south-australia-costs']} />
       <RelatedServices eyebrow="Adjacent help" heading={<>Often connected to:</>} items={related} />
       <Booking />
     </>

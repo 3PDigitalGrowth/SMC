@@ -114,7 +114,7 @@ export default function PowerOfAttorneyPage() {
       />
       <ServiceCallout eyebrow="If you are here because…" heading={<>Three reasons people put this in place.</>} items={callouts} />
       <ServiceFAQ eyebrow="Common questions" heading={<>What people most often ask on the first call.</>} items={faq} />
-      <RelatedGuides slugs={['estate-planning-documents-south-australia', 'wills-lawyers-south-australia']} />
+      <RelatedGuides slugs={['enduring-power-of-attorney-advance-care-directive-south-australia', 'estate-planning-documents-south-australia', 'wills-lawyers-south-australia']} />
       <RelatedServices eyebrow="Adjacent help" heading={<>Often done in the same visit:</>} items={related} />
       <Booking />
     </>
